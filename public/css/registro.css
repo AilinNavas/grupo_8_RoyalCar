@@ -16,6 +16,7 @@ body {
     display: flex;
     justify-content: space-between;
     
+    
   }
   .header a {
     float: left;
@@ -86,6 +87,8 @@ body {
     justify-content: space-between;
     color: white;
     font-size: 12px;
+
+
   }
   .footer-left{
     color: white;
