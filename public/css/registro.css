@@ -13,9 +13,23 @@ body {
     background-color: rgb(0, 0, 0);
     padding: 20px 10px;
     width : 100%;
+        
+  }
+  .header-left{
+    float: left;
+    color: white;
     display: flex;
-    justify-content: space-between;
-    
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+  }
+  .header-right {
+    float: right;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .header a {
     float: left;
@@ -32,6 +46,7 @@ body {
     font-weight: bold;
     color : #cb0e08;
     font-style: italic;
+    text-align: center;
   }
   .header a:hover {
     background-color: #cb0e08;
@@ -42,30 +57,25 @@ body {
     background-color: dodgerblue;
     color: white;
   }
-  .header-left{
-    float: left;
-    color: white;
-    display: flex;
-    flex-direction: row
-    ;
-  }
+  
   .telefono{
     color: white;
     display: flex;
     flex-wrap: wrap;
     font-size: 16px;
     margin: 13px
-
-
     ;
   }
   .callcenter {
     color: white;
+    display: flex;
+    flex-wrap: wrap;
   }
   .location{
     color: white;
     display: flex;
-    ;
+    display: flex;
+    flex-wrap: wrap;
   }
   .texto-h2{
   font-size: 16px;
@@ -74,23 +84,21 @@ body {
   align-items:flex-end;
   margin: 15px;
   }
-  .header-right {
-    float: right;
-  }
+  
   .footer{
     overflow: hidden;
     background-color: rgb(46, 45, 45);
     padding: 20px 30px;
     width : 100%;
-    display: flex;
-    justify-content: space-between;
     color: white;
     font-size: 12px;
   }
   .footer-left{
     color: white;
+    width: 100%;
+    text-align: center;
   }
-  .footer-right{
+  .footer-right a{
     float: left;
     color: white;
     text-align: center;
@@ -112,7 +120,7 @@ body {
     }
   }
   .signupFrm {
-    margin : 40px;
+    margin : auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,4 +209,34 @@ body {
     font-size: 14px;
     font-weight: 600;
   }
-  
+  @media (min-width: 481px){
+    .header{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .header-left{
+      width: 30%;
+    }
+    a.logo{
+      width: 30%;
+    }
+    .header-right{
+      width: 30%;
+    }
+    .footer{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .footer-left{
+      width: 50%;
+      text-align: left;
+    }
+    .footer-right{
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+  }
