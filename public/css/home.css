@@ -11,13 +11,13 @@
     margin: 0 auto;
     padding: 0;
     font-family: 'Oswald', sans-serif;
-    background-color: black;
-    color: #fff;
+    background-color:  #fff;
+    
 
   }
   a{
     text-decoration: none;
-    color: white;
+    color:black;
   }
   
   img {
@@ -127,12 +127,11 @@
     
   }
   .motor-busqueda {
-    border: black 3px solid;
+    border: black 1px solid;
     color: white;
     font-size: 16px;
-    background-color:  rgb(46, 45, 45);
+    background-color:  black;
     display: flex;
-    border-radius: 50%;
     width: 100%;
     height:10vh;
     justify-content: center;
@@ -191,27 +190,34 @@ button.button-search {
 }
 .servicios {
   border: green 3px solid;
+  width: 90vw;
   padding: 30px;
+  height: 30vhs;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
 
 }
-.Comprar {
-  /* border: yellow 3px solid; */
+article.compra {
+ border: yellow 3px solid;
   padding: 10px;
   width: 50vw;
   height: 50vw;
 
 }
-.Vender {
-  /* border: blue 3px solid; */
+article.alquiler {
+  border: blue 3px solid; 
   padding: 10px;
   width: 50vw;
   height: 50vw;
 }
 
-.nosotros {
-  font-size: 12px;
+h2.nosotros {
+  font-size: 20px;
+  padding: 10px;
+  margin: auto;
+  border: pink 1px solid;
+  text-align: center;
 }
