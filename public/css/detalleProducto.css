@@ -148,7 +148,7 @@ body {
   line-height: 25px;
   border-radius: 4px;
 }
-/* sección del detalle del producto*/
+/* sección producto*/
 section {
   margin: 0;
   padding: 0px;
@@ -156,10 +156,9 @@ section {
 .fondo img {
   width: 100%;
 }
-section.tituloproducto {
+.tituloproducto {
   /*border: 5px solid red;*/
   padding-top: 3%;
-  height: 46vh;
 }
 .titulo {
   display: flex;
@@ -171,21 +170,25 @@ h2 {
 h2::first-letter {
   color: #fe0505;
 }
-.productoseleccionado {
+.imagenproducto {
   text-align: center;
 }
-.productoseleccionado img {
+.imagenproducto img {
   padding: 0;
   margin: 0;
-  width: 600px;
+  height: 100%;
+  width: 40%;
+}
+.carruselproducto {
+
 }
 .carruselproducto .carrusel {
   display: flex;
   /*border: 5px solid red;*/
-  height: 38vh;
-  padding-top: 9%;
+  padding-top: 5vh;
   padding-left: 17%;
   padding-right: 17%;
+  align-items: center;
 }
 .carruselproducto .fondoprecio {
   /*border: 5px solid yellow;*/
@@ -219,8 +222,13 @@ h2::first-letter {
 .precio #preciop1 h2 {
   color: #fe0505;
 }
-.carrusel .product_1 img {
-  width: 190px;
+.product_1 {
+  width: 13vw;
+  height: 16vh;
+  margin: 0.1vw;
+}
+.product_1 img {
+  width: 100%;
   height: 100%;
 }
 .next {
@@ -233,9 +241,29 @@ h2::first-letter {
 }
 #botonizquierdo {
   border-radius: 1vh 0 0 1vh;
+  width: 3vw;
+  height: 16vh;
 }
 #botonderecho {
   border-radius: 0 1vh 1vh 0;
+  width: 3vw;
+  height: 16vh;
+}
+/*sección tabla*/
+.tecnicas {
+  /*border: 2px solid red;*/
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding-bottom: 2vh;
+}
+.tabla {
+  /*border: 2px solid yellow;*/
+}
+.tabla th {
+  text-align: center;
+  width: 32vw;
+  padding-top: 2vh;
 }
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 500px) {
