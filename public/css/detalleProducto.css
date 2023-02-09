@@ -190,11 +190,11 @@ h2::first-letter {
   padding-right: 17%;
   align-items: center;
 }
-.carruselproducto .fondoprecio {
+.fondoprecio {
   /*border: 5px solid yellow;*/
   height: 18vh;
-  padding-top: 2%;
-  padding-bottom: 3%;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
   padding-left: 30%;
   padding-right: 30%;
 }
@@ -218,6 +218,7 @@ h2::first-letter {
   border-radius: 1vh;
   opacity: 0.6;
   box-shadow: 2px 2px 7px #383737;
+  height: 6vh;
 }
 .precio #preciop1 h2 {
   color: #fe0505;
