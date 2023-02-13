@@ -216,13 +216,13 @@ body {
       justify-content: space-between;
     }
     .header-left{
-      width: 30%;
+      width: 38%;
     }
     a.logo{
       width: 30%;
     }
     .header-right{
-      width: 30%;
+      width: 38%;
     }
     .footer{
       width: 100%;
@@ -239,4 +239,7 @@ body {
       justify-content: flex-end;
     }
 
+  }
+  @media (min-width: 761px){
+    
   }
