@@ -11,7 +11,7 @@ app.get('/index',(req, res)=>{
 app.get('/producto',(req, res)=>{
     res.sendFile(path.join(__dirname, './views/productDetail.html'));
 });
-app.get('/registro',(req, res)=>{
+app.get('/register',(req, res)=>{
     res.sendFile(path.join(__dirname, './views/register.html'));
 });
 app.get('/productCart',(req, res)=>{
