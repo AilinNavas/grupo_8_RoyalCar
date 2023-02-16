@@ -101,7 +101,7 @@ ul {
 }
 .header-right {
   float: left;
-   color: white;
+  color: white;
   text-align: center;
   text-decoration: none;
   font-size: 20px;
@@ -110,7 +110,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-} 
+}
 .contenedorlogo {
   /*border: 2px solid yellow;*/
   padding-right: 22vw;
@@ -237,15 +237,13 @@ ul {
   text-shadow: 1px 1px 0 hsla(220, 20%, 20%, 0.5);
 }
 
-.carousel__nav a:hover {
-  
-}
+
 .motor-busqueda {
   border: black 1px solid;
   color: white;
   font-size: 12px;
   background-color: black;
-   width: 100vw;
+  width: 100vw;
   height: 18vh;
   position: relative;
   margin: auto;
@@ -293,7 +291,7 @@ button {
     width: var(--width-of-input);
     font-family:'Oswald', sans-serif;
    }
-   /* styling of Input */
+   
    .input {
     color: #fff;
     font-size: 0.9rem;
@@ -305,7 +303,7 @@ button {
     border: none;
     border-bottom: var(--border-height) solid var(--border-before-color);
    }
-   /* styling of animated border */
+  
    .input-border {
     position: absolute;
     background: var(--border-after-color);
@@ -315,96 +313,59 @@ button {
     left: 0;
     transition: 0.3s;
    }
-   /* Hover on Input */
+  
    input:hover {
     background: var(--input-hovered-color);
    }
-   
+
    input:focus {
     outline: none;
    }
-   /* here is code of animated border */
+   
    input:focus ~ .input-border {
     width: 100%;
    }
-   /* === if you want to do animated border on typing === */
-   /* remove input:focus code and uncomment below code */
-   /* input:valid ~ .input-border{
-     width: 100%;
-   } */
+ 
 
 button:active {
   box-shadow: none;
   transform: translate(3px, 3px);
 }
 
-.fa-search {
-  background-color: rgb(46, 45, 45);
-  border: solid 1px black;
-  color:#cb0e08;
-  font-size: 20px;
-  width: 15%;
-  position: absolute; 
-}
 
-
-button.button-search {
- position: relative; 
-background-color: black;
-color: #fff;
-left: 7px;
-border: rgb(46, 45, 45) solid 1px;
-padding: 3px;
-}
-.fa-magnifying-glass {
-color: #cb0e08;
-}
-.servicios {
-border: black 2px solid;
-width: 90vw;
-height: 10vh;
-display: flex;
-flex-direction: column;
-justify-content:center;
-align-items: flex-start ;
-margin: auto;
-
-}
-article.compra {
-border:black 2px solid; 
-margin: auto;
-width: 50%;
-height: 15vh;
-background-color:white;
-/* box-shadow: 0px 0px 10px rgb(173, 40, 40); */
-
-}
-article.alquiler {
-border: black 2px solid; 
-margin: auto;
-width: 50%;
-height: 15vh;
-background-color:white;
-/* box-shadow: 0px 0px 10px rgb(173, 40, 40); */
-}
-
-article.compra img ,
-article.alquiler img {
-  display: block;
+.card {
+  width: 90%;
+  height: 254px;
+  margin: 15px;
+  padding: 10px;
+  nter: ;
+  margin-bottom: 10px;
+  background-image: linear-gradient(163deg, #f1d0c3 0%, #cf0b0b 100%);
+  border-radius: 20px;
+  transition: all .3s;
+ }
+ 
+ .card2 {
   width: 100%;
-  height: 100%;
-  margin: auto;
-  
-}
+  height: 254px;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  transition: all .2s;
+ }
+ 
+ .card2:hover {
+  transform: scale(1.1);
+  border-radius: 20px;
+ }
+ 
+ .card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+ }
+ .servicios {
+  margin-bottom: 10px;
+  display: block;
 
-h3 {
-  color: #cb0e08;
-  font-size: 20px;
-  width: 40vw;
-  text-align: center;
-  position: absolute;
-
-}
+ }
 
 h2.nosotros {
 font-size: 30px;
@@ -412,23 +373,6 @@ padding: 10px;
 margin: auto;
 border: pink 1px solid;
 text-align: center;
-}
-.venta-usados {
-  display: none;
-  width: 100vw;
-  height: 40vw;
-}
-.venta-usados img {
-  width: 100%;
-  height: 100%;
-}
-.venta-usados h4 {
-  font-size: 20px;
-  position: absolute;
-  left: 50px;
-  margin: auto;
-  text-align: center;
-  color: #cb0e08;
 }
 
 /*Organización footer*/
@@ -464,7 +408,7 @@ text-align: center;
 
 
 /* Tablet */
-@media (min-width: 768px) {
+@media (min-width: 481px) {
 
 
   .motor-busqueda {
@@ -498,44 +442,6 @@ text-align: center;
     justify-content:space-between;
   }
   
-  .fa-search {
-    background-color: rgb(46, 45, 45);
-    border: solid 1px black;
-    color:#cb0e08;
-    font-size: 20px;
-    width: 15%;
-    position: absolute; 
-  }
-  
-  .servicios {
-    /* border: green 3px solid; */
-    width: 90vw;
-    height: 50vw;
-    padding: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    
-    }
-    article.compra {
-    /* border: yellow 3px solid; */
-    padding: 10px;
-    width: 40vw;
-    height: 40vw;
-    
-    }
-    article.alquiler {
-    /* border: blue 3px solid;  */
-    padding: 20px;
-    width: 40vw;
-    height: 40vw;
-    }
-    article.compra img {
-      display: block;
-    }
-    
     h2.nosotros {
     font-size: 40px;
     padding: 10px;
@@ -552,26 +458,17 @@ text-align: center;
       width: 40vw;
       text-align: center;
       position: relative;
-      
     
     }
-    .venta-usados {
-      display: block;
-      width: 100vw;
-      height: 40vw;
+    .servicios {
+      display: flex;
+      justify-content: space-around;
+
     }
-    .venta-usados img {
-      width: 100%;
-      height: 100%;
-    }
-    .venta-usados h4 {
-      font-size: 30px;
-      position: relative;
-      left: 5px;
-      bottom: -50px;
-    }
+  }
     
-}
+    
+
 
 
 /* Desktop */
@@ -591,34 +488,8 @@ text-align: center;
       text-align: center;
     
     }
-    article.compra {
-      padding: 10px;
-      width: 50vw;
-      height: 45vw;
-      
-      }
-      article.alquiler {
-      padding: 20px;
-      width: 50vw;
-      height: 45vw;
-      }
-      .servicios {
-        width: 90vw;
-        height: 50vw;
-        padding: 30px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        
-        }
-        .venta-usados h4 {
-          font-size: 40px;
-          position: relative;
-          left: 5px;
-          bottom: -75px;
-        }
+    
+       
       }    
 
 
