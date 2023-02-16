@@ -63,8 +63,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     font-size: 16px;
-    margin: 13px
-    ;
+    margin: 13px;
   }
   .callcenter {
     color: white;
