@@ -8,7 +8,7 @@ app.get('/index',(req, res)=>{
     res.sendFile(path.join(__dirname, './views/index.html'));
 });
 
-app.get('/producto',(req, res)=>{
+app.get('/productDetail',(req, res)=>{
     res.sendFile(path.join(__dirname, './views/productDetail.html'));
 });
 app.get('/register',(req, res)=>{
