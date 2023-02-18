@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
 }
 
 body {
@@ -261,7 +263,7 @@ ul {
   font-size: 12px;
   background-color: black;
   width: 90vw;
-  height: 20vh;
+  /* height: 20vh; */
   position: relative;
   margin: auto;
   margin-top: 30px;
@@ -278,11 +280,15 @@ ul {
 .caja1form,
 .caja2form,
 .caja3form {
-  width: 100%;
-  height: 20%;
+  width: 90%;
+  /* height: 20%; */
   margin-top: 5px;
 }
+.button-search{
+  width: 100%;
+  margin: 6px
 
+}
 button {
   font-family: 'Oswald', sans-serif;
   font-size: 1rem;
@@ -295,14 +301,12 @@ button {
   cursor: pointer;
   margin: 2px;
   margin-right: 25px;
-  position: absolute;
-  right: 20px;
-  top: 30px;
+  
 }
 
 .form {
 
-  --width-of-input: 200px;
+  --width-of-input: 100%;
   --border-height: 1px;
   --border-before-color: rgba(221, 221, 221, 0.39);
   --border-after-color: red;
@@ -457,9 +461,9 @@ h2.nosotros {
     display: flex;
     flex-direction: row;
     width: 90%;
-    height: 10vh;
-    justify-content: center;
-    align-items: center;
+    /* height: 10vh; */
+    /* justify-content: center;
+    align-items: center; */
     /* position: fixed;
     z-index: 1000; 
      bottom: 2%;  */
@@ -470,9 +474,9 @@ h2.nosotros {
 
   }
 
-  input {
+  /* input {
     width: 90%;
-  }
+  } */
 
   .formulario {
     display: flex;
@@ -482,11 +486,14 @@ h2.nosotros {
   .caja1form,
   .caja2form,
   .caja3form {
-    width: 20%;
+    width: 25%;
     height: 10%;
-    padding-top: 15px;
+    /* padding-top: 15px; */
   }
 
+  .button-search{
+    width: 15%;
+  }
   button {
     /* position: absolute; */
     top: 40px;
@@ -562,6 +569,15 @@ h2.nosotros {
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .input{
+    font-size: 20px;
+
+  }
+ 
+  button{
+    font-size: 30px;
+  }
+
   h2.nosotros {
     font-size: 70px;
     padding: 30px;
