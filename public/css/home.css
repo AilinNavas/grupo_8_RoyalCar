@@ -451,7 +451,9 @@ h2.nosotros {
 
 /* Tablet */
 @media (min-width: 481px) {
-
+  .navbar a{
+    font-size: 3.2vh;
+  }
 
   .motor-busqueda {
     border: black 1px solid;
@@ -514,7 +516,7 @@ h2.nosotros {
   .card,
   .card2 {
 
-    height: 254px;
+    height: 145px;
     text-align: center;
     margin: auto;
     font-size: 70px;
@@ -523,7 +525,7 @@ h2.nosotros {
   }
 
   .card2 {
-    padding-top: 50px;
+    padding-top: 20px;
   }
 
   .nosotros2 {
@@ -565,10 +567,12 @@ h2.nosotros {
     height: 100%;
   }
 }
-
+ 
 
 /* Desktop */
 @media (min-width: 1024px) {
+ 
+
   .input{
     font-size: 20px;
 
