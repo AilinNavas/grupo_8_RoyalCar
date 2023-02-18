@@ -261,7 +261,7 @@ ul {
   font-size: 12px;
   background-color: black;
   width: 90vw;
-  height: 10vh;
+  height: 20vh;
   position: relative;
   margin: auto;
   margin-top: 30px;
@@ -488,7 +488,7 @@ h2.nosotros {
   }
 
   button {
-    position: absolute;
+    /* position: absolute; */
     top: 40px;
     right: 5px;
     font-size: 20px;
@@ -551,6 +551,7 @@ h2.nosotros {
     width: 100vw;
     display: block;
     height: 100%;
+    margin-bottom: -5px;
   }
 
   img {
