@@ -36,7 +36,7 @@ app.use("/register", mainRoutes);
 app.use("/login", mainRoutes);
 app.use("/productCart", mainRoutes);
 app.use("/productCreation" , mainRoutes);
-
+app.use("/productoCompra" , mainRoutes);
 
 const port = process.env.PORT || 3000;
 app.listen(port, ()=>{

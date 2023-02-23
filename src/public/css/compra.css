@@ -1,0 +1,236 @@
+* {margin: 0;
+    padding: 0;
+    box-sizing: border-box}
+    
+    body {background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px}
+    
+    h4 {font-size: 24px}
+    
+    .description {font-size: 16px; color: #ebebeb;}
+
+    .status {font-size: 16px; color: goldenrod; margin-top: 5 px; margin-bottom: 5 px;}
+    
+    div {font-size: 130%}
+    
+    section {border-top: 1px solid; border-color: #ebebeb}
+    
+    article div.main-article {
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+    position: relative}
+      
+    .price {
+    font-size: 20px; color: goldenrod;}
+    
+    .description {
+    font-size: 16px;
+    font-weight: normal}
+      
+    h3,
+    .description {
+    color: #666}
+    
+    h4 {color: black;}
+    
+    main {
+    width: 90%;
+    margin: auto}
+      
+    main section article {
+    background-color: #fff;
+    margin-bottom: 16px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)}
+      
+    main section article img {
+    width: 100%}
+      
+
+        .switch {margin-top: 10 px;}
+
+
+    @media (min-width: 481px) {
+    main section article .description {
+    display: block}
+      
+    main section article {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)}
+      
+    main section div.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between}
+      
+    main section div.products article {
+    flex-basis: 48%}
+      
+    .price,
+    .discount {
+    width: 50%;
+    }
+    }
+      
+    @media (min-width: 769px) {
+    main section div.products article {
+    flex-basis: 24%;
+    }
+    }
+
+    button {
+        /* Variables */
+       --button_radius: 0.75em;
+       --button_color: #e8e8e8;
+       --button_outline_color: #000000;
+       font-size: 17px;
+       font-weight: bold;
+       border: none;
+       border-radius: var(--button_radius);
+       background: var(--button_outline_color);
+      }
+      
+      .button_top {
+       display: block;
+       box-sizing: border-box;
+       border: 2px solid var(--button_outline_color);
+       border-radius: var(--button_radius);
+       padding: 0.75em 1.5em;
+       background: var(--button_color);
+       color: var(--button_outline_color);
+       transform: translateY(-0.2em);
+       transition: transform 0.1s ease;
+      }
+      
+      button:hover .button_top {
+        /* Pull the button upwards when hovered */
+       transform: translateY(-0.33em);
+      }
+      
+      button:active .button_top {
+        /* Push the button downwards when pressed */
+       transform: translateY(0);
+      }
+
+      .switch {
+        --button-width: 3.5em;
+        --button-height: 2em;
+        --toggle-diameter: 1.5em;
+        --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+        --toggle-shadow-offset: 10px;
+        --toggle-wider: 3em;
+        --color-grey: #cccccc;
+        --color-green: #4296f4;
+       }
+       
+       .slider {
+        display: inline-block;
+        width: var(--button-width);
+        height: var(--button-height);
+        background-color: var(--color-grey);
+        border-radius: calc(var(--button-height) / 2);
+        position: relative;
+        transition: 0.3s all ease-in-out;
+       }
+       
+       .slider::after {
+        content: "";
+        display: inline-block;
+        width: var(--toggle-diameter);
+        height: var(--toggle-diameter);
+        background-color: #fff;
+        border-radius: calc(var(--toggle-diameter) / 2);
+        position: absolute;
+        top: var(--button-toggle-offset);
+        transform: translateX(var(--button-toggle-offset));
+        box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+        transition: 0.3s all ease-in-out;
+       }
+       
+       .switch input[type="checkbox"]:checked + .slider {
+        background-color: var(--color-green);
+       }
+       
+       .switch input[type="checkbox"]:checked + .slider::after {
+        transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+        box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+       }
+       
+       .switch input[type="checkbox"] {
+        display: none;
+       }
+       
+       .switch input[type="checkbox"]:active + .slider::after {
+        width: var(--toggle-wider);
+       }
+       
+       .switch input[type="checkbox"]:checked:active + .slider::after {
+        transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
+       }
+       
+       .card {
+        width: 240px;
+        height: 254px;
+        padding: .8em;
+        background: #f5f5f5;
+        position: relative;
+        overflow: visible;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+       }
+       
+       .card-img {
+        
+        height: 40%;
+        width: 100%;
+        border-radius: .5rem;
+        transition: .3s ease;
+       }
+       
+       .card-info {
+        padding-top: 10%;
+       }
+       
+       svg {
+        width: 20px;
+        height: 20px;
+       }
+       
+       .card-footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+       }
+       
+       /*Text*/
+       .text-title {
+        font-weight: 900;
+        font-size: 1.2em;
+        line-height: 1.5;
+       }
+       
+       .text-body {
+        font-size: .9em;
+        padding-bottom: 10px;
+       }
+       
+       /*Button*/
+       .card-button {
+        border: 1px solid #252525;
+        display: flex;
+        padding: .3em;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .3s ease-in-out;
+       }
+       
+       /*Hover*/
+       .card-img:hover {
+        transform: translateY(-25%);
+        box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+       }
+    
+       
