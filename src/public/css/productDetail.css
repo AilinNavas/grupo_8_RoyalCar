@@ -185,7 +185,7 @@ h2::first-letter {
   padding-left: 17%;
   padding-right: 17%;
   align-items: center;
-  width: 400%;
+  width: 100%;
 }
 
 .fondoprecio {
@@ -225,6 +225,7 @@ h2::first-letter {
   width: 13vw;
   height: 16vh;
   margin: 0.1vw;
+  display: flex;
 }
 .product_1 img {
   width: 100%;
@@ -320,14 +321,15 @@ h2::first-letter {
     padding-left: 0%;
     padding-right: 0%;
     align-items: center;
-    
+    overflow-y: auto;
   }
 
   .product_1 {
     display: flex;
-    width: 25%;
+    width: 100%;
     height: 22vh;
     margin: 0.1vw;
+    flex-wrap: nowrap;
     overflow-y:scroll;
   }
 
