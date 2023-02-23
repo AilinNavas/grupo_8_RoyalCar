@@ -11,7 +11,8 @@ las tareas son divididas de manera equitativa para el logro de los objetivos.
 
 A nivel general, estamos muy conformes con nuestro grupo y con el progreso que venimos logrando. 
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------Principales conclusiones de la retro del Sprint N°2:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Principales conclusiones de la retro del Sprint N°2:
 
 *¿Que hicimos bien?
 
