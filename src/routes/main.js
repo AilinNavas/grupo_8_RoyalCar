@@ -5,13 +5,10 @@ const mainController = require("../controllers/mainController");
 const router = express.Router();
 
 router.get("/", mainController.index);
-
 router.get("/register", mainController.register);
-
 router.get("/login", mainController.login);
-
 router.get("/productCart", mainController.productCart);
-
 router.get("/productCreation", mainController.productCreation);
+router.get("/productDetail", mainController.productDetail);
 
 module.exports = router;
