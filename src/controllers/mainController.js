@@ -13,6 +13,9 @@ const controller = {
     productCart: (req, res) => {
         res.render(path.join(__dirname,'../views/productCart.ejs'))
     },
+    productCreation : (req, res) => {
+        res.render(path.join(__dirname,'../views/productCreation.ejs'))
+    },
 
 
 };
