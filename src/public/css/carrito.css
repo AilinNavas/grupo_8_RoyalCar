@@ -14,7 +14,9 @@
     
     div {font-size: 130%}
     
-    section {border-top: 1px solid; border-color: #ebebeb}
+    section {border-top: 1px solid; border-color: #ebebeb;
+      margin-top: 30px;
+    }
     
     article div.main-article {
     border-top: solid 1px #ebebeb;
