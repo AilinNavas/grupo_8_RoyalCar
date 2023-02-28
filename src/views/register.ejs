@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto&family=Sofia+Sans+Semi+Condensed:ital,wght@1,200&display=swap"
-    rel="stylesheet">
-  <link href="/css/registro-login.css" rel="stylesheet">
-  <link href="/css/header.css" rel="stylesheet">
-  <link href="/css/footer.css" rel="stylesheet">
-
-  <title>Registro</title>
-</head>
+<%- include('partials/head' , { title: 'Registro' , styles: [ 'registro-login' , 'header' , 'footer' ]}) %>
 
 <body>
-  <%- include('partials/header.html') %>
+  <%- include('partials/header') %>
   <div class="signupFrm">
     <form action="" class="form">
       <h1 class="title">Regístrate</h1>
@@ -47,6 +31,6 @@
     </form>
   </div>
 </body>
-<%- include('partials/footer.html') %>
+<%- include('partials/footer') %>
 
 </html>
