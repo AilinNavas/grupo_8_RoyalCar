@@ -8,13 +8,13 @@ body {
   font-family: "oswald", sans-serif;
   width: 100%;
 }
+
 .description-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
+  position: relative;
+  right: -50%;
+  width: 80vw;
   padding: 40px;
-  margin-top: 270px;
+  margin-top: 50vh;
   transform: translate(-50%, -55%);
   background: rgba(0,0,0,.9);
   box-sizing: border-box;
@@ -207,9 +207,7 @@ button{
 
 @media (min-width : 1024px){
   .description-box {
-    top: 80%;
-    left: 50%;
-    width: 70vw;
+    margin-top: 65vh;
     }
     .title {
       font-size: 40px;
