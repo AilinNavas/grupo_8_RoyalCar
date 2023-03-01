@@ -1,5 +1,4 @@
-
-    <%- include('partials/head' , { title: 'Crear producto' , styles: [ 'productCreate' , 'header' , 'footer' ]}) %>
+ <%- include('partials/head' , { title: 'Editar producto' , styles: [ 'productCreate' , 'header' , 'footer' ]}) %>
     
       <body>
     
@@ -28,7 +27,7 @@
           <div class="description-box">
             <br>
             <br>
-            <p class="title">Informacion Nuevo Producto</p>
+            <p class="title">Editar Informacion Producto</p>
             <form action="/productCreate " method="POST" enctype=" ">
               <div class="data-box">
                 <input required="" name="marca" type="text">
@@ -105,7 +104,7 @@
                 <span></span>
                 <button type="submit">Enviar</button>
               </a>
-            
+             
             </form>
     
           </div>
