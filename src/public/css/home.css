@@ -13,106 +13,41 @@ img {
   max-width: 100%;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 16px;
-}
-
-
-.carousel {
-  position: relative;
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  z-index: 0;
-}
-
-.carousel:focus {
-  outline: 0.25rem solid hsl(220, 60%, 60%);
-  outline-offset: 0.25rem;
-}
-
-.wrapper {
-  position: relative;
-  width: 100vw;
-}
-
-.wrapper::before,
-.wrapper::after {
-  --size: 2rem;
-  content: '';
-  display: block;
-  position: absolute;
-  width: var(--size);
-  height: 100%;
-  top: 0;
-  left: 0.5rem;
-  padding: 0.25rem;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2 L2 5 L7 8" /></svg>');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  color: #fff;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.wrapper::after {
-  left: auto;
-  right: 0.5rem;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M2 2 L7 5 L2 8" /></svg>');
-}
-
-.slide {
-  position: relative;
-  flex: 1 0 100%;
-  scroll-snap-align: center;
-
-}
-
-.slide a {
-  position: absolute;
-  top: 0;
-  width: 3rem;
-  height: 100%;
-  display: grid;
-  place-items: center;
-  font-size: 0;
-}
-
-.slide a:last-of-type {
-  top: 0;
-  right: 0;
-}
-
-.carousel img {
-  display: block;
+.slider {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  overflow: hidden;
 }
-
-.carousel__nav ul {
-  margin-top: -3rem;
+.slider ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  animation: cambio 15s infinite alternate linear;
+  width: 400%;
 }
 
-.carousel__nav a {
-  display: grid;
-  place-items: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  color: white;
-  text-decoration: none;
-  text-shadow: 1px 1px 0 hsla(220, 20%, 20%, 0.5);
+.slider li {
+  width: 100%;
+  list-style: none;
 }
 
+.slider img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes cambio {
+  0% { margin-left: 0;}
+  20% { margin-left: 0;}
+
+  25% { margin-left: -100%;}
+  45% { margin-left: -100%;}
+
+  50% { margin-left: -200%;}
+  70% { margin-left: -200%;}
+
+  75% { margin-left: -300%;}
+  100% { margin-left: -300%;}
+
+}
 
 .motor-busqueda {
   border: black 1px solid;
