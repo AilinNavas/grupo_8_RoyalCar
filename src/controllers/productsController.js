@@ -13,6 +13,13 @@ const controller = {
     productEdit: (req, res) => {
         res.render(path.join(__dirname, '../views/productEdit.ejs'))
     },
+    productDetail: (req, res) => {
+        res.render(path.join(__dirname, '../views/productDetail.ejs'))
+    },
+
+    products: (req, res) => {
+        res.render(path.join(__dirname, '../views/products.ejs'))
+    },
 
 };
 
