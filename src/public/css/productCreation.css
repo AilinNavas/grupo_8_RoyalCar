@@ -8,224 +8,225 @@ body {
   font-family: "oswald", sans-serif;
   width: 100%;
 }
+.description-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  margin-top: 270px;
+  transform: translate(-50%, -55%);
+  background: rgba(0,0,0,.9);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
 
-.informacion {
-    border: solid 3px royalblue;
-    width: 25vw;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+.description-box p:first-child {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.description-box .data-box {
+  position: relative;
+}
+
+.description-box .data-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.description-box .data-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.description-box .data-box input:focus ~ label,
+.description-box .data-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #fff;
+  font-size: 12px;
+}
+
+.description-box form a {
+  position: relative;
+  display: block;
+  width: 50%;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 3px
+}
+
+.description-box a:hover {
+  background: #eb2222;
+  color: #272727;
+  border-radius: 5px;
+}
+
+.description-box a span {
+  position: absolute;
+  display: block;
+}
+
+.description-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fff);
+  animation: btn-anim1 1.5s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.description-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #fff);
+  animation: btn-anim2 1.5s linear infinite;
+  animation-delay: .375s
+}
+button{
+  all: unset;
+  text-decoration: none;
+  outline:none;
+  color: #fff;
+  }
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.description-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #fff);
+  animation: btn-anim3 1.5s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.description-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #fff);
+  animation: btn-anim4 1.5s linear infinite;
+  animation-delay: 1.125s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+.description-box p:last-child {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.description-box a.a2 {
+  color: #fff;
+  text-decoration: none;
+}
+
+.description-box a.a2:hover {
+  background: transparent;
+  color: #aaa;
+  border-radius: 5px;
+}
+ p {
+  font-size: 16px;
+  color: #fff;
+  text-align: start;
+}
+.title {
+  font-size: 24px;
+  align-items: center;
+  color:#cb0e08 ;
+}
+
+@media (min-width : 1024px){
+  .description-box {
+    top: 80%;
+    left: 50%;
+    width: 70vw;
+    }
+    .title {
+      font-size: 40px;
+    
+    }
+    .description-box .data-box label ,
+    .description-box .data-box input ,
+    p {
+      font-size: 26px;
+    }
+    .description-box form a {
+      width: 20%;
+      height: 30%;
+    }
+    
+    
 
 }
 
-h3 {
-    font-size: 25px;
-    padding: 10px;
-}
 
-.box {
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.box-label {
-    display: flex;
-   flex-direction: column;
-   width: 100%;
-
-}
-label {
-    font-size: 20px;
-    padding-bottom: 10px;
-    margin-bottom: 5px;
-    position: relative;
-}
-.input {
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    background-color: #e8e8e8;
-    box-shadow: 6px 6px 12px #ffffff,
-                -6px -6px 12px #c5c5c5;
-    font-size: medium;
-    font-weight: bold;
-    position:relative;
-   }
-   
-   .input:focus {
-    outline-color: white;
-    place-content: "Enter your message!";
-   }
-
-   /* Hide the default checkbox */
-.container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-    border-radius: 5px;
-   }
-   
-   .container {
-    display: flex;
-    position: relative;
-    cursor: pointer;
-    font-size: 20px;
-    user-select: none;
-    border-radius: 5px;
-    box-shadow: 2px 2px 0px rgb(183, 183, 183);
-    padding-right: 20px;
-   }
-   
-   /* Create a custom checkbox */
-   .checkmark {
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 1.3em;
-    width: 1.3em;
-    background-color: #ccc;
-    border-radius: 5px;
-  
-   }
-   
-   /* When the checkbox is checked, add a blue background */
-   .container input:checked ~ .checkmark {
-    box-shadow: 3px 3px 0px rgb(183, 183, 183);
-    transition: all 0.2s;
-    opacity: 1;
-    background-image: linear-gradient(45deg, rgb(240, 178, 178) 0%, rgb(221, 17, 17) 100%);
-   }
-   
-   .container input ~ .checkmark {
-    transition: all 0.2s;
-    opacity: 1;
-    box-shadow: 1px 1px 0px rgb(183, 183, 183);
-   }
-   
-   /* Create the checkmark/indicator (hidden when not checked) */
-   .checkmark:after {
-    content: "";
-    position: absolute;
-    opacity: 0;
-    transition: all 0.2s;
-   }
-   
-   /* Show the checkmark when checked */
-   .container input:checked ~ .checkmark:after {
-    opacity: 1;
-    transition: all 0.2s;
-   }
-   
-   /* Style the checkmark/indicator */
-   .container .checkmark:after {
-    left: 0.45em;
-    top: 0.25em;
-    width: 0.25em;
-    height: 0.5em;
-    border: solid white;
-    border-width: 0 0.15em 0.15em 0;
-    transform: rotate(45deg);
-   }
-
-   .principal {
-    width: 60vw;
-    height: 35vh;
-    position: relative;
-    left: 100px;
-    top: -750px;
-    border: 2px brown solid;
-    text-align: center;
-    margin: auto;
-   }
-   .imagen {
-    height: 30vh;
-    width: 55vw;
-    border-radius: 10px;
-    box-shadow: 4px 4px 30px rgba(0, 0, 0, .2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    gap: 5px;
-    background-color: rgba(0, 110, 255, 0.041);
-    text-align: center;
-    margin: auto;
-  }
-  
-  .header {
-    flex: 1;
-    width: 100%;
-    border: 2px dashed red;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .header svg {
-    height: 100px;
-  }
-  
-  .header p {
-    text-align: center;
-    color: black;
-  }
-  
-  .footer {
-    background-color: rgba(0, 110, 255, 0.075);
-    width: 100%;
-    height: 40px;
-    padding: 8px;
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    color: black;
-    border: none;
-  }
-  
-  .footer svg {
-    height: 130%;
-    fill: red;
-    background-color: rgba(70, 66, 66, 0.103);
-    border-radius: 50%;
-    padding: 2px;
-    cursor: pointer;
-    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.205);
-  }
-  
-  .footer p {
-    flex: 1;
-    text-align: center;
-  }
-  
-  #file {
-    display: none;
-  }
-  .imagen2{
-    height: 30vh;
-    width: 25vw;
-    border-radius: 10px;
-    box-shadow: 4px 4px 30px rgba(0, 0, 0, .2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    gap: 5px;
-    background-color: rgba(0, 110, 255, 0.041);
-    text-align: center;
-    margin: auto;
-  }
-  .fotos-varias {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 70vh;
-    height: 50vh;
-  }

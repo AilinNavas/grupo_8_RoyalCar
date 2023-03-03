@@ -35,15 +35,12 @@ Moncayo, Mario: 43 años, de Bogotá, Colombia. Soy ingeniero mecánico y me des
 Me gusta la automatización, creativo y entusiasta por la programación.
 
 Navas, Ailín: 30 años, de Córdoba, Argentina. Soy estilista, y estoy dando mis primeros pasos en el área de la informática.
-Me gustan los cambios, los desafíos y el esfuerzo que lleva lograr metas elevadas.
+Me gustan los cambios y los desafíos .
 
 Piccinini, Franco: 25 años. Soy de Buenos Aires, Argentina. Soy case manager en un estudio de Chicago y busco reinventarme en lo que es la programación.
 
 Ramírez, Juan Manuel: 28 años, de Colombia, ingeniero civil, he empezado a aprender programacion desde agosto del año pasado,
 sin embargo hasta ahora aprendiendo muchos conceptos nuevos.
-
-Salvi, Martin; 45 años, Caba. Gastronómico y profesor de karate. Tengo nociones de computación de mi egreso del secundario en 1995 (sistema DOS).
-Desde entonces me desvinculé absolutamente. Hoy es como empezar de cero.
 
 
 

@@ -13,16 +13,16 @@ const controller = {
     productCart: (req, res) => {
         res.render(path.join(__dirname,'../views/productCart.ejs'))
     },
-    productCreation : (req, res) => {
-        res.render(path.join(__dirname,'../views/productCreation.ejs'))
+    productCreate : (req, res) => {
+        res.render(path.join(__dirname,'../views/productCreate.ejs'))
     },
     productDetail : (req, res) => {
         res.render(path.join(__dirname,'../views/productDetail.ejs'))
     },
+    prueba : (req, res) => {
+        res.render(path.join(__dirname,'../views/prueba.ejs'))
+    },
 
 };
-
-
-
 
 module.exports = controller;

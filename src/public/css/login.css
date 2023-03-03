@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
   }
-  body {
+  /*body {
         background-color: white;
       font-family: "lato", sans-serif;
       width: 100%;
@@ -76,7 +76,7 @@
     }
     .header-right {
       float: right;
-    }
+    }*/
     .footer{
       overflow: hidden;
       background-color: rgb(46, 45, 45);
