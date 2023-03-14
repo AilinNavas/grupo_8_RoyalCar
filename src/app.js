@@ -1,6 +1,6 @@
 const express = require ("express");
 const path = require("path");
-// const methodOverride = require('method-override'); //para poder usar metodos Put y delete
+const methodOverride = require('method-override'); //para poder usar metodos Put y delete
 
 
 
@@ -11,7 +11,7 @@ const publicPath = path.join(__dirname, './public');
 app.use(express.static(publicPath));
 app.use(express.urlencoded({ extended: false }));// para poder recibir informacion por post
 app.use(express.json());// para poder recibir informacion  por post
-// app.use(methodOverride('_method')); //para poder pisar el mothod- 'post' en el form por put y delete
+app.use(methodOverride('_method')); //para poder pisar el mothod- 'post' en el form por put y delete
 
 //Template engine
 app.set ("view engine" , "ejs");
