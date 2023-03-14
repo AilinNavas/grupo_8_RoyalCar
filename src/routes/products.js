@@ -9,11 +9,12 @@ router.get("/", productsController.products);
 
 router.get("/productCart", productsController.productCart);
 
-router.get("/productCreate", productsController.productCreate);
+router.get("/create", productsController.formCreate);
 
 router.get("/productEdit", productsController.productEdit);
 
 router.get("/productDetail", productsController.productDetail);
+
 
 
 

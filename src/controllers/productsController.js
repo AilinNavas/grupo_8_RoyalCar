@@ -14,22 +14,26 @@ const controller = {
         const products = getProducts();
         res.render('products', { products });
     },
-    productCart: (req, res) => {
-        res.render(path.join(__dirname, '../views/productCart.ejs'))
+    
+    //(GET) Mostrar formulario de creacion de producto
+    formCreate: (req, res) => {
+        res.render(path.join(__dirname, '../views/formCreate'))
     },
 
-    productCreate: (req, res) => {
-        res.render(path.join(__dirname, '../views/productCreate.ejs'))
+    productCart: (req, res) => {
+        res.render(path.join(__dirname, '../views/productCart'))
     },
+    
+    
 
     productEdit: (req, res) => {
-        res.render(path.join(__dirname, '../views/productEdit.ejs'))
+        res.render(path.join(__dirname, '../views/productEdit'))
     },
-    productDetail: (req, res) => {
-        res.render(path.join(__dirname, '../views/productDetail.ejs'))
-    },
+     productDetail: (req, res) => {
+         res.render(path.join(__dirname, '../views/productDetail'))
+     },
+    
 
-   
 
 };
 

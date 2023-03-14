@@ -44,8 +44,10 @@
   }
   
   .price {
-    font-size: 20px;
+    font-size: 25px;
     color: goldenrod;
+    font-weight: bolder;
+    text-shadow: black;
   }
   
   .description {
@@ -55,13 +57,22 @@
   
   h3,
   .description {
-    color: #666
+    color: #666;
+    font-weight: bold;
+    font-size: 100%;
+   
+  
   }
   
   h4 {
     color: black;
   }
-  
+  .model {
+    color: #666;
+    font-size: 16px;
+
+  }
+   */
   main {
     width: 90%;
     margin: auto
@@ -158,7 +169,7 @@
     --toggle-shadow-offset: 10px;
     --toggle-wider: 3em;
     --color-grey: #cccccc;
-    --color-green: #4296f4;
+    --color-green: #cb0e08;
   }
   
   .slider {
