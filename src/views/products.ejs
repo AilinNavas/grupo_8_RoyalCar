@@ -1,177 +1,184 @@
 <%- include('partials/head' , { title: 'Nuestros productos' , styles: [ 'compra' , 'header' , 'footer' ]}) %>
-<body>
+
+  <body>
 
     <%- include('partials/header') %>
 
-<main>
-<br>
-<section class="product-cart">
-<br>
-<br>
-<br>
-<h3>Nuestros Autos</h3>
-<br>
-<div class="products">
-<article>
-<img src="\images\image.ferrari.jpg.webp" alt="Auto" class="product_img">
-<div class="main-article">
-<i class="fa-solid fa-car"></i></i>
-<p class="price">$1.000.000,00.-</p>
-<h4 class="description">Ferrari X (Descripción)</h4>
-<br>
-<p class="status">Agregar al carrito</p>
-<label class="switch">
-    <input type="checkbox">
-    <span class="slider"></span>
-  </label>
+      <main>
+        <br>
+        <section class="product-cart">
+          <br>
+          <br>
+          <br>
+          <h3>Nuestros Autos</h3>
+          <br>
+          <div class="products">
+            
+            <% products.forEach((product) => { %>
+            <article>
+              <a href="/products/detail/<%= product.id %>"><img src="\images\<%= product.Imagen %>" alt="Auto" class="product_img"></a>
+             
+              <div class="main-article">
+                <i class="fa-solid fa-car"></i></i>
+                <p class="price"><%= product.Precio %></p>
+                <h4 class="description"><%= product.Marca %> </h4>
+              
+                <br>
+                <p class="status">Agregar al carrito</p>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
 
-</div>
-</article>
-<article>
-<img src="\images\image.lambo.jpg.jpg" alt="Auto" class="product_img">
-<div class="main-article">
-<i class="fa-solid fa-car"></i>
-<p class="price">$1.500.000,00.-</p>
-<h4 class="description">Lambo X (Descripción)</h4>
-<br>
-<p class="status">Agregar al carrito</p>
-<label class="switch">
-    <input type="checkbox">
-    <span class="slider"></span>
-  </label>
-</div>
-</article>
-<article>
-<img src="\images\image.mercedes.jpg.jpg" alt="Auto" class="product_img">
-<div class="main-article">
-<i class="fa-solid fa-car"></i>
-<p class="price">$2.000.000,00.-</p>
-<h4 class="description">Mercedes X (Descripción)</h4>
-<br>
-<p class="status">Agregar al carrito</p>
-<label class="switch">
-    <input type="checkbox">
-    <span class="slider"></span>
-  </label>
-</div>
-</article>
-<article>
-<img src="\images\image.tesla.jpg.jpeg" alt="Auto" class="product_img">
-<div class="main-article">
-<i class="fa-solid fa-car"></i>
-<p class="price">$1.850.000,00.-</p>
-<h4 class="description">Tesla X (Descripción)</h4>
-<br>
-<p class="status">Agregar al carrito</p>
-<label class="switch">
-    <input type="checkbox">
-    <span class="slider"></span>
-  </label>
+              </div>
+            </article>
+            <% }) %>
+          </div>
+            <!-- <article>
+              <img src="\images\image.lambo.jpg.jpg" alt="Auto" class="product_img">
+              <div class="main-article">
+                <i class="fa-solid fa-car"></i>
+                <p class="price">$1.500.000,00.-</p>
+                <h4 class="description">Lambo X (Descripción)</h4>
+                <br>
+                <p class="status">Agregar al carrito</p>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </article>
+            <article>
+              <img src="\images\image.mercedes.jpg.jpg" alt="Auto" class="product_img">
+              <div class="main-article">
+                <i class="fa-solid fa-car"></i>
+                <p class="price">$2.000.000,00.-</p>
+                <h4 class="description">Mercedes X (Descripción)</h4>
+                <br>
+                <p class="status">Agregar al carrito</p>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </article>
+            <article>
+              <img src="\images\image.tesla.jpg" alt="Auto" class="product_img">
+              <div class="main-article">
+                <i class="fa-solid fa-car"></i>
+                <p class="price">$1.850.000,00.-</p>
+                <h4 class="description">Tesla X (Descripción)</h4>
+                <br>
+                <p class="status">Agregar al carrito</p>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
 
-</div>
+              </div>
 
-</article>
-<article>
-<img src="\images\image.teslaRoad.jpg.jpg" alt="Auto" class="product_img">
-<div class="main-article">
-<i class="fa-solid fa-car"></i>
-<p class="price">$3.900.000,00.-</p>
-<h4 class="description">Tesla Road (Descripción)</h4>
-<br>
-<p class="status">Agregar al carrito</p>
-<label class="switch">
-    <input type="checkbox">
-    <span class="slider"></span>
-  </label>
+            </article>
+            <article>
+              <img src="\images\image.tesla.jpg" alt="Auto" class="product_img">
+              <div class="main-article">
+                <i class="fa-solid fa-car"></i>
+                <p class="price">$3.900.000,00.-</p>
+                <h4 class="description">Tesla Road (Descripción)</h4>
+                <br>
+                <p class="status">Agregar al carrito</p>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
 
-</div>
-
-
-
-
-</article>
-<article>
-<img src="\images\image.porshe911.jpg" alt="Auto" class="product_img">
-<div class="main-article">
-<i class="fa-solid fa-car"></i>
-<p class="price">$2.000.000,00.-</p>
-<h4 class="description">Porshe 911 (Descripción)</h4>
-<br>
-<p class="status">Agregar al carrito</p>
-<label class="switch">
-    <input type="checkbox">
-    <span class="slider"></span>
-  </label>
-
-</div>
-
-</article>
-<article>
-<img src="\images\image.ferrariSpider.jpg" alt="Auto" class="product_img">
-<div class="main-article">
-<i class="fa-solid fa-car"></i>
-<p class="price">$2.950.000,00.-</p>
-<h4 class="description">Ferrari Spider X (Descripción)</h4>
-<br>
-<p class="status">Agregar al carrito</p>
-<label class="switch">
-    <input type="checkbox">
-    <span class="slider"></span>
-  </label>
-
-</div>
-
-</article>
-<article>
-<img src="\images\image.astonDBS.jpg" alt="Auto" class="product_img">
-<div class="main-article">
-<i class="fa-solid fa-car"></i>
-<p class="price">$2.750.000,00.-</p>
-<h4 class="description">Aston Martin DBS (Descripción)</h4>
-<br>
-<p class="status">Agregar al carrito</p>
-<label class="switch">
-    <input type="checkbox">
-    <span class="slider"></span>
-  </label>
-
-</div>
+              </div>
 
 
 
 
+            </article>
+            <article>
+              <img src="\images\image.porshe911.jpg" alt="Auto" class="product_img">
+              <div class="main-article">
+                <i class="fa-solid fa-car"></i>
+                <p class="price">$2.000.000,00.-</p>
+                <h4 class="description">Porshe 911 (Descripción)</h4>
+                <br>
+                <p class="status">Agregar al carrito</p>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
 
+              </div>
 
+            </article>
+            <article>
+              <img src="\images\image.ferrariSpider.jpg" alt="Auto" class="product_img">
+              <div class="main-article">
+                <i class="fa-solid fa-car"></i>
+                <p class="price">$2.950.000,00.-</p>
+                <h4 class="description">Ferrari Spider X (Descripción)</h4>
+                <br>
+                <p class="status">Agregar al carrito</p>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
 
+              </div>
 
+            </article>
+            <article>
+              <img src="\images\image.astonDBS.jpg" alt="Auto" class="product_img">
+              <div class="main-article">
+                <i class="fa-solid fa-car"></i>
+                <p class="price">$2.750.000,00.-</p>
+                <h4 class="description">Aston Martin DBS (Descripción)</h4>
+                <br>
+                <p class="status">Agregar al carrito</p>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
 
-
-
-</article>
-</div>
-</section>
-<br>
-
-  <button>
-    <span class="button_top"><a href="/products/productCart">¡Ir al Carrito!
-  </a></span>
-  </button>
-
-
-  
+              </div>
 
 
 
 
 
-</main>
-</body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<%- include('partials/footer') %>
 
-</html>
+
+
+
+
+
+            </article> -->
+          </div>
+        </section>
+        <br>
+
+        <button>
+          <span class="button_top"><a href="/products/productCart">¡Ir al Carrito!
+            </a></span>
+        </button>
+
+
+
+
+
+
+
+
+      </main>
+  </body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <%- include('partials/footer') %>
+
+    </html>

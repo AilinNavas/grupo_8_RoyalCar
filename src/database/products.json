@@ -5,20 +5,11 @@
         "Modelo ": "XC90",
         "Año": 2010,
         "Potencia": 1191,
-        "Precio": "$178.39",
+        "Precio": "$178.59",
         "Color": "Blue",
-        "Imagen": [
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000"
-        ]
+        "Imagen": "image.tesla.jpg"
+         
+        
     },
     {
         "id": 2,
@@ -28,18 +19,7 @@
         "Potencia": 1413,
         "Precio": "$910.78",
         "Color": "Orange",
-        "Imagen": [
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff"
-        ]
+        "Imagen": "lambo.jpg"
     },
     {
         "id": 3,
@@ -49,18 +29,7 @@
         "Potencia": 1610,
         "Precio": "$752.51",
         "Color": "Purple",
-        "Imagen": [
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff"
-        ]
+        "Imagen": "bugatti.jpg"
     },
     {
         "id": 4,
@@ -70,18 +39,7 @@
         "Potencia": 1325,
         "Precio": "$361.70",
         "Color": "Orange",
-        "Imagen": [
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff"
-        ]
+        "Imagen": "bugatti.jpg"
     },
     {
         "id": 5,
@@ -91,18 +49,7 @@
         "Potencia": 1715,
         "Precio": "$222.35",
         "Color": "Purple",
-        "Imagen": [
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff"
-        ]
+        "Imagen": "lambo.jpg"
     },
     {
         "id": 6,
@@ -112,18 +59,7 @@
         "Potencia": 1922,
         "Precio": "$581.32",
         "Color": "Turquoise",
-        "Imagen": [
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff"
-        ]
+        "Imagen": "bugatti.jpg"
     },
     {
         "id": 7,
@@ -133,18 +69,7 @@
         "Potencia": 1143,
         "Precio": "$707.97",
         "Color": "Orange",
-        "Imagen": [
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000"
-        ]
+        "Imagen": "lambo.jpg"
     },
     {
         "id": 8,
@@ -154,18 +79,7 @@
         "Potencia": 1243,
         "Precio": "$778.35",
         "Color": "Turquoise",
-        "Imagen": [
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff"
-        ]
+        "Imagen": "bugatti.jpg"
     },
     {
         "id": 9,
@@ -175,18 +89,8 @@
         "Potencia": 1366,
         "Precio": "$526.82",
         "Color": "Crimson",
-        "Imagen": [
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff"
-        ]
+        "Imagen": "bugatti.jpg"
+        
     },
     {
         "id": 10,
@@ -196,17 +100,29 @@
         "Potencia": 1919,
         "Precio": "$174.06",
         "Color": "Violet",
-        "Imagen": [
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/5fa2dd/ffffff",
-            "http://dummyimage.com/250x250.png/ff4444/ffffff",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/dddddd/000000",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff",
-            "http://dummyimage.com/250x250.png/cc0000/ffffff"
-        ]
+        "Imagen": "lambo.jpg"
+        
+    },
+    {
+        "id": 11,
+        "Marca": "Chevrolet",
+        "Modelo ": "Express 2500",
+        "Año": 2003,
+        "Potencia": 1243,
+        "Precio": "$778.35",
+        "Color": "Turquoise",
+        "Imagen": "bugatti.jpg"
+    },
+    {
+        "id": 12,
+        "Marca": "Audi",
+        "Modelo ": "RS4",
+        "Año": 2007,
+        "Potencia": 1366,
+        "Precio": "$526.82",
+        "Color": "Crimson",
+        "Imagen": "bugatti.jpg"
+        
     }
+   
 ]
