@@ -38,6 +38,7 @@ Podemos mejorar la frecuencia de las reuniones, y la realizacion de tareas duran
 
 *¿Que vamos a empezar a hacer?
 Estimar mejor el tiempo/esfuerzo que lleva la realizacion de cada tarea.
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Principales conclusiones de la retro del Sprint N°4:
 
