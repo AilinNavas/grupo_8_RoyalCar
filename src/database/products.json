@@ -2,7 +2,7 @@
     {
         "id": 1,
         "Marca": "Volvo",
-        "Modelo ": "XC90",
+        "Modelo": "XC90",
         "Año": 2010,
         "Potencia": 1191,
         "Precio": "$178.59",
@@ -14,7 +14,7 @@
     {
         "id": 2,
         "Marca": "Toyota",
-        "Modelo ": "Tercel",
+        "Modelo": "Tercel",
         "Año": 1995,
         "Potencia": 1413,
         "Precio": "$910.78",
@@ -24,7 +24,7 @@
     {
         "id": 3,
         "Marca": "Pontiac",
-        "Modelo ": "Grand Prix",
+        "Modelo": "Grand Prix",
         "Año": 1972,
         "Potencia": 1610,
         "Precio": "$752.51",
@@ -34,7 +34,7 @@
     {
         "id": 4,
         "Marca": "Ford",
-        "Modelo ": "Galaxie",
+        "Modelo": "Galaxie",
         "Año": 1964,
         "Potencia": 1325,
         "Precio": "$361.70",
@@ -44,7 +44,7 @@
     {
         "id": 5,
         "Marca": "Saturn",
-        "Modelo ": "Ion",
+        "Modelo": "Ion",
         "Año": 2004,
         "Potencia": 1715,
         "Precio": "$222.35",
@@ -54,7 +54,7 @@
     {
         "id": 6,
         "Marca": "Mercury",
-        "Modelo ": "Villager",
+        "Modelo": "Villager",
         "Año": 1996,
         "Potencia": 1922,
         "Precio": "$581.32",
@@ -64,7 +64,7 @@
     {
         "id": 7,
         "Marca": "Chevrolet",
-        "Modelo ": "Impala",
+        "Modelo": "Impala",
         "Año": 2005,
         "Potencia": 1143,
         "Precio": "$707.97",
@@ -74,7 +74,7 @@
     {
         "id": 8,
         "Marca": "Chevrolet",
-        "Modelo ": "Express 2500",
+        "Modelo": "Express 2500",
         "Año": 2003,
         "Potencia": 1243,
         "Precio": "$778.35",
@@ -84,7 +84,7 @@
     {
         "id": 9,
         "Marca": "Audi",
-        "Modelo ": "RS4",
+        "Modelo": "RS4",
         "Año": 2007,
         "Potencia": 1366,
         "Precio": "$526.82",
@@ -95,7 +95,7 @@
     {
         "id": 10,
         "Marca": "Mitsubishi",
-        "Modelo ": "Raider",
+        "Modelo": "Raider",
         "Año": 2006,
         "Potencia": 1919,
         "Precio": "$174.06",
@@ -106,7 +106,7 @@
     {
         "id": 11,
         "Marca": "Chevrolet",
-        "Modelo ": "Express 2500",
+        "Modelo": "Express 2500",
         "Año": 2003,
         "Potencia": 1243,
         "Precio": "$778.35",
@@ -116,7 +116,7 @@
     {
         "id": 12,
         "Marca": "Audi",
-        "Modelo ": "RS4",
+        "Modelo": "RS4",
         "Año": 2007,
         "Potencia": 1366,
         "Precio": "$526.82",

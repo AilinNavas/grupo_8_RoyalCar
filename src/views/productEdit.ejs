@@ -1,115 +1,117 @@
- <%- include('partials/head' , { title: 'Editar producto' , styles: [ 'productCreate' , 'header' , 'footer' ]}) %>
-    
-      <body>
-    
-        <%- include('partials/header') %>
+<%- include('partials/head' , { title: 'Editar producto' , styles: [ 'productCreate' , 'header' , 'footer' ]}) %>
+
+  <body>
+
+    <%- include('partials/header') %>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <div class="description-box">
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br> 
-         
-          <div class="description-box">
-            <br>
-            <br>
-            <p class="title">Editar Informacion Producto</p>
-            <form action="/productCreate " method="POST" enctype=" ">
-              <div class="data-box">
-                <input required="" name="marca" type="text">
-                <label>Marca</label>
-              </div>
-              <div class="data-box">
-                <input required="" name="modelo" type="text">
-                <label>Modelo</label>
-              </div>
-              <div class="data-box">
-                <input required="" name="" type="number">
-                <label>Año</label>
-              </div>
-            
-              <div class="data-box">
-                <input required="" name="" type="number">
-                <label>Potencia(hp)</label>
-              </div>
-              <div class="data-box">
-                <input required="" name="precio" type="number">
-                <label>Precio</label>
-              </div>
-              <div class="data-box">
-                <input required="" name="color" type="text">
-                <label>Color</label>
-              </div>
-              <p><i class="fa-regular fa-image"></i> Imagen principal</p>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <p><i class="fa-regular fa-image"></i> Imagenes secundarias</p>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-    
-              <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <button type="submit">Enviar</button>
-              </a>
-             
-            </form>
-    
+        <p class="title">Editar Informacion Producto</p>
+        <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+          <div class="data-box">
+            <input required="" id="marca" name="marca" type="text" value="<%= productToEdit.Marca %>">
+            <label>Marca</label>
           </div>
-          <%- include('partials/footer') %>
-    
-      </body>
-    
-      </html>
+          <div class="data-box">
+            <input required="" id="modelo" name="modelo" type="text" value="<%= productToEdit.Modelo %>">
+            <label>Modelo</label>
+          </div>
+          <div class="data-box">
+            <input required="" id="año" name="año" type="number" value="<%= productToEdit.Año %>">
+            <label>Año</label>
+          </div>
+
+          <div class="data-box">
+            <input required="" id="potencia" name="potencia" type="number" value="<%= productToEdit.Potencia %>">
+            <label>Potencia(hp)</label>
+          </div>
+          <div class="data-box">
+            <input required="" id="precio" name="precio" type="" value="<%= productToEdit.Precio %>">
+            <label>Precio</label>
+          </div>
+          <div class="data-box">
+            <input required="" id="color" name="color" type="text" value="<%= productToEdit.Color %>">
+            <label>Color</label>
+          </div>
+          <p><i class="fa-regular fa-image"></i> Imagen principal</p>
+          <div class="data-box">
+            <input type="file" id="myfile" name="myfile" class="inputfile" value="<%= productToEdit.Imagen %>">
+            <label></label>
+          </div>
+          <p><i class="fa-regular fa-image"></i> Imagenes secundarias</p>
+          <div class="data-box">
+            <input type="file" id="myfile" name="myfile" class="inputfile">
+            <label></label>
+          </div>
+          <div class="data-box">
+            <input type="file" id="myfile" name="myfile" class="inputfile">
+            <label></label>
+          </div>
+          <div class="data-box">
+            <input type="file" id="myfile" name="myfile" class="inputfile">
+            <label></label>
+          </div>
+          <div class="data-box">
+            <input type="file" id="myfile" name="myfile" class="inputfile">
+            <label></label>
+          </div>
+          <div class="data-box">
+            <input type="file" id="myfile" name="myfile" class="inputfile">
+            <label></label>
+          </div>
+          <div class="data-box">
+            <input type="file" id="myfile" name="myfile" class="inputfile">
+            <label></label>
+          </div>
+          <div class="data-box">
+            <input type="file" id="myfile" name="myfile" class="inputfile">
+            <label></label>
+          </div>
+          <div class="data-box">
+            <input type="file" id="myfile" name="myfile" class="inputfile">
+            <label></label>
+          </div>
+          <div class="data-box">
+            <input type="file" id="myfile" name="myfile" class="inputfile">
+            <label></label>
+          </div>
+
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <button type="submit">Guardar Cambios</button>
+          </a>
+
+        </form>
+
+      </div>
+      <%- include('partials/footer') %>
+
+  </body>
+
+  </html>
