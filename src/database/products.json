@@ -1,127 +1,126 @@
 [
     {
         "id": 1,
-        "Marca": "Volvo",
-        "Modelo": "XC90",
-        "Año": 2010,
+        "Marca": "Ferrari Monza",
+        "Modelo": "Sp2",
+        "Año": 2021,
         "Potencia": 1191,
         "Precio": "$178.59",
         "Color": "Blue",
-        "Imagen": "image.tesla.jpg"
+        "Imagen": "ferrari-monza.jpg"
          
-        
     },
     {
         "id": 2,
-        "Marca": "Toyota",
-        "Modelo": "Tercel",
-        "Año": 1995,
+        "Marca": "Lamborghini Veneno",
+        "Modelo": "Roadster 1",
+        "Año": 2015,
         "Potencia": 1413,
         "Precio": "$910.78",
         "Color": "Orange",
-        "Imagen": "lambo.jpg"
+        "Imagen": "labo-veneno3.jpg"
     },
     {
         "id": 3,
-        "Marca": "Pontiac",
-        "Modelo": "Grand Prix",
-        "Año": 1972,
+        "Marca": "Lamborghini ",
+        "Modelo": "Sian",
+        "Año": 2022,
         "Potencia": 1610,
         "Precio": "$752.51",
         "Color": "Purple",
-        "Imagen": "bugatti.jpg"
+        "Imagen": "labo-sian6.jpg"
     },
     {
         "id": 4,
-        "Marca": "Ford",
-        "Modelo": "Galaxie",
-        "Año": 1964,
+        "Marca": "Mclaren",
+        "Modelo": "765LT spider ",
+        "Año":  2022,
         "Potencia": 1325,
         "Precio": "$361.70",
         "Color": "Orange",
-        "Imagen": "bugatti.jpg"
+        "Imagen": "mclaren4.jpg"
     },
     {
         "id": 5,
-        "Marca": "Saturn",
-        "Modelo": "Ion",
-        "Año": 2004,
+        "Marca": "Lamborghini",
+        "Modelo": "Huracan Evo Spyder",
+        "Año": 2023,
         "Potencia": 1715,
         "Precio": "$222.35",
         "Color": "Purple",
-        "Imagen": "lambo.jpg"
+        "Imagen": "huracan.jpg"
     },
     {
         "id": 6,
-        "Marca": "Mercury",
-        "Modelo": "Villager",
-        "Año": 1996,
+        "Marca": "Rolls Royce",
+        "Modelo": "Dawn Black Badge",
+        "Año": 2019,
         "Potencia": 1922,
         "Precio": "$581.32",
         "Color": "Turquoise",
-        "Imagen": "bugatti.jpg"
+        "Imagen": "roy.jpg"
     },
     {
         "id": 7,
-        "Marca": "Chevrolet",
-        "Modelo": "Impala",
-        "Año": 2005,
+        "Marca": "BMW",
+        "Modelo": "M8 Competition",
+        "Año": 2020,
         "Potencia": 1143,
         "Precio": "$707.97",
         "Color": "Orange",
-        "Imagen": "lambo.jpg"
+        "Imagen": "bmw.jpg"
     },
     {
         "id": 8,
-        "Marca": "Chevrolet",
-        "Modelo": "Express 2500",
-        "Año": 2003,
+        "Marca": "Porsche",
+        "Modelo": "Taycan 4S cross ",
+        "Año": 2023,
         "Potencia": 1243,
         "Precio": "$778.35",
         "Color": "Turquoise",
-        "Imagen": "bugatti.jpg"
+        "Imagen": "porch.jpg"
     },
     {
         "id": 9,
-        "Marca": "Audi",
-        "Modelo": "RS4",
-        "Año": 2007,
+        "Marca": "Bugatti",
+        "Modelo": "Chiron",
+        "Año": 2018,
         "Potencia": 1366,
         "Precio": "$526.82",
         "Color": "Crimson",
-        "Imagen": "bugatti.jpg"
+        "Imagen": "chiron.jpg"
         
     },
     {
         "id": 10,
-        "Marca": "Mitsubishi",
-        "Modelo": "Raider",
-        "Año": 2006,
+        "Marca": "Ferrari ",
+        "Modelo": "488 pista spider",
+        "Año": 2022,
         "Potencia": 1919,
         "Precio": "$174.06",
         "Color": "Violet",
-        "Imagen": "lambo.jpg"
+        "Imagen": "spider.jpg"
         
     },
     {
         "id": 11,
-        "Marca": "Chevrolet",
-        "Modelo": "Express 2500",
-        "Año": 2003,
+        "Marca": "Porsche",
+        "Modelo": "918 Spyder",
+        "Año": 2015,
         "Potencia": 1243,
         "Precio": "$778.35",
         "Color": "Turquoise",
-        "Imagen": "bugatti.jpg"
+        "Imagen": "pors.jpg"
     },
     {
         "id": 12,
-        "Marca": "Audi",
-        "Modelo": "RS4",
-        "Año": 2007,
+        "Marca": "Mclaren",
+        "Modelo": "P1",
+        "Año": 2014,
         "Potencia": 1366,
         "Precio": "$526.82",
         "Color": "Crimson",
-        "Imagen": "bugatti.jpg"
+        "Imagen": "p14.jpg"
         
     }
    

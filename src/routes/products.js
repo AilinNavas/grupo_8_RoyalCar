@@ -20,7 +20,7 @@ router.get("/", productsController.products);
 
 router.get("/productCart", productsController.productCart);
 
-router.get("/productCreate", productsController.productCreate);
+router.get("/create", productsController.formCreate);
 
 router.get("/edit/:id", productsController.edit);
 router.put("/:id", upload.single("image"),productsController.update);
@@ -28,6 +28,7 @@ router.put("/:id", upload.single("image"),productsController.update);
 router.delete('/:id', productsController.destroy);
 
 router.get("/productDetail", productsController.productDetail);
+
 
 
 

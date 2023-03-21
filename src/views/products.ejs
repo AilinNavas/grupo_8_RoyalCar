@@ -16,12 +16,13 @@
             
             <% products.forEach((product) => { %>
             <article>
-              <a href="/products/detail/<%= product.id %>"><img src="\images\<%= product.Imagen %>" alt="Auto" class="product_img"></a>
+              <a href="/products/detail/<%= product.id %>"><img src="\images\products\<%= product.Imagen %>" alt="Auto" class="product_img"></a>
              
               <div class="main-article">
                 <i class="fa-solid fa-car"></i></i>
                 <p class="price"><%= product.Precio %></p>
                 <h4 class="description"><%= product.Marca %> </h4>
+                <p class="model"><%= product.Modelo %> </p>
               
                 <br>
                 <p class="status">Agregar al carrito</p>
