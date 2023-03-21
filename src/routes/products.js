@@ -21,16 +21,19 @@ const productsController = require('../controllers/productsController');
 
 router.get("/", productsController.products); 
 
+
 router.get("/create", productsController.formCreate);
 router.post('/', upload.single('imgFile'), productsController.store);
 
+router.get("/:id", productsController.productDetail);
 router.get("/productCart", productsController.productCart);
 
-router.get("/create", productsController.formCreate);
+router.get("/:id/edit", productsController.edit);
+router.put("/:id", upload.single("image"),productsController.update);
 
-router.get("/productEdit", productsController.productEdit);
+router.delete('/:id', productsController.destroy);
 
-router.get("/detail/:id", productsController.productDetail);
+
 
 
 

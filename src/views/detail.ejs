@@ -10,19 +10,19 @@
                     <br>
                     <br>
                     <br>
-                    <h3>Nuestros Autos</h3>
+                    <h3><%= product.model %></h3>
                     <br>
                     <div class="products">
 
 
                         <article>
-                            <a href="/products/detail/<%= product.id %>"><img
+                            <a href="/products/<%= product.id %>/edit"><img
                                     src="\images\products\<%= product.image %>" alt="Auto" class="product_img"></a>
 
                             <div class="main-article">
                                 <i class="fa-solid fa-car"></i></i>
                                 <p class="price">
-                                    <%= product.price %>
+                                    US$ <%= product.price %>
                                 </p>
                                 <h4 class="description">
                                     <%= product.brand %>
@@ -48,7 +48,7 @@
 
                             </div>
 
-                            <a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+                            <a href="/products/<%= product.id %>/edit" class="action-button edit">EDITAR PRODUCTO</a>
                             <form action="/products/<%= product.id %>?_method=DELETE" method="POST"
                                 style="display: inline-flex">
                                 <button class="status" type="submit">ELIMINAR</button>
