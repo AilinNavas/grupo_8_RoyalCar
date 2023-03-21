@@ -1,122 +1,54 @@
+<%- include('partials/head' , { title: 'Crear producto' , styles: [ 'productCreate' ,'header' , 'footer' ]}) %>
+    
+<body>
 
-    <%- include('partials/head' , { title: 'Crear producto' , styles: [ 'productCreate' , 'header' , 'footer' ]}) %>
+  <%- include('partials/header') %>
+  <br>
+  <br>
+  
+    <div class="description-box">
+      <br>
+      <br>
+      <p class="title">Informacion Nuevo Producto</p>
+      <form action="/products" method="POST" enctype="multipart/form-data">
+        <div class="data-box">
+          <input required="" name="brand" type="text">
+          <label>Marca</label>
+        </div>
+        <div class="data-box">
+          <input required="" name="model" type="text">
+          <label>Modelo</label>
+        </div>
+        <div class="data-box">
+          <input required="" name="year" type="number">
+          <label>Año</label>
+        </div>
+      
+        <div class="data-box">
+          <input required="" name="power" type="number">
+          <label>Potencia(hp)</label>
+        </div>
+        <div class="data-box">
+          <input required="" name="price" type="number">
+          <label>Precio</label>
+        </div>
+        <div class="data-box">
+          <input required="" name="color" type="text">
+          <label>Color</label>
+        </div>
+         <p><i class="fa-regular fa-image"></i> Imagen</p>
+        <div class="data-box">
+          <input type="file" id="myfile" name="imgFile" class="inputfile" >
+          <label></label>
+        </div> 
+      
+       <input type="submit" class="submitBtn" value="Enviar">
+      </form>
+
+    </div>
+    <%- include('partials/footer') %>
+
+</body>
+
+</html>
     
-      <body>
-    
-        <%- include('partials/header') %>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br> 
-         
-          <div class="description-box">
-            <br>
-            <br>
-            <p class="title">Informacion Nuevo Producto</p>
-            <form action="/create " method="POST" enctype="multipart/form-data">
-              <div class="data-box">
-                <input required="" name="marca" type="text">
-                <label>Marca</label>
-              </div>
-              <div class="data-box">
-                <input required="" name="modelo" type="text">
-                <label>Modelo</label>
-              </div>
-              <div class="data-box">
-                <input required="" name="" type="number">
-                <label>Año</label>
-              </div>
-            
-              <div class="data-box">
-                <input required="" name="" type="number">
-                <label>Potencia(hp)</label>
-              </div>
-              <div class="data-box">
-                <input required="" name="precio" type="number">
-                <label>Precio</label>
-              </div>
-              <div class="data-box">
-                <input required="" name="color" type="text">
-                <label>Color</label>
-              </div>
-              <p><i class="fa-regular fa-image"></i> Imagen principal</p>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <p><i class="fa-regular fa-image"></i> Imagenes secundarias</p>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-              <div class="data-box">
-                <input type="file" id="myfile" name="myfile" class="inputfile">
-                <label></label>
-              </div>
-    
-              <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <button type="submit">Enviar</button>
-              </a>
-            
-            </form>
-    
-          </div>
-          <%- include('partials/footer') %>
-    
-      </body>
-    
-      </html>

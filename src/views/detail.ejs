@@ -1,0 +1,64 @@
+<%- include('partials/head' , { title: 'Nuestros productos' , styles: [ 'compra' , 'header' , 'footer' ]}) %>
+
+    <body>
+
+        <%- include('partials/header') %>
+
+            <main>
+                <br>
+                <section class="product-cart">
+                    <br>
+                    <br>
+                    <br>
+                    <h3>Nuestros Autos</h3>
+                    <br>
+                    <div class="products">
+
+
+                        <article>
+                            <a href="/products/detail/<%= product.id %>"><img
+                                    src="\images\products\<%= product.image %>" alt="Auto" class="product_img"></a>
+
+                            <div class="main-article">
+                                <i class="fa-solid fa-car"></i></i>
+                                <p class="price">
+                                    <%= product.price %>
+                                </p>
+                                <h4 class="description">
+                                    <%= product.brand %>
+                                </h4>
+                                <p class="model">
+                                    <%= product.model %>
+                                        <%= product.year%>
+
+                                </p>
+                                <p class="model">
+                                    <%= product.power %> HP
+
+                                </p>
+                                <p class="model">
+                                    <%= product.color %>
+                                </p>
+
+                                <p class="status">Agregar al carrito</p>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+
+                            </div>
+
+                            <a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+                            <form action="/products/<%= product.id %>?_method=DELETE" method="POST"
+                                style="display: inline-flex">
+                                <button class="status" type="submit">ELIMINAR</button>
+                            </form>
+                        </article>
+
+                    </div>
+            </main>
+            <%- include('partials/footer') %>
+
+    </body>
+
+    </html>
