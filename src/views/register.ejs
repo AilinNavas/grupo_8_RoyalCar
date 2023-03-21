@@ -8,24 +8,32 @@
 
       <div class="inputContainer">
         <input type="text" class="input" placeholder="a">
-        <label for="" class="label">Email</label>
+        <label for="" name="name" class="label">Nombre</label>
       </div>
+    
+      <div class="inputContainer">
+        <input type="text" class="input" placeholder="a">
+        <label for="" name="last_name" class="label">Apellido</label>
+      </div>
+      <div class="inputContainer">
+        <input type="email" class="input" placeholder="ejemplo@gmil.com">
+        <label for="" name="email" class="label">Email</label>
+      </div>
+      <div class="inputContainer">
+        <input type="date" class="input" placeholder="a">
+        <label for="" name="date_of_birth" class="label">Fecha de nacimiento</label>
+      </div>
+      <select class="inputContainer" name="category" >
+     <option value="">Categoria</option>  
+       <option class="input" value="Vendedor">Usuario</option>
+       <option class="input" value="Vendedor">Administrador</option>
       
-
+      </select>
       <div class="inputContainer">
-        <input type="text" class="input" placeholder="a">
-        <label for="" class="label">Username</label>
+        <input type="password" name="password" class="input" placeholder="a">
+        <label for="" class="label">Contraseña</label>
       </div>
-
-      <div class="inputContainer">
-        <input type="text" class="input" placeholder="a">
-        <label for="" class="label">Password</label>
-      </div>
-
-      <div class="inputContainer">
-        <input type="text" class="input" placeholder="a">
-        <label for="" class="label">Confirm Password</label>
-      </div>
+    
       <p>Al registrarte, aceptas nuestras Condiciones de uso y Politicas de Privacidad</p>
       <p>¿Ya tienes una cuenta? <a href="/login" style="color:red;">Inicia Sesion</a></p>
       <input type="submit" class="submitBtn" value="Continuar">
