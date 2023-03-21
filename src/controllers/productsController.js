@@ -56,7 +56,7 @@ const controller = {
 		const productIndex = products.findIndex(element => element.id == req.params.id);
 		products.splice(productIndex, 1);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-		// End
+		
 		res.redirect('/products');
 	},
 
