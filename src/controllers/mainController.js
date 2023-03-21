@@ -14,6 +14,9 @@ const controller = {
     login: (req, res) => {
         res.render(path.join(__dirname,'../views/login.ejs'))
     },
+    contact :  (req, res) => {
+        res.render(path.join(__dirname,'../views/contact.ejs'))
+    },
     
 
 

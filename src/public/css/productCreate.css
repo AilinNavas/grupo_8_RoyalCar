@@ -14,7 +14,7 @@ body {
   right: -50%;
   width: 80vw;
   padding: 40px;
-  margin-top: 50vh;
+  margin-top: 140%;
   transform: translate(-50%, -55%);
   background: rgba(0,0,0,.9);
   box-sizing: border-box;
@@ -66,130 +66,43 @@ body {
   color: #fff;
   font-size: 12px;
 }
-
-.description-box form a {
-  position: relative;
-  display: block;
-  width: 50%;
-  padding: 10px 20px;
-  font-weight: bold;
-  color: #fff;
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: .5s;
-  margin-top: 40px;
-  letter-spacing: 3px
-}
-
-.description-box a:hover {
-  background: #eb2222;
-  color: #272727;
-  border-radius: 5px;
-}
-
-.description-box a span {
-  position: absolute;
-  display: block;
-}
-
-.description-box a span:nth-child(1) {
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #fff);
-  animation: btn-anim1 1.5s linear infinite;
-}
-
-@keyframes btn-anim1 {
-  0% {
-    left: -100%;
-  }
-
-  50%,100% {
-    left: 100%;
-  }
-}
-
-.description-box a span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent, #fff);
-  animation: btn-anim2 1.5s linear infinite;
-  animation-delay: .375s
-}
 button{
   all: unset;
   text-decoration: none;
   outline:none;
   color: #fff;
   }
-
-@keyframes btn-anim2 {
-  0% {
-    top: -100%;
+  .submitBtn {
+    display: block;
+    margin-left: auto;
+    padding: 10px 30px;
+    width: 20%;
+    height: 10%;
+    border: none;
+    background-color: black;
+    color: #cb0e08;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-right : auto
   }
-
-  50%,100% {
-    top: 100%;
+  
+  .submitBtn:hover {
+    transform: translateY(-2px)
   }
-}
-
-.description-box a span:nth-child(3) {
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, #fff);
-  animation: btn-anim3 1.5s linear infinite;
-  animation-delay: .75s
-}
-
-@keyframes btn-anim3 {
-  0% {
-    right: -100%;
-  }
-
-  50%,100% {
-    right: 100%;
-  }
-}
-
-.description-box a span:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg, transparent, #fff);
-  animation: btn-anim4 1.5s linear infinite;
-  animation-delay: 1.125s
-}
-
-@keyframes btn-anim4 {
-  0% {
-    bottom: -100%;
-  }
-
-  50%,100% {
-    bottom: 100%;
-  }
-}
 
 .description-box p:last-child {
   color: #aaa;
   font-size: 14px;
 }
 
-.description-box a.a2 {
+.description-box .buttoms.a2 {
   color: #fff;
   text-decoration: none;
 }
 
-.description-box a.a2:hover {
+.description-box .buttoms.a2:hover {
   background: transparent;
   color: #aaa;
   border-radius: 5px;
@@ -203,6 +116,11 @@ button{
   font-size: 24px;
   align-items: center;
   color:#cb0e08 ;
+}
+@media (min-width : 768px) {
+.description-box {
+  margin-top: 80%;
+}
 }
 
 @media (min-width : 1024px){
@@ -218,7 +136,7 @@ button{
     p {
       font-size: 26px;
     }
-    .description-box form a {
+    .description-box form .buttoms {
       width: 20%;
       height: 30%;
     }

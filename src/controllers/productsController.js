@@ -21,18 +21,17 @@ const controller = {
     },
 
     store: (req, res) => {
-		
-        const images = req.files.map(img => img.filename)
+        const image = req.file ? req.file.filename : 'default-image.png';
 		const products = getProducts();
 		const newProduct = {
 			id: products[products.length - 1].id + 1,
-			Marca: req.body.brand,
-			Modelo: req.body.model,
-			Año: req.body.year,
-			Potencia: req.body.power,
-			Precio: req.body.price,
-            Color: req.body.color,
-			images
+			marca: req.body.brand,
+			modelo: req.body.model,
+			año: req.body.year,
+			potencia: req.body.power,
+			precio: req.body.price,
+            color: req.body.color, 
+			image
 		};
 		products.push(newProduct);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));

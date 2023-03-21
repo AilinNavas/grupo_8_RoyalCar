@@ -1,127 +1,123 @@
 [
-    {
-        "id": 1,
-        "Marca": "Ferrari Monza",
-        "Modelo": "Sp2",
-        "Año": 2021,
-        "Potencia": 1191,
-        "Precio": "$178.59",
-        "Color": "Blue",
-        "Imagen": "ferrari-monza.jpg"
-         
-    },
-    {
-        "id": 2,
-        "Marca": "Lamborghini Veneno",
-        "Modelo": "Roadster 1",
-        "Año": 2015,
-        "Potencia": 1413,
-        "Precio": "$910.78",
-        "Color": "Orange",
-        "Imagen": "labo-veneno3.jpg"
-    },
-    {
-        "id": 3,
-        "Marca": "Lamborghini ",
-        "Modelo": "Sian",
-        "Año": 2022,
-        "Potencia": 1610,
-        "Precio": "$752.51",
-        "Color": "Purple",
-        "Imagen": "labo-sian6.jpg"
-    },
-    {
-        "id": 4,
-        "Marca": "Mclaren",
-        "Modelo": "765LT spider ",
-        "Año":  2022,
-        "Potencia": 1325,
-        "Precio": "$361.70",
-        "Color": "Orange",
-        "Imagen": "mclaren4.jpg"
-    },
-    {
-        "id": 5,
-        "Marca": "Lamborghini",
-        "Modelo": "Huracan Evo Spyder",
-        "Año": 2023,
-        "Potencia": 1715,
-        "Precio": "$222.35",
-        "Color": "Purple",
-        "Imagen": "huracan.jpg"
-    },
-    {
-        "id": 6,
-        "Marca": "Rolls Royce",
-        "Modelo": "Dawn Black Badge",
-        "Año": 2019,
-        "Potencia": 1922,
-        "Precio": "$581.32",
-        "Color": "Turquoise",
-        "Imagen": "roy.jpg"
-    },
-    {
-        "id": 7,
-        "Marca": "BMW",
-        "Modelo": "M8 Competition",
-        "Año": 2020,
-        "Potencia": 1143,
-        "Precio": "$707.97",
-        "Color": "Orange",
-        "Imagen": "bmw.jpg"
-    },
-    {
-        "id": 8,
-        "Marca": "Porsche",
-        "Modelo": "Taycan 4S cross ",
-        "Año": 2023,
-        "Potencia": 1243,
-        "Precio": "$778.35",
-        "Color": "Turquoise",
-        "Imagen": "porch.jpg"
-    },
-    {
-        "id": 9,
-        "Marca": "Bugatti",
-        "Modelo": "Chiron",
-        "Año": 2018,
-        "Potencia": 1366,
-        "Precio": "$526.82",
-        "Color": "Crimson",
-        "Imagen": "chiron.jpg"
-        
-    },
-    {
-        "id": 10,
-        "Marca": "Ferrari ",
-        "Modelo": "488 pista spider",
-        "Año": 2022,
-        "Potencia": 1919,
-        "Precio": "$174.06",
-        "Color": "Violet",
-        "Imagen": "spider.jpg"
-        
-    },
-    {
-        "id": 11,
-        "Marca": "Porsche",
-        "Modelo": "918 Spyder",
-        "Año": 2015,
-        "Potencia": 1243,
-        "Precio": "$778.35",
-        "Color": "Turquoise",
-        "Imagen": "pors.jpg"
-    },
-    {
-        "id": 12,
-        "Marca": "Mclaren",
-        "Modelo": "P1",
-        "Año": 2014,
-        "Potencia": 1366,
-        "Precio": "$526.82",
-        "Color": "Crimson",
-        "Imagen": "p14.jpg"
-        
-    }
-   
+  {
+    "id": 1,
+    "marca": "Ferrari Monza",
+    "modelo": "Sp2",
+    "año": 2021,
+    "potencia": 1191,
+    "precio": "$178.59",
+    "color": "Blue",
+    "image": "ferrari-monza.jpg"
+  },
+  {
+    "id": 2,
+    "marca": "Lamborghini Veneno",
+    "modelo": "Roadster 1",
+    "año": 2015,
+    "potencia": 1413,
+    "precio": "$910.78",
+    "color": "Orange",
+    "image": "labo-veneno3.jpg"
+  },
+  {
+    "id": 3,
+    "marca": "Lamborghini ",
+    "modelo": "Sian",
+    "año": 2022,
+    "potencia": 1610,
+    "precio": "$752.51",
+    "color": "Purple",
+    "image": "labo-sian6.jpg"
+  },
+  {
+    "id": 4,
+    "marca": "Mclaren",
+    "modelo": "765LT spider ",
+    "año": 2022,
+    "potencia": 1325,
+    "precio": "$361.70",
+    "color": "Orange",
+    "image": "mclaren4.jpg"
+  },
+  {
+    "id": 5,
+    "marca": "Lamborghini",
+    "modelo": "Huracan Evo Spyder",
+    "año": 2023,
+    "potencia": 1715,
+    "precio": "$222.35",
+    "color": "Purple",
+    "image": "huracan.jpg"
+  },
+  {
+    "id": 6,
+    "marca": "Rolls Royce",
+    "modelo": "Dawn Black Badge",
+    "año": 2019,
+    "potencia": 1922,
+    "precio": "$581.32",
+    "color": "Turquoise",
+    "image": "roy.jpg"
+  },
+  {
+    "id": 7,
+    "marca": "BMW",
+    "modelo": "M8 Competition",
+    "año": 2020,
+    "potencia": 1143,
+    "precio": "$707.97",
+    "color": "Orange",
+    "image": "bmw.jpg"
+  },
+  {
+    "id": 8,
+    "marca": "Porsche",
+    "modelo": "Taycan 4S cross ",
+    "año": 2023,
+    "potencia": 1243,
+    "precio": "$778.35",
+    "color": "Turquoise",
+    "image": "porch.jpg"
+  },
+  {
+    "id": 9,
+    "marca": "Bugatti",
+    "modelo": "Chiron",
+    "año": 2018,
+    "potencia": 1366,
+    "precio": "$526.82",
+    "color": "Crimson",
+    "image": "chiron.jpg"
+  },
+  {
+    "id": 10,
+    "marca": "Ferrari ",
+    "modelo": "488 pista spider",
+    "año": 2022,
+    "potencia": 1919,
+    "precio": "$174.06",
+    "color": "Violet",
+    "image": "spider.jpg"
+  },
+  {
+    "id": 11,
+    "marca": "Porsche",
+    "modelo": "918 Spyder",
+    "año": 2015,
+    "potencia": 1243,
+    "precio": "$778.35",
+    "color": "Turquoise",
+    "image": "pors.jpg"
+  },
+  {
+    "id": 12,
+    "marca": "Mclaren",
+    "modelo": "P1",
+    "año": 2014,
+    "potencia": 1366,
+    "precio": "$526.82",
+    "color": "Crimson",
+    "image": "p14.jpg"
+  }
+  
 ]

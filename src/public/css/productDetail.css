@@ -153,6 +153,10 @@
   section {
     margin: 0;
     padding: 0px;
+    position: absolute;
+  }
+  .especificaciones {
+    position: relative;
   }
   .fondo img {
     width: 100%;
