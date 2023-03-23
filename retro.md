@@ -43,10 +43,10 @@ Estimar mejor el tiempo/esfuerzo que lleva la realizacion de cada tarea.
 Principales conclusiones de la retro del Sprint N°4:
 
 *¿Que hicimos bien?
-Dividimos bien las tareas y mantuvimos una buena comunicacion.
+Pudimos adaptar el proyecto a los requerimientos necesarios para dar funcionalidad, y nos esforzamos en reforzar los conocimientos teoricos para poder lograr los cumplir con los entregables.
 
 *¿Que podemos mejorar?
-La comunicacion.
+La comunicacion entre los integrantes del equipo.
 
 *¿Que vamos a empezar a hacer?
 Realizarnos seguimientos entre nosotros para ayudarnos en el cumplimiento de cada tarea.
