@@ -106,23 +106,4 @@
     font-size: 14px;
     font-weight: 600;
   }
-  @media (min-width: 481px){
-    .header{
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-    }
-    .header-left{
-      width: 38%;
-    }
-    a.logo{
-      width: 30%;
-    }
-    .header-right{
-      width: 38%;
-    }
-   
-  }
-  @media (min-width: 761px){
-    
-  }
+  
