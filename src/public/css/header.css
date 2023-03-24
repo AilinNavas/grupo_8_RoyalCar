@@ -8,12 +8,7 @@ body {
 .header {
     overflow: hidden;
     background-color: rgb(0, 0, 0);
-    padding: 0px 30px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 7vh;
     position: fixed;
     z-index: 1;
   }
@@ -52,6 +47,7 @@ body {
     color: white;
     display: flex;
     flex-direction: row;
+    width: 100%;
   }
   
   .telefono {
@@ -67,6 +63,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    width: 50%;
   }
   
   .location {
@@ -74,6 +71,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    width: 50%;
   }
   
   .texto-h2 {
@@ -92,31 +90,23 @@ body {
     font-size: 20px;
     line-height: 25px;
     border-radius: 4px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
   }
   .contenedorlogo {
-    /*border: 2px solid yellow;*/
-    padding-right: 22vw;
-    padding-left: 24vw;
+   width: 100%;
   }
   
   .header_1 {
     width: 100%;
-    display: flex;
+    
   }
   
   .header_2 {
-    position: fixed;
-    top: 7vh;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
+    width: 100%;
     background-color: #000000;
-    height: 52px;
+    
   }
   
   .logo_2 {
@@ -129,23 +119,43 @@ body {
     height: 3.1vw;
   } */
   
+  .navbar {
+    width: 100%;
+   display: flex;
+  }
   .navbar a {
-    padding: 0vh 1.3vw;
+    width: 19%;
+    font-size: 13px;
   }
   
 @media (min-width: 481px){
     .header{
       width: 100%;
       display: flex;
+      flex-direction: column;
+    }
+    .header_1{
+      display: flex;
       justify-content: space-between;
     }
     .header-left{
-      width: 38%;
+      width: 33%;
     }
-    a.logo{
-      width: 30%;
+    .contenedorlogo{
+      width: 38%;
     }
     .header-right{
+      display: flex;
       width: 38%;
+      justify-content: flex-end;
+    }
+    .navbar{
+
+    }
+    .navbar a {
+      width: 20%;
+      font-size: 22px;
     }
   }
+  
+    
