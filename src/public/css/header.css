@@ -1,5 +1,5 @@
 body {
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
     font-family: 'Oswald', sans-serif;
@@ -124,12 +124,28 @@ body {
     height: 100%;
   }
   
-  .logo_2 img {
+  /* .logo_2 img {
     width: 4.5vw;
     height: 3.1vw;
-  }
+  } */
   
   .navbar a {
     padding: 0vh 1.3vw;
   }
   
+@media (min-width: 481px){
+    .header{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .header-left{
+      width: 38%;
+    }
+    a.logo{
+      width: 30%;
+    }
+    .header-right{
+      width: 38%;
+    }
+  }

@@ -3,29 +3,7 @@
   margin: 0;
   padding: 0;
 }
-  .footer{
-    overflow: hidden;
-    background-color: rgb(46, 45, 45);
-    padding: 20px 30px;
-    width : 100%;
-    color: white;
-    font-size: 12px;
-  }
-  .footer-left{
-    color: white;
-    width: 100%;
-    text-align: center;
-  }
-  .footer-right a{
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
-  }
+  
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
   @media screen and (max-width: 500px) {
     .header a {
@@ -143,21 +121,7 @@
     .header-right{
       width: 38%;
     }
-    .footer{
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-    }
-    .footer-left{
-      width: 50%;
-      text-align: left;
-    }
-    .footer-right{
-      width: 50%;
-      display: flex;
-      justify-content: flex-end;
-    }
-
+   
   }
   @media (min-width: 761px){
     
