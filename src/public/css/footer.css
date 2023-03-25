@@ -36,6 +36,8 @@
       width : 100%;
       color: white;
       font-size: 12px;
+      z-index: 2;
+      position: relative;
     }
     .footer-left{
       color: white;
