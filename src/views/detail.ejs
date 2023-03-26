@@ -1,22 +1,20 @@
-<%- include('partials/head' , { title: 'Nuestros productos' , styles: [ 'compra' , 'header' , 'footer' ]}) %>
+<%- include('partials/head' , { title: 'Nuestros productos' , styles: [ 'detail' , 'header' , 'footer' ]}) %>
 
     <body>
 
         <%- include('partials/header') %>
 
             <main>
-                <br>
-                <section class="product-cart">
-                    <br>
-                    <br>
-                    <br>
-                    <h3><%= product.model %></h3>
-                    <br>
-                    <div class="products">
+              
+                <!-- <section class="product-cart"> -->
+                  
+                    <!-- <h3><%= product.model %></h3> -->
+                    
+                    <div class="product-cart">
 
 
-                        <article>
-                            <a href="/products/<%= product.id %>/edit"><img
+                        <article class="product-cart2">
+                            <a href="/products/<%= product.id %>"><img
                                     src="\images\products\<%= product.image %>" alt="Auto" class="product_img"></a>
 
                             <div class="main-article">
@@ -40,25 +38,30 @@
                                     <%= product.color %>
                                 </p>
 
-                                <p class="status">Agregar al carrito</p>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider"></span>
-                                </label>
+                                <div class="action-button">
+                                    <div class="cajas-button">
 
+                                        <a href="" class="button-decoration">Continuar Compra</a>
+                                    </div>
+
+                                    <div class="cajas-button">
+                                        <a href="/products/<%= product.id %>/edit" class="button-decoration">EDITAR PRODUCTO</a>
+                                    </div> 
+                                    <div class="cajas-button">
+                                        <form action="/products/<%= product.id %>?_method=DELETE" method="POST"
+                                            style="display: inline-flex">
+                                            <button class="button-decoration" type="submit">ELIMINAR</button>
+                                        </form>
+                                    </div>                            
+                                </div>   
                             </div>
-
-                            <a href="/products/<%= product.id %>/edit" class="action-button edit">EDITAR PRODUCTO</a>
-                            <form action="/products/<%= product.id %>?_method=DELETE" method="POST"
-                                style="display: inline-flex">
-                                <button class="status" type="submit">ELIMINAR</button>
-                            </form>
+                                
                         </article>
-
                     </div>
+                <!-- </section> -->
             </main>
-            <%- include('partials/footer') %>
-
-    </body>
-
+            
+        </body>
+        
+        <%- include('partials/footer') %>
     </html>

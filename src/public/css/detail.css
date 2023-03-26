@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+  }
+  
+  body {
+    background-color: white;
+    font-family:"oswald", sans-serif;
+    font-size: 12px
+  }
+  
+  h4 {
+    font-size: 24px
+  }
+  
+  .product_img {
+    width: 100%;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #ebebeb;
+  }
+  
+  .action-button {
+    font-size: 16px;
+    color: goldenrod;
+    
+    
+  }
+  .button-decoration{
+    border-radius: 4px;
+    font-size: 18px;
+    text-align: center;
+    color: goldenrod;
+    text-decoration: none;
+    border: none;
+    transition: all 4500ms;
+
+  }
+  .button-decoration :hover{
+    transform: 100px;
+    font-size: 20px;
+    background-color: #666;
+    border-radius: 10px;
+  }
+  
+  div {
+    font-size: 130%
+  }
+  
+  .product-cart {
+    border-top: 1px solid;
+    border-color: #ebebeb;
+    background-color: #fff;
+    margin-bottom: 16px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
+  }
+  .product-cart2{
+    margin-top: 150px;
+    padding: 10px;
+   
+  }
+  
+  article div.main-article {
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+    position: relative
+  }
+  
+  .price {
+    font-size: 25px;
+    color: goldenrod;
+    font-weight: bolder;
+    text-shadow: black;
+  }
+  
+  .description {
+    font-size: 16px;
+    font-weight: normal
+  }
+  
+  h3,
+  .description {
+    color: #666;
+    font-weight: bold;
+    font-size: 100%;
+    
+  }
+  
+  h4 {
+    color: black;
+  }
+  .model {
+    color: #666;
+    font-size: 16px;
+
+  }
+   
+  .switch {
+    margin-top: 10 px;
+  }
+  
+  
+  @media (min-width: 481px) {
+    .product-cart2{
+      margin-top: 100px;
+      padding: 10px;
+     
+    }
+    .price{
+      font-size: 30px;
+
+    }
+    .description{
+      font-size: 50px;
+
+    }
+    .model{
+      font-size: 24px;
+
+    }
+    .action-button{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+    .button-decoration{
+      font-size: 24px;
+
+    }
+   
+  }
+  
+  @media (min-width: 769px) {
+    .button-decoration:hover{
+      transform: 200px;
+      font-size: 35px;
+      background-color: #666;
+      border-radius: 10px;
+    }
+    
+
+
+  }
+    

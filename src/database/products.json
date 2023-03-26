@@ -93,8 +93,8 @@
     "id": 10,
     "brand": "Ferrari ",
     "model": "488 pista spider",
-    "year": 2022,
-    "power": 1919,
+    "year": "2022",
+    "power": "1919",
     "price": "174.06",
     "color": "Violet",
     "image": "spider.jpg"
