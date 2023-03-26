@@ -1,16 +1,14 @@
-<%- include('partials/head' , { title: 'Crear producto' , styles: [ 'productCreate' ,'header' , 'footer' ]}) %>
+<%- include('partials/head' , { title: 'Editar producto' , styles: [ 'productCreate' ,'header' , 'footer' ]}) %>
     
 <body>
 
   <%- include('partials/header') %>
-  <br>
-  <br>
   
-    <div class="description-box">
-      <br>
-      <br>
-      <p class="title">Editar Informacion De Producto</p>
-      <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+  
+  <div class="description-box">
+  
+  <p class="title">Editar Informacion De Producto</p>
+  <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
         <div class="data-box">
           <input required="" name="brand" type="text" value="<%= productToEdit.brand %>">
           <label>Marca</label>
@@ -39,15 +37,21 @@
          <p><i class="fa-regular fa-image"></i> Imagen</p>
         <div class="data-box">
           <input type="file" id="myfile" name="imgFile" class="inputfile" value="<%= productToEdit.image %>">
-          <label></label>
         </div> 
-      
-       <input type="submit" class="submitBtn" value="Guardar Cambios">
+        <input type="submit" class="submitBtn" value="Guardar Cambios">
       </form>
+      
+      
+
 
     </div>
-    <%- include('partials/footer') %>
-
-</body>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+  </body>
+  <%- include('partials/footer') %>
+  
 </html>
