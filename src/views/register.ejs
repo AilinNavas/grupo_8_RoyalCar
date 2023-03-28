@@ -20,27 +20,37 @@
         <label for="" name="email" class="label">Email</label>
       </div>
       <div class="inputContainer">
-        <input type="date" class="input" placeholder="a">
-        <label for="" name="date_of_birth" class="label">Fecha de nacimiento</label>
+      <div class="input">
+        <label class="label"  for="Perfil">
+          Seleccion Imagen De Perfil
+        </label>
+        <input type="file" id="Perfil" style="display:none">
       </div>
-      <select class="inputContainer" name="category" >
-     <option value="">Categoria</option>  
-       <option class="input" value="Vendedor">Usuario</option>
-       <option class="input" value="Vendedor">Administrador</option>
-      
-      </select>
+      </div>
+      <div class="inputContainer">
+        <select class="input" name="category" >
+          <option class="label" value="Categoria" font-family="oswald" >Categoria</option>  
+          <option class="label" value="Vendedor">Usuario</option>
+          <option class="label" value="Vendedor">Administrador</option>
+        </select>
+      </div>
       <div class="inputContainer">
         <input type="password" name="password" class="input" placeholder="a">
         <label for="" class="label">Contraseña</label>
       </div>
+      <div class="inputContainer">
+        <input type="password" name="password" class="input" placeholder="a">
+        <label for="" class="label">Confirmar Contraseña</label>
+      </div>
+
     
       <p>Al registrarte, aceptas nuestras Condiciones de uso y Politicas de Privacidad</p>
       <p>¿Ya tienes una cuenta? <a href="/login" style="color:red;">Inicia Sesion</a></p>
       <input type="submit" class="submitBtn" value="Continuar">
     </form>
   </div>
+  <%- include('partials/footer') %>
 </body>
 
-<%- include('partials/footer') %>
 
 </html>

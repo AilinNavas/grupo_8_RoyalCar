@@ -20,13 +20,13 @@ const upload = multer({ storage });
 const productsController = require("../controllers/productsController");
 
 router.get("/", productsController.products); 
+router.get("/productCart", productsController.productCart);
 
 
 router.get("/create", productsController.formCreate);
 router.post("/", upload.single('imgFile'), productsController.store);
 
 router.get("/:id", productsController.productDetail);
-router.get("/productCart", productsController.productCart);
 
 router.get("/:id/edit", productsController.edit);
 router.put("/:id", upload.single("image"),productsController.update);
