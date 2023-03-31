@@ -88,7 +88,7 @@ const controller = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
 		
 		res.redirect('/products');
-	},
+	}
 
 }
 	module.exports = controller;

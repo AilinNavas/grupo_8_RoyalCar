@@ -1,12 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('partials/head' , { title: 'Inicio' , styles: [ 'home' , 'header' , 'footer']}) %>
 <body>
-    
-</body>
+
+  <%- include('partials/header') %>
+
+<br>
+<br>
+<br>
+<br>
+
+  <h2 class="nosotros2"> No se ha encontrado la página
+  </h2>
+
+  <div class="descripcion-nosotros">
+
+    <p>Lo sentimos, pero no se encuentra la página que buscas.</p>
+    <p>Revisa la ortografia y el uso de mayúsculas en la URL.</p>
+    <p>Regresá a nuestra página de inicio</p><a href="/">RoyalCar</a>
+  </div>
+
+  <div class="banner">
+
+    <a href="/"><img src="/images/banner.png" alt=""></a>
+  </div>
+  <%- include('partials/footer') %>
+  </main>
+
 </html>
