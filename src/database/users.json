@@ -1,91 +1,122 @@
 [
-{"id":1,
-"name":"Bordie",
-"last_name":"Kleinstein",
-"email":"bkleinstein0@google.de",
-"date_of_birth":"9/19/2021",
-"category":1,
-"password":"VLuElm"
-},
-{
-"id":2,
-"name":"Filberto",
-"last_name":"Lenthall",
-"email":"flenthall1@people.com.cn",
-"date_of_birth":"1/26/2023",
-"category":2,
-"password":"ERFU52EG2HM"
-},
-{
-"id":3,
-"name":"Kally",
-"last_name":"Hugonet",
-"email":"khugonet2@com.com",
-"date_of_birth":"2/20/2021",
-"category":1,
-"password":"huFPjPHfqQo"
-},
-{
-"id":4,
-"name":"Janetta",
-"last_name":"MacTrusty",
-"email":"jmactrusty3@shinystat.com",
-"date_of_birth":"8/7/2021",
-"category":1,
-"password":"yuV2wKx"
-},
-{
-"id":5,
-"name":"Chaddie",
-"last_name":"Toye",
-"email":"ctoye4@macromedia.com",
-"date_of_birth":"6/10/2021",
-"category":1,
-"password":"zjMUhQpS0m"
-},
-{
-"id":6,
-"name":"Jeanne",
-"last_name":"Meth",
-"email":"jmeth5@merriam-webster.com",
-"date_of_birth":"6/26/2021",
-"category":2,
-"password":"noBRoGknx"
-},
-{
-"id":7,
-"name":"Robinia",
-"last_name":"Dennerley",
-"email":"rdennerley6@hibu.com",
-"date_of_birth":"10/6/2020",
-"category":2,
-"password":"VVmQyBnPUUW"
-},
-{
-"id":8,
-"name":"Tony",
-"last_name":"Phebee",
-"email":"tphebee7@imdb.com",
-"date_of_birth":"1/10/2022",
-"category":1,
-"password":"QqNbKLQZ9"
-},
-{
-"id":9,
-"name":"Shel",
-"last_name":"Farens",
-"email":"sfarens8@instagram.com",
-"date_of_birth":"1/2/2022",
-"category":1,
-"password":"0MLVhez"
-},
-{
-"id":10,
-"name":"Dosi",
-"last_name":"Astall",
-"email":"dastall9@cdbaby.com",
-"date_of_birth":"12/23/2020",
-"category":2,
-"password":"LjyeUOas08Pu"
-}
+  {
+    "id": 1,
+    "name": "Bordie",
+    "last_name": "Kleinstein",
+    "email": "bkleinstein0@google.de",
+    "image": "9/19/2021",
+    "category": 1,
+    "password": "VLuElm",
+    "confirm_password": "VLuElm"
+  },
+  {
+    "id": 2,
+    "name": "Filberto",
+    "last_name": "Lenthall",
+    "email": "flenthall1@people.com.cn",
+    "image": "1/26/2023",
+    "category": 2,
+    "password": "ERFU52EG2HM",
+    "confirm_password": "ERFU52EG2HM"
+  },
+  {
+    "id": 3,
+    "name": "Kally",
+    "last_name": "Hugonet",
+    "email": "khugonet2@com.com",
+    "image": "2/20/2021",
+    "category": 1,
+    "password": "huFPjPHfqQo",
+    "confirm_password": "huFPjPHfqQo"
+  },
+  {
+    "id": 4,
+    "name": "Janetta",
+    "last_name": "MacTrusty",
+    "email": "jmactrusty3@shinystat.com",
+    "image": "8/7/2021",
+    "category": 1,
+    "password": "yuV2wKx",
+    "confirm_password": "yuV2wKx"
+  },
+  {
+    "id": 5,
+    "name": "Chaddie",
+    "last_name": "Toye",
+    "email": "ctoye4@macromedia.com",
+    "image": "6/10/2021",
+    "category": 1,
+    "password": "zjMUhQpS0m",
+    "confirm_password": "zjMUhQpS0m"
+  },
+  {
+    "id": 6,
+    "name": "Jeanne",
+    "last_name": "Meth",
+    "email": "jmeth5@merriam-webster.com",
+    "image": "6/26/2021",
+    "category": 2,
+    "password": "noBRoGknx",
+    "confirm_password": "noBRoGknx"
+  },
+  {
+    "id": 7,
+    "name": "Robinia",
+    "last_name": "Dennerley",
+    "email": "rdennerley6@hibu.com",
+    "image": "10/6/2020",
+    "category": 2,
+    "password": "VVmQyBnPUUW",
+    "confirm_password": "VVmQyBnPUUW"
+  },
+  {
+    "id": 8,
+    "name": "Tony",
+    "last_name": "Phebee",
+    "email": "tphebee7@imdb.com",
+    "image": "1/10/2022",
+    "category": 1,
+    "password": "QqNbKLQZ9",
+    "confirm_password": "QqNbKLQZ9"
+  },
+  {
+    "id": 9,
+    "name": "Shel",
+    "last_name": "Farens",
+    "email": "sfarens8@instagram.com",
+    "image": "1/2/2022",
+    "category": 1,
+    "password": "0MLVhez",
+    "confirm_password": "0MLVhez"
+  },
+  {
+    "id": 10,
+    "name": "Dosi",
+    "last_name": "Astall",
+    "email": "dastall9@cdbaby.com",
+    "image": "12/23/2020",
+    "category": 2,
+    "password": "LjyeUOas08Pu",
+    "confirm_password": "LjyeUOas08Pu"
+  },
+  {
+    "id": 11,
+    "name": "f",
+    "last_name": "fd",
+    "email": "navasailin18@gmail.com",
+    "image": "default-image.png",
+    "category": "usuario",
+    "password": "123",
+    "confirm_password": "123"
+  },
+  {
+    "id": 12,
+    "name": "ailin",
+    "last_name": "rtur",
+    "email": "navasailin18@gmail.com",
+    "image": "1680315230888-ferrari-monza3.jpg",
+    "category": "usuario",
+    "password": "$2a$10$ZwZBmQcqboYIhr/1ILkwx.DpTTqJyyuM4w3Al2azBDUMNwihkbY/O",
+    "confirm_password": "123456"
+  }
 ]
