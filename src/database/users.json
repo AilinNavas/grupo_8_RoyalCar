@@ -98,25 +98,5 @@
     "category": 2,
     "password": "LjyeUOas08Pu",
     "confirm_password": "LjyeUOas08Pu"
-  },
-  {
-    "id": 11,
-    "name": "f",
-    "last_name": "fd",
-    "email": "navasailin18@gmail.com",
-    "image": "default-image.png",
-    "category": "usuario",
-    "password": "123",
-    "confirm_password": "123"
-  },
-  {
-    "id": 12,
-    "name": "ailin",
-    "last_name": "rtur",
-    "email": "navasailin18@gmail.com",
-    "image": "1680315230888-ferrari-monza3.jpg",
-    "category": "usuario",
-    "password": "$2a$10$ZwZBmQcqboYIhr/1ILkwx.DpTTqJyyuM4w3Al2azBDUMNwihkbY/O",
-    "confirm_password": "123456"
   }
 ]
