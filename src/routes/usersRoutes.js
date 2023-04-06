@@ -22,6 +22,9 @@ router.get("/register", usersController.register );
 router.post("/register",upload.single('usersImage'), usersController.createUser);
 
 router.get("/login", usersController.login );
+router.post("/login", usersController.loginProcess);
+
+router.get("/profile", usersController.profile);
 
 
 module.exports = router;

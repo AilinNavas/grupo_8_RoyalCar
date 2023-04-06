@@ -103,4 +103,9 @@
     font-size: 14px;
     font-weight: 600;
   }
-  
+  .errors{
+    color: #cb0e08;
+    font-size: 12px;
+    font-weight: 500;
+    
+  }
