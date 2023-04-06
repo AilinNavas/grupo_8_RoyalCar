@@ -118,55 +118,5 @@
     "category": "usuario",
     "password": "$2a$10$ZwZBmQcqboYIhr/1ILkwx.DpTTqJyyuM4w3Al2azBDUMNwihkbY/O",
     "confirm_password": "123456"
-  },
-  {
-    "id": 13,
-    "name": "Walter",
-    "last_name": "Barboza",
-    "email": "wbarboza97@gmail.com",
-    "image": "default-image.png",
-    "category": "administrador",
-    "password": "$2a$10$HMOT3XOgr/NKLG9mzSrpkeMBZafA5I7rTVb9IlLwMh2PAd5w7UPt2",
-    "confirm_password": "$2a$10$IgqwC3iQS/Jz/iK1xrZ5jOLJYVB8VU5au0bRarsowT1Gz1tSIsrGy"
-  },
-  {
-    "id": 14,
-    "name": "Walter",
-    "last_name": "Barboza",
-    "email": "walter_97@live.com.ar",
-    "image": "default-image.png",
-    "category": "usuario",
-    "password": "$2a$10$22l2buEmueMMcW4xnsyTpepvNPuxGrTUrs8ntkaXk3SXNC5GhfsgO",
-    "confirm_password": "$2a$10$ZDJ7vjyW5.TNxKY1XF27g.fUmjbWZv1E/VsGs7Adw7mh1amU4pnd."
-  },
-  {
-    "id": 15,
-    "name": "aspdj",
-    "last_name": "apsdkj",
-    "email": "jorgelina69@gmail.com",
-    "image": "default-image.png",
-    "category": "usuario",
-    "password": "$2a$10$11EjBP1PM4B3fe7J4CcdkuFEzihRKD5gMtX.FWFy2/Huv.9/4UMxG",
-    "confirm_password": "$2a$10$2Zt9gBAlpq7RFob96jcN3OcYv4AVgh71ERzyrOJmF7Sc1xmEuvzUS"
-  },
-  {
-    "id": 16,
-    "name": "mamina",
-    "last_name": "Barboza",
-    "email": "asdkj@dh.com",
-    "image": "1680615011020-WhatsApp Image 2021-08-16 at 13.50.50 (2).jpeg",
-    "category": "usuario",
-    "password": "$2a$10$wTZ8r1xXtY8kYKpZVxdDHOhGGT8VG4fulE88dsABWOfFOx3c.BSZ2",
-    "confirm_password": "$2a$10$lt7kWELrgHTKltroVh5ehO8Q4ucuHwUfPRb.cJL6.s9Bo9pZFQxVW"
-  },
-  {
-    "id": 17,
-    "name": "pepito",
-    "last_name": "pedro",
-    "email": "pero@gmail.com",
-    "image": "default-image.png",
-    "category": "usuario",
-    "password": "$2a$10$5g.aFeZqHo1lFAOZbLvXwe5hJTtRLgNcEGbnm7sC5PiKuyo8/E2XO",
-    "confirm_password": "$2a$10$4hZzZpxRcB8nOWSddklSz.DMFfz1tIOYRSAMTUsXf5XPr3.WQfHQ."
   }
 ]
