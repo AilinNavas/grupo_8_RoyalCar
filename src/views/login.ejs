@@ -3,7 +3,7 @@
   
     <body>
       <%- include('partials/header') %>
-  
+     
         <div class="loginFrm">
           <form action="/users/login"  method="post" class="form">
             <h1 class="title">Ingresa</h1>
@@ -12,20 +12,30 @@
             <div class="inputContainer">
               <input type="email" class="input" name="email" placeholder="ejemplo@gmil.com">
               <label for="" name="email" class="label">Email</label>
-              <% if (locals.errors && errors.email) { %>
+              <!-- <% if (locals.errors && errors.email) { %>
                 <span class="errors">
                 <% errors.email.msg %>
                 </span>
-              <% } %>
+              <% } %> -->
             </div>
   
             <div class="inputContainer">
               <input type="password" name="password" class="input" placeholder="a" minlength="6" required>
               <label for="" class="label">Contraseña</label>
-              <% if (locals.errors && errors.password) { %>
+              <!-- <% if (locals.errors && errors.password) { %>
                 <div class="errors">
                 <% errors.password.msg %>
               </div>
+             <% } %> -->
+             <% if (typeof errors != 'undefined') { %>
+              <p style='color:red'> ERROR</p>
+              <ul>
+               <% for( let i = 0; i < errors.length; i++ ) { %>
+               <li>
+                 <%= errors[i].msg %>
+               </li>
+               <% } %>
+              </ul>
              <% } %>
             </div>
   

@@ -1,6 +1,15 @@
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
+const  {check, validationResult, body} = require("express-validator");
+
+
+
+// const validateLogin= [
+//     check('email').isEmail().withMessage("Email invalido"),
+//     check('password').isLength({min: 6}).withMessage("La contraseña es invalida")
+
+// ];
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {

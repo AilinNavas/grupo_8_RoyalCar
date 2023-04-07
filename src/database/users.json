@@ -118,5 +118,25 @@
     "category": "usuario",
     "password": "$2a$10$ZwZBmQcqboYIhr/1ILkwx.DpTTqJyyuM4w3Al2azBDUMNwihkbY/O",
     "confirm_password": "123456"
+  },
+  {
+    "id": 13,
+    "name": "Walter",
+    "last_name": "Barboza",
+    "email": "wbarboza97@gmail.com",
+    "image": "1680828887960-descarga.jpg",
+    "category": "usuario",
+    "password": "$2a$10$BjICLC/Qg0k5sbxYd0mBa.pgiTambKUSYfTb1eUQWMrov45oG8r8O",
+    "confirm_password": "$2a$10$gLWeoNVHKJFDJUFoXTyKt.hhJ9dytWwiUUwlO7vEWQ5AXv1OVzCga"
+  },
+  {
+    "id": 14,
+    "name": "lucia",
+    "last_name": "delgado",
+    "email": "delgado@gmail.com",
+    "image": "default-image.png",
+    "category": "usuario",
+    "password": "$2a$10$9Yr1IaFimz8ZXBtc34A74uJtsZWtrjyMeTmzJxhYVf19NFLkIFxQu",
+    "confirm_password": "$2a$10$XfVNyR095iEGRpt82R3qPeE8MECa2fmMfpSaC/mt6cD.gaoon1Fna"
   }
 ]
