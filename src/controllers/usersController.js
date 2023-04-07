@@ -43,7 +43,55 @@ const controller = {
 
 	login: (req, res) => {
 		res.render(path.join(__dirname, '../views/login.ejs'))
-	}
+	},
+	// todos los usuarios
+	findAll:  function(){
+        return getUsers();
+    },
+    // buscar un usuario por id
+	findByPk: function (id) {
+		let allUser = controller.findAll();
+		let userFound = allUser.find(oneUser => oneUser.id === id);
+		return userFound;
+	},
+	// buscar un usuario por email
+	findByField: function (field, text) {
+		let allUser = controller.findAll();
+		let userFound = allUser.find(oneUser => oneUser[field] === text);
+		return userFound;
+	},
+
+	loginProcess: (req, res) => {
+		let userToLogin = controller.findByField("email", req.body.email);
+
+		if (userToLogin) {
+			let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+			if (isOkThePassword) {
+				return res.redirect("profile");
+			}
+			return res.render('login', {
+				errors: {
+					password: {
+						msg: "La informacion es incorrecta..."
+					}
+				}
+			});
+			
+		}
+		 return res.render('login', {
+		errors: {
+		 		email: {
+				msg: "No se encuentra este email..."
+				}
+			}
+		});
+	},
+	
+	
+	profile: (req, res) => {
+		res.render(path.join(__dirname, '../views/profile.ejs'))
+	},
+
 
 };
 

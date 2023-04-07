@@ -138,5 +138,15 @@
     "category": "Administrador",
     "password": "$2a$10$TNFkRmA9WjbJ1TgdKyH3dualcRjrFD9WIbUtg/6.pxZeOoSedpE0G",
     "confirm_password": "$2a$10$VUIykMIuVkujdnfOJIUmPupxBCoS.ZX6EIZ7Vaf4AV0ZD0qmOAIku"
+  },
+  {
+    "id": 15,
+    "name": "Walter",
+    "last_name": "Barboza",
+    "email": "wbarboza97@gmail.com",
+    "image": "1680893397778-descarga.jpg",
+    "category": "Usuario",
+    "password": "$2a$10$G8AgQYRUJNj58O0lOX8sLeEwc3U.jy.Y04lgYiXJqVmg0uuX/dJ/i",
+    "confirm_password": "$2a$10$n4ZsYCu2HkRgnDiPbgKQUO6A3GgkSuc/.8Ef1jSIpU29y6wwgvqi."
   }
 ]
