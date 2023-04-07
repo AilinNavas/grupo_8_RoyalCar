@@ -16,7 +16,7 @@ const upload = multer({ storage });
 
 const usersController = require("../controllers/usersController");
 const guestMidddleware = require('../middlewares/guestMiddleware');
-
+const authMidddleware = require("../middlewares/authMiddleware");
 const { body } = require("express-validator");
 
 const validationsRegister = [
@@ -51,7 +51,7 @@ router.post("/register",upload.single('usersImage'), validationsRegister, usersC
 router.get("/login", guestMidddleware, usersController.login );
 router.post("/login", usersController.loginProcess);
 
-router.get("/profile", usersController.profile);
+router.get("/profile", authMidddleware ,usersController.profile);
 
 
 module.exports = router;
