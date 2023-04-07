@@ -98,5 +98,45 @@
     "category": 2,
     "password": "LjyeUOas08Pu",
     "confirm_password": "LjyeUOas08Pu"
+  },
+  {
+    "id": 11,
+    "name": "Ailin",
+    "last_name": "Navas",
+    "email": "navasailin18@gmail.com",
+    "image": "default-image.png",
+    "category": "Usuario",
+    "password": "$2a$10$symuw0n4rGWmr66r61lrYOBvpHAWs2XhfJuVdxTaOrff9E5aHJnfi",
+    "confirm_password": "$2a$10$5gPemJgbWGMEEaVg2ujd3OnCZe5p1DeySxteT.bsEn.9SMenvuRPO"
+  },
+  {
+    "id": 12,
+    "name": "Ailin",
+    "last_name": "Navas",
+    "email": "navasailin18@gmail.com",
+    "image": "1680890487455-ferrari-monza2.jpg",
+    "category": "Usuario",
+    "password": "$2a$10$z408JJzEu.hmMQMY0MwO.OL9/Hc89PJDRsnaXw3I9n5mQLy2TI8ra",
+    "confirm_password": "$2a$10$a72Xd4IWADTZ/EfZnU9yS.HgSeS/9ze.nv8LbUsFBAA6pgXiVbTKS"
+  },
+  {
+    "id": 13,
+    "name": "Ailin",
+    "last_name": "Navas",
+    "email": "navasailin18@gmail.com",
+    "image": "1680890761922-ferrari-monza2.jpg",
+    "category": "Administrador",
+    "password": "$2a$10$nLDIPmXmxwf5Gb8C1UpAEuR0XA7xHAfJsyWiUwJvwKceHURffn2QK",
+    "confirm_password": "$2a$10$OajahAe6YXHiK6jZsWD.vex1X2b.LJp8L/itjVdsgIQYz6i.iupeW"
+  },
+  {
+    "id": 14,
+    "name": "Ailin",
+    "last_name": "Navas",
+    "email": "navasailin18@gmail.com",
+    "image": "1680890963439-ferrari-monza2.jpg",
+    "category": "Administrador",
+    "password": "$2a$10$TNFkRmA9WjbJ1TgdKyH3dualcRjrFD9WIbUtg/6.pxZeOoSedpE0G",
+    "confirm_password": "$2a$10$VUIykMIuVkujdnfOJIUmPupxBCoS.ZX6EIZ7Vaf4AV0ZD0qmOAIku"
   }
 ]
