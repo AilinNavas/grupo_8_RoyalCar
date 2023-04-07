@@ -67,6 +67,8 @@ const controller = {
 		if (userToLogin) {
 			let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password);
 			if (isOkThePassword) {
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin;
 				return res.redirect("profile");
 			}
 			return res.render('login', {
@@ -89,7 +91,10 @@ const controller = {
 	
 	
 	profile: (req, res) => {
-		res.render(path.join(__dirname, '../views/profile.ejs'))
+		res.render('profile', {
+			user: req.session.userLogged
+
+		});
 	},
 
 

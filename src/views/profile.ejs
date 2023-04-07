@@ -7,12 +7,17 @@
       
       <div class="card">
         <div class="imge">
-          <div class="Usericon"></div>
-          <p class="UserName"></p>
-          <p class="Id"></p>
+            <div class="Usericon">
+              <img src="\images\users\<%= user.image %>" alt="">
+              
         </div>
-      
-        <div class="Description"></div>
+        <p class="UserName"> hi <%= user.name %> </p>
+        <p class="Id"> <%= user.email %> </p>
+    </div>
+    
+    <div class="Description">
+            <p> <%= user.category %> </p>
+        </div>
       
         <div class="social-media">
               <a href="#">

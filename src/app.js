@@ -1,9 +1,15 @@
 const express = require("express");
 const path = require("path");
 const methodOverride = require('method-override'); //para poder usar metodos Put y delete
-
+const session = require("express-session");
 
 const app = express();
+
+app.use(session({
+    secret: "secret!?",
+    resave: false,
+    saveUninitialized: false,
+}))
 
 //Middlewares globales
 const publicPath = path.join(__dirname, './public');
