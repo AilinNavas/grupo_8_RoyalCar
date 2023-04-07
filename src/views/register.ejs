@@ -3,49 +3,112 @@
   <body>
     <%- include('partials/header') %>
       <div class="signupFrm">
+
         <form action="/users/register" class="form" method="POST" enctype="multipart/form-data">
           <h1 class="title">Regístrate</h1>
 
           <div class="inputContainer">
-            <input type="text" class="input" name="name" placeholder="a">
+            <input type="text"
+             class="input" 
+             name="name"
+              placeholder="a"
+              value = "<%= locals.oldData ? oldData.name : null %>">
+           
             <label for="" name="name" class="label">Nombre</label>
           </div>
-
-          <div class="inputContainer">
-            <input type="text" class="input" name="last_name" placeholder="a">
-            <label for="" name="last_name" class="label">Apellido</label>
-          </div>
-          <div class="inputContainer">
-            <input type="email" class="input" name="email" placeholder="ejemplo@gmil.com">
-            <label for="" name="email" class="label">Email</label>
-          </div>
-          <div class="inputContainer">
-            <div class="input">
-               <input type="file" name="usersImage" id="Perfil"  style="display:none"> 
-              <label class="label" for="Perfil">Seleccion Imagen De Perfil</label>
+          <% if (locals.errors && errors.name) { %>
+            <div class="msg-error">
+              <%= errors.name.msg %>
             </div>
-          </div>
-          <div class="inputContainer">
-            <select class="input" name="category">
-              <option class="label" name="category" value="Categoria" font-family="oswald">Categoria</option>
-              <option class="label" name="category" value="usuario">Usuario</option>
-              <option class="label" name="category" value="administrador">Administrador</option>
-            </select>
-          </div>
-          <div class="inputContainer">
-            <input type="password" name="password" class="input" placeholder="a" minlength="6" required>
-            <label for="" class="label">Contraseña</label>
-          </div>
-          <div class="inputContainer">
-            <input type="password" name="confirm_password" class="input" placeholder="a" minlength="6" required>
-            <label for="" class="label">Confirmar Contraseña</label>
-          </div>
+            <% } %>
 
 
-          <p>Al registrarte, aceptas nuestras Condiciones de uso y Politicas de Privacidad</p>
-          <p>¿Ya tienes una cuenta? <a href="/login" style="color:red;">Inicia Sesion</a></p>
-          <input type="submit" class="submitBtn" value="Continuar">
-        </form>
+              <div class="inputContainer">
+                <input type="text"
+                 class="input" 
+                 name="last_name"
+                  placeholder="a" 
+                   value = "<%= locals.oldData ? oldData.last_name : null %>">
+                <label for="" name="last_name" class="label">Apellido</label>
+              </div>
+              <% if (locals.errors && errors.last_name) { %>
+                <div class="msg-error">
+                  <%= errors.last_name.msg %>
+                </div>
+                <% } %>
+                  <div class="inputContainer">
+                    <input type="email" 
+                    class="input" 
+                    name="email" 
+                    placeholder="ejemplo@gmil.com"
+                    value = "<%= locals.oldData ? oldData.email : null %>">
+                    <label for="" name="email" class="label">Email</label>
+                  </div>
+                  <% if (locals.errors && errors.email) { %>
+                    <div class="msg-error">
+                      <%= errors.email.msg %>
+                    </div>
+                  <% } %>
+                 
+                  <div class="inputContainer">
+                    <div class="input">
+                      <input type="file" name="usersImage" id="Perfil" style="display:none">
+                      <label class="label" for="Perfil">Seleccion Imagen De Perfil</label>
+                    </div>
+                  </div>
+                  <% if (locals.errors && errors.usersImage) { %>
+                    <div class="msg-error">
+                      <%= errors.usersImage.msg %>
+                    </div>
+                  <% } %>
+                  <div class="inputContainer">
+                    <select class="input" name="category">
+                      <option class="label" value = "" font-family="oswald">Categoria</option>
+
+                     <% 
+                     const categories = ['Usuario' , 'Administrador'] 
+                     %>
+                     <% for (const oneCategory of categories) { %>
+                      <option 
+                      value="<%= oneCategory %>"
+                      <%= locals.oldData && (oneCategory === oldData.category ? 'selected' : null) %>
+                     > <%= oneCategory %> </option>
+                     <% } %>
+                    </select>
+                  </div>
+                  <% if (locals.errors && errors.category) { %>
+                    <div class="msg-error">
+                      <%= errors.category.msg %>
+                    </div>
+                  <% } %>
+                 
+                 
+                  <div class="inputContainer">
+                    <input type="password" name="password" class="input" placeholder="a" minlength="8">
+                    <label for="" class="label">Contraseña</label>
+                  </div>
+                  <% if (locals.errors && errors.password) { %>
+                    <div class="msg-error">
+                      <%= errors.password.msg %>
+                    </div>
+                  <% } %>
+                 
+                  <div class="inputContainer">
+                    <input type="password" name="confirm_password" class="input" placeholder="a" minlength="6">
+                    <label for="" class="label">Confirmar Contraseña</label>
+                  </div>
+                  <% if (locals.errors && errors.confirm_password) { %>
+                    <div class="msg-error">
+                      <%= errors.confirm_password.msg %>
+                    </div>
+                  <% } %>
+                 
+
+
+                  <p>Al registrarte, aceptas nuestras Condiciones de uso y Politicas de Privacidad</p>
+                  <p>¿Ya tienes una cuenta? <a href="/login" style="color:red;">Inicia Sesion</a></p>
+                  <input type="submit" class="submitBtn" value="Continuar">
+                </form>
       </div>
       <%- include('partials/footer') %>
   </body>
