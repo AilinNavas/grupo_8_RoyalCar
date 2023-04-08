@@ -45,10 +45,10 @@ const controller = {
 		res.render(path.join(__dirname, '../views/login.ejs'))
 	},
 	// todos los usuarios
-	findAll:  function(){
-        return getUsers();
-    },
-    // buscar un usuario por id
+	findAll: function () {
+		return getUsers();
+	},
+	// buscar un usuario por id
 	findByPk: function (id) {
 		let allUser = controller.findAll();
 		let userFound = allUser.find(oneUser => oneUser.id === id);
@@ -69,6 +69,11 @@ const controller = {
 			if (isOkThePassword) {
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
+
+				if (req.body.remember_user) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				}
+
 				return res.redirect("profile");
 			}
 			return res.render('login', {
@@ -78,24 +83,30 @@ const controller = {
 					}
 				}
 			});
-			
+
 		}
-		 return res.render('login', {
-		errors: {
-		 		email: {
-				msg: "No se encuentra este email..."
+		return res.render('login', {
+			errors: {
+				email: {
+					msg: "No se encuentra este email..."
 				}
 			}
 		});
 	},
-	
-	
+
+
 	profile: (req, res) => {
-		res.render('profile', {
+		    res.render('profile', {
 			user: req.session.userLogged
 
 		});
 	},
+
+	logout: (req, res) => {
+		res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+	}
 
 
 };
