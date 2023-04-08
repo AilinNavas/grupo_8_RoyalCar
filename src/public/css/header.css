@@ -127,6 +127,12 @@ body {
     width: 19%;
     font-size: 13px;
   }
+  .nav-profile{
+    display: flex;
+  }
+  .nav-profile-1{
+    display: flex;
+  }
   
 @media (min-width: 481px){
     .header{

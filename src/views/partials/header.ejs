@@ -35,12 +35,17 @@
 
       <a href="/products" class="">Contáctanos</a>
       <% if (locals.isLogged) { %>
-        <a href="/users/profile" class="">
-          <p> 
-            Hola <% locals.userLogged.name %>
-
-          </p>
-        </a>
+        <!-- <li class="nav-profile"> -->
+          <a class="nav-profile-1" href="users/profile" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/images/users/<%= locals.userLogged.image %>" width="45" style="border-radius: 100%;">
+            Hi <%= locals.userLogged.name %> 
+          </a>
+          <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/user/profile">Mi perfil</a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="/user/logout">Cerrar Sesion</a>
+          </ul> -->
+        <!-- </li> -->
         
       <% } else {%>
       <a href="/users/login" class="">Ingresar</a>
