@@ -54,5 +54,10 @@ router.post("/login", usersController.loginProcess);
 router.get("/profile", authMidddleware ,usersController.profile);
 
 router.get('/logout', usersController.logout);
+// ruta para huespedes
+// router.get('/guests', usersController.guests);
+// // ruta para lista de usuarios
+// router.get('/usersList', usersController.usersList);
+
 
 module.exports = router;

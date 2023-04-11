@@ -106,7 +106,14 @@ const controller = {
 		res.clearCookie('userEmail');
 		req.session.destroy();
 		return res.redirect('/');
-	}
+	},
+	// guests: (req, res) => {
+	// 	res.render('/')
+	// },
+	// usersList: (req, res) => {
+	// 	res.render('/');
+	// },
+
 
 
 };

@@ -1,3 +1,12 @@
+body{
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNgt3tPBfbiIlHsPkReRcdDvm0Ghe0RAFgZA&usqp=CAU);
+    background-size: 100vw 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+
+}
 .profilebody{
     
     width: 100%;
@@ -7,31 +16,39 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
   }
-
+ 
   .card {
-    width: 190px;
-    height: 254px;
-    background: rgb(0, 0, 0);
-    box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.333);
+      width: 320px;
+      height: 260px;
+      background: rgb(0, 0, 0);
+      box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.333);
+      border: solid 1px white;
   }
   
   .imge {
     height: 70px;
-    background-color: #cb0e08;
+    background-color: rgb(46, 45, 45);
+    border: solid 1px white;
   }
   
-  .imge .Usericon {
+  .Usericon {
     background-color: #fff;
     transform: translateX(10px) translateY(10px);
-    width: 50px;
-    height: 50px;
+    width: 57px;
+    height: 57px;
     border-radius: 10px;
+  }
+  .image-perfil{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
   
   .imge .UserName {
     background-color: #fff;
-    width: 60px;
+    width: 60%;
     height: 15px;
     border-width: 10px;
     border-radius: 5px;
@@ -40,11 +57,14 @@
     font-size: 15px;
     font-weight: bold;
     transform: translateX(70px) translateY(-35px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .imge .Id {
     background-color: #fff;
-    width: 100px;
+    width: 65%;
     height: 15px;
     border-width: 10px;
     border-radius: 5px;
@@ -53,15 +73,19 @@
     font-size: 15px;
     font-weight: bold;
     transform: translateX(70px) translateY(-25px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .Description {
     border-color: #141414;
     background-color: #fff;
     transform: translate(5px, 6px);
-    width: 180px;
-    height: 130px;
+    width: 95%;
+    height: 150px;
     border-radius: 5px;
+    
   }
   
   /*______Social Media______*/
@@ -72,9 +96,26 @@
     transform: translatey(10px);
     background: #414141;
   }
-   
+  .contein-logout{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 55px;
+  } 
   
   .logout-button{
-    color:#cb0e08;
+    color: #cb0e08;
     font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 1500ms;
+  }
+  .logout-button:hover{
+    background-color: #cb0e08;
+    font-size: 18px;
+    color:rgb(0, 0, 0);
   }

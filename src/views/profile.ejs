@@ -3,34 +3,44 @@
     <body>
         <%- include('partials/header') %>
             <main class="profilebody">
+                
 
-                <div class="card">
-                    <div class="imge">
-                        <div class="Usericon">
-                            <img src="\images\users\<%= user.image %>" alt="">
+
+                    <div class="card">
+                        <div class="imge">
+                            <div class="Usericon">
+                                <img class="image-perfil" src="\images\users\<%= user.image %>" alt="">
+
+                            </div>
+                            <p class="UserName"> hi <%= user.name %>
+                            </p>
+                            <p class="Id">
+                                <%= user.email %>
+                            </p>
+                        </div>
+
+                        <div class="Description">
+                            <p>
+                                Bienvenid@ <%= user.name %>
+                                    <%= user.last_name %> a tu cuenta de <%= user.category %> de RoyalCar.
+                                            Por cualquier duda, podes comunicarte con un asesor de nuestro equipo a
+                                            travez de asesoria_personalizada@royalcar.com.
+
+                            </p>
+                        </div>
+
+                        <div class="social-media">
+                            <div class="contein-logout">
+
+                                <a href="/users/logout" class="logout-button"> Cerrar Sesion </a>
+
+                            </div>
 
                         </div>
-                        <p class="UserName"> hi <%= user.name %>
-                        </p>
-                        <p class="Id">
-                            <%= user.email %>
-                        </p>
+
                     </div>
 
-                    <div class="Description">
-                        <p>
-                            <%= user.category %>
-                        </p>
-                    </div>
-
-                    <div class="social-media">
-                        <a href="/users/logout" class="logout-button"> Cerrar Sesion </a>
-                            
-                        
-                    </div>
-
-                </div> 
-
+                
 
             </main>
 
@@ -44,6 +54,3 @@
     <%- include('partials/footer') %>
 
         </html>
-
-
-        
