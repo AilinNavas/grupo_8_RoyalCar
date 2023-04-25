@@ -33,7 +33,7 @@
     border-radius: 4px;
     font-size: 18px;
     text-align: center;
-    color: goldenrod;
+    color:  #cb0e08;
     text-decoration: none;
     border: none;
     background-color: white;
@@ -41,6 +41,7 @@
     font-weight: normal;
 
   }
+
   
   div {
     font-size: 130%
@@ -134,7 +135,7 @@
     .button-decoration:hover{
       transform: 200px;
       font-size: 35px;
-      background-color: #666;
+      background-color: #000000;
       border-radius: 10px;
     }
     
