@@ -1,55 +1,95 @@
-<%- include('partials/head' , { title: 'Editar producto' , styles: [ 'productCreate' ,'header' , 'footer' ]}) %>
+<%- include('partials/head' , { title: 'Editar producto' , styles: [ 'registro-login' ,'header' , 'footer' ]}) %>
     
 <body>
 
   <%- include('partials/header') %>
-  
-  
-  <div class="description-box">
-  
-  <p class="title">Editar Informacion De Producto</p>
-  <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
-        <div class="data-box">
-          <input required="" name="brand" type="text" value="<%= productToEdit.brand %>">
-          <label>Marca</label>
-        </div>
-        <div class="data-box">
-          <input required="" name="model" type="text" value="<%= productToEdit.model %>">
-          <label>Modelo</label>
-        </div>
-        <div class="data-box">
-          <input required="" name="year" type="number" value="<%= productToEdit.year %>">
-          <label>Año</label>
-        </div>
-      
-        <div class="data-box">
-          <input required="" name="power" type="number" value="<%= productToEdit.power %>">
-          <label>Potencia(hp)</label>
-        </div>
-        <div class="data-box">
-          <input required="" name="price" type="" value="<%= productToEdit.price %>">
-          <label>Precio</label>
-        </div>
-        <div class="data-box">
-          <input required="" name="color" type="text" value="<%= productToEdit.color %>">
-          <label>Color</label>
-        </div>
-         <p><i class="fa-regular fa-image"></i> Imagen</p>
-        <div class="data-box">
-          <input type="file" id="myfile" name="imgFile" class="inputfile" value="<%= productToEdit.image %>">
+
+
+    <!-- NUEVA VERSION DEL FORMULARIO -->
+    <div class="signupFrm"  id="form-container">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
+        <h1 class="title" id="product" >Editar producto</h1>
+        <div class="inputContainer" id="form-product">
+          <select class="input" name="brand">
+            <option class="label" value = "" font-family="oswald">Marca</option>
+
+           <% 
+           const brands = ['Lamborghini' , 'Ferrari', 'BMW' , 'Rolls-Royce'] 
+           %>
+           <% for (const oneBrand of brands) { %>
+           <option 
+            value="<%= oneBrand %>" 
+           <%= locals.oldData && (oneBrand === oldData.brand ? 'selected' : null) %>
+          > <%= oneBrand %> </option>
+          <% } %></option>
+          </select>
         </div> 
-        <input type="submit" class="submitBtn" value="Guardar Cambios">
-      </form>
-      
-      
+         
+        <div class="inputContainer" id="form-product">
+          <input type="text" class="input" name="model" placeholder="a" value="<%= productToEdit.model %>">
+          <label for="" name="model" class="label">Modelo</label>
+        </div>
 
+            <div class="inputContainer" id="form-product">
+              <input type="number" class="input" name="year" placeholder="a" value="<%= productToEdit.year %>">
+              <label for="" name="year" class="label">Año</label>
+            </div>
+           
+                <div class="inputContainer" id="form-product">
+                  <input type="text" class="input" name="description" value="<%= productToEdit.description %>" >
+                  <label for="" name="description" class="label">Descripción</label>
+                </div>
+               
+                
+                <div class="inputContainer" id="form-product">
+                  <input type="number" class="input" name="price" value="<%= productToEdit.price %>">
+                  <label for="" name="price" class="label">Precio</label>
+                </div>
 
+                <div class="inputContainer" id="form-product">
+                  <label for="" name="year" class="label">Colores disponibles</label>
+                </div>
+                  <% const colors=['Rojo' , 'Negro' , 'Blanco' , 'Azul' ] %>
+                    <% for (const oneColor of colors) { %>
+                      <div class="inputContainer"><input type="checkbox" class="inputColor" name="color" value="<%= oneColor %>">
+                      <%= oneColor %> </input>
+                    </div>
+                        <% } %>
+                
+                
+               
+                <div class="inputContainer" id="form-product">
+                  <div class="input">
+                    <input type="file" name="imgFile" id="Perfil" style="display:none" value="<%= productToEdit.image %>"> 
+                    <label class="label" for="Perfil">Seleccion Imagen De Producto</label>
+                  </div>
+                </div>
+              
+               
+               
+               
+                
+               
+               
+              
+                <input type="submit" class="submitBtn" value="Guardar cambios">
+              </form>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     
   </body>
   <%- include('partials/footer') %>

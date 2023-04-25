@@ -28,7 +28,7 @@ const controller = {
 			brand: req.body.brand,
 			model: req.body.model,
 			year: req.body.year,
-			power: req.body.power,
+			description: req.body.description,
 			price: req.body.price,
 			color: req.body.color,
 			image

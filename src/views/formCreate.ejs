@@ -1,10 +1,10 @@
-<%- include('partials/head' , { title: 'Crear producto' , styles: [ 'productCreate' ,'header' , 'footer' ]}) %>
+<%- include('partials/head' , { title: 'Crear producto' , styles: [ 'productCreate' ,'header' , 'footer' , 'registro-login' ]}) %>
     
 <body>
 
   <%- include('partials/header') %>
- 
-    <div class="description-box">
+   <!-- FORMULARIO INICIAL -->
+    <!-- <div class="description-box">
       
       <p class="title">Informacion Nuevo Producto</p>
       <form action="/products" method="POST" enctype="multipart/form-data">
@@ -12,6 +12,7 @@
           <input required="" name="brand" type="text">
           <label>Marca</label>
         </div>
+        
         <div class="data-box">
           <input required="" name="model" type="text">
           <label>Modelo</label>
@@ -22,8 +23,8 @@
         </div>
       
         <div class="data-box">
-          <input required="" name="power" type="number">
-          <label>Potencia(hp)</label>
+          <input required="" name="power" type="text">
+          <label>Descripción</label>
         </div>
         <div class="data-box">
           <input required="" name="price" type="number">
@@ -48,7 +49,92 @@
     <br>
     <br>
     <br>
-    
+     -->
+
+     <!-- NUEVA VERSION FORMULARIO -->
+     <div class="signupFrm" id="form-container">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <form action="/products" method="POST" enctype="multipart/form-data">
+        <h1 class="title" id= "product">Crear nuevo producto</h1>
+
+        <div class="inputContainer" id="form-product">
+          <select class="input" name="brand">
+            <option class="label" value = "" font-family="oswald">Marca</option>
+
+           <% 
+           const brands = ['Lamborghini' , 'Ferrari', 'BMW' , 'Rolls-Royce'] 
+           %>
+           <% for (const oneBrand of brands) { %>
+            <option 
+            value="<%= oneBrand %>"
+           > <%= oneBrand %> </option>
+           <% } %>
+          </select>
+        </div>
+        <div class="inputContainer" id="form-product">
+          <input type="text" class="input" name="model" placeholder="a">
+          <label for="" name="model" class="label">Modelo</label>
+        </div>
+
+            <div class="inputContainer" id="form-product">
+              <input type="number" class="input" name="year" placeholder="a">
+              <label for="" name="year" class="label">Año</label>
+            </div>
+           
+                <div class="inputContainer" id="form-product">
+                  <input type="text" class="input" name="description">
+                  <label for="" name="description" class="label">Descripción</label>
+                </div>
+               
+                
+                <div class="inputContainer" id="form-product">
+                  <input type="number" class="input" name="price">
+                  <label for="" name="price" class="label">Precio</label>
+                </div>
+
+                <div class="inputContainer" id="form-product">
+                  <label for="" name="year" class="label">Colores disponibles</label>
+                </div>
+                  <% const colors=['Rojo' , 'Negro' , 'Blanco' , 'Azul' ] %>
+                    <% for (const oneColor of colors) { %>
+                      <div class="inputContainer"><input type="checkbox" class="inputColor" name="color" value="<%= oneColor %>">
+                      <%= oneColor %> </input>
+                    </div>
+                        <% } %>
+                
+                
+               
+                <div class="inputContainer" id="form-product">
+                  <div class="input">
+                    <input type="file" name="imgFile" id="Perfil" style="display:none">
+                    <label class="label" for="Perfil">Seleccion Imagen De Producto</label>
+                  </div>
+                </div>
+              
+               
+               
+               
+                
+               
+               
+              
+                <input type="submit" class="submitBtn" value="Crear">
+              </form>
+    </div>
   </body>
   
   <%- include('partials/footer') %>

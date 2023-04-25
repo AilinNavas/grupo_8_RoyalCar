@@ -7,4 +7,7 @@ const router = express.Router();
 router.get("/", mainController.index);
 
 
+router.get("/contact", mainController.contact);
+
+
 module.exports = router;

@@ -1,0 +1,26 @@
+<%- include('partials/head' , { title: 'Contáctanos' , styles: [ 'registro-login' , 'header' , 'footer' ]}) %>
+
+    <body>
+        <%- include('partials/header') %>
+            <div class="signupFrm">
+
+                <form action="/users/register" class="form" method="POST" enctype="multipart/form-data">
+                    <h1 class="title">Contáctanos</h1>
+
+                    <div class="inputContainer">
+                        <input type="email" class="input" name="email" placeholder="a" required>
+                        <label for="" name="name" class="label">E-mail</label>
+                    </div>
+
+                    <div class="inputContainer">
+                        <textarea name="mensaje" class="input" placeholder="a" id="textarea" cols="60" rows="20" ></textarea>
+                        <label for="" name="last_name" class="label">Mensaje</label>
+                    </div>
+                </form>
+
+            </div>
+            <%- include('partials/footer') %>
+    </body>
+
+
+    </html>

@@ -4,7 +4,7 @@
     "brand": "Ferrari Monza",
     "model": "Sp2",
     "year": 2021,
-    "power": 1191,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "price": "178123",
     "color": "Blue",
     "image": "ferrari-monza.jpg"
@@ -14,7 +14,7 @@
     "brand": "Lamborghini Veneno",
     "model": "Roadster 1",
     "year": "2023",
-    "power": "123",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "price": "1234",
     "color": "Orange",
     "image": "labo-veneno3.jpg"
@@ -24,7 +24,7 @@
     "brand": "Lamborghini ",
     "model": "Sian",
     "year": "2022",
-    "power": "1610",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "price": "75212",
     "color": "Purple",
     "image": "labo-sian6.jpg"
@@ -34,7 +34,7 @@
     "brand": "Mclaren",
     "model": "765LT spider ",
     "year": 2022,
-    "power": 1325,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "price": "361.70",
     "color": "Orange",
     "image": "mclaren4.jpg"
@@ -44,7 +44,7 @@
     "brand": "Lamborghini",
     "model": "Huracan Evo Spyder",
     "year": 2023,
-    "power": 1715,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "price": "222.35",
     "color": "Purple",
     "image": "huracan.jpg"
@@ -54,7 +54,7 @@
     "brand": "Rolls Royce",
     "model": "Dawn Black Badge",
     "year": 2019,
-    "power": 1922,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "price": "581.32",
     "color": "Turquoise",
     "image": "roy.jpg"
@@ -64,7 +64,7 @@
     "brand": "BMW",
     "model": "M8 Competition",
     "year": "2020",
-    "power": "1143",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "price": "250.97",
     "color": "Orange",
     "image": "bmw.jpg"
@@ -74,8 +74,8 @@
     "brand": "Porsche",
     "model": "Taycan 4S cross ",
     "year": 2023,
-    "power": 1243,
-    "price": "778.35",
+    "description": 1243,
+    "price": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "color": "Turquoise",
     "image": "porch.jpg"
   },
@@ -84,7 +84,7 @@
     "brand": "Bugatti",
     "model": "Chiron",
     "year": 2018,
-    "power": 1366,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "price": "526.82",
     "color": "Crimson",
     "image": "chiron.jpg"
@@ -94,7 +94,7 @@
     "brand": "Ferrari ",
     "model": "488 pista spider",
     "year": "2022",
-    "power": "1919",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "price": "174.06",
     "color": "Violet",
     "image": "spider.jpg"
@@ -104,7 +104,7 @@
     "brand": "Porsche",
     "model": "918 Spyder",
     "year": 2015,
-    "power": 1243,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "price": "778.35",
     "color": "Turquoise",
     "image": "pors.jpg"
@@ -114,9 +114,22 @@
     "brand": "Mclaren",
     "model": "P1",
     "year": 2014,
-    "power": 1366,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "price": "526.82",
     "color": "Crimson",
     "image": "p14.jpg"
+  },
+  {
+    "id": 13,
+    "brand": "Ferrari",
+    "model": "f",
+    "year": "2015",
+    "description": "kshfsjghfhdsbhdbfhdsfb<sfh",
+    "price": "1256",
+    "color": [
+      "Rojo",
+      "Blanco"
+    ],
+    "image": "default-image.png"
   }
 ]

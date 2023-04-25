@@ -28,16 +28,28 @@
     box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
     margin-top: 125px;
   }
+
+  #form-container {
+    position: relative;
+    top: 150px;
+    padding-bottom: 200px ;
+  }
   
   .title {
     font-size: 30px;
     margin-bottom: 30px;
+  }
+  #product {
+   color: #cb0e08;
   }
   .inputContainer {
     position: relative;
     height: 45px;
     width: 90%;
     margin-bottom: 5px;
+  }
+  #form-product {
+    width: 70vw;
   }
   .input {
     position: absolute;
@@ -53,7 +65,23 @@
     background: none;
     z-index: 1;
   }
-
+  .inputColor {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 50%;
+    width: 100%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;
+    outline: none;
+    background: none;
+    z-index: 1;
+  }
+  #textarea {
+    height: 200px;
+  }
   
   ::placeholder {
     color: transparent;
