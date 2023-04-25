@@ -50,3 +50,15 @@ La comunicacion entre los integrantes del equipo.
 
 *¿Que vamos a empezar a hacer?
 Realizarnos seguimientos entre nosotros para ayudarnos en el cumplimiento de cada tarea.
+
+
+Principales conclusiones de la retro del Sprint N°5:
+
+*¿Que hicimos bien?
+Repasar los contenidos teoricos y aplicarlos a los requerimientos del spint.
+
+*¿Que podemos mejorar?
+Mejorar la frecuencia de nuestras reuniones para lograr alcanzar los obejtivos, y apoyarnos en las tareas individuales.
+
+*¿Que vamos a empezar a hacer?
+Mejorar la comunicacion, estar pendientes del otro y trabajar más unidos para .
