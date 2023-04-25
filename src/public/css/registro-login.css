@@ -11,6 +11,15 @@
     align-items: center;
     width : 100%
   }
+  #contactUs {
+    position: relative;
+    top: 70px;
+    padding-bottom: 300px;
+  }
+  #contact {
+    height: 450px;
+    padding-bottom: 300px;
+  }
   .loginFrm{
     margin : auto;
     display: flex;

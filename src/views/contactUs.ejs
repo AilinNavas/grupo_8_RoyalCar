@@ -2,9 +2,9 @@
 
     <body>
         <%- include('partials/header') %>
-            <div class="signupFrm">
+            <div class="signupFrm" id="contactUs">
 
-                <form action="/users/register" class="form" method="POST" enctype="multipart/form-data">
+                <form action="/users/register" class="form" id="contact" method="POST" enctype="multipart/form-data">
                     <h1 class="title">Contáctanos</h1>
 
                     <div class="inputContainer">
@@ -12,10 +12,16 @@
                         <label for="" name="name" class="label">E-mail</label>
                     </div>
 
-                    <div class="inputContainer">
-                        <textarea name="mensaje" class="input" placeholder="a" id="textarea" cols="60" rows="20" ></textarea>
+                    <div class="inputContainer" id="textarea">
+                        <textarea name="mensaje" class="input" placeholder="a" cols="60" rows="20" ></textarea>
                         <label for="" name="last_name" class="label">Mensaje</label>
                     </div>
+
+
+                    <div class="inputContainer">
+                        <input type="submit" class="submitBtn" value="Enviar">
+                    </div>
+                    
                 </form>
 
             </div>
