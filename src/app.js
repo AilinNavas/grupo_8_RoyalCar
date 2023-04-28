@@ -1,9 +1,11 @@
+require('dotenv').config();
 const express = require("express");
 const path = require("path");
 const methodOverride = require('method-override'); //para poder usar metodos Put y delete
 const session = require("express-session");
 const userLoggedMiddleware = require("./middlewares/userLoggeMiddleware")
 const cookies = require ('cookie-parser');
+
 
 const app = express();
 
