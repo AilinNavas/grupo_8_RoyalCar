@@ -64,8 +64,7 @@
                   <div class="inputContainer">
                     <select class="input" name="category">
                       <option class="label" value = "" font-family="oswald">Categoria</option>
-
-                     <% 
+                      <% 
                      const categories = ['Usuario' , 'Administrador'] 
                      %>
                      <% for (const oneCategory of categories) { %>
@@ -74,6 +73,7 @@
                       <%= locals.oldData && (oneCategory === oldData.category ? 'selected' : null) %>
                      > <%= oneCategory %> </option>
                      <% } %>
+                
                     </select>
                   </div>
                   <% if (locals.errors && errors.category) { %>
