@@ -11,18 +11,14 @@
         <h1 class="title" id= "product">Crear nuevo producto</h1>
 
         <div class="inputContainer" id="form-product">
-          <select class="input" name="brand">
-            <option class="label" value = "" font-family="oswald">Marca</option>
-
-           <% 
-           const brands = ['Lamborghini' , 'Ferrari', 'BMW' , 'Rolls-Royce'] 
-           %>
-           <% for (const oneBrand of brands) { %>
-            <option 
-            value="<%= oneBrand %>"
-           > <%= oneBrand %> </option>
-           <% } %>
+          <select class="input" name="products_brands_id" required>
+            <option  value = "" font-family="oswald">Marca</option>
+            <% brands.forEach(brand => { %>         
+              <option value="<%= brand.id %>"><%= brand.name %></option>
+           <% }) %>  
+        
           </select>
+          
         </div>
         <div class="inputContainer" id="form-product">
           <input type="text" class="input" name="model" placeholder="a">
@@ -45,32 +41,15 @@
                   <label for="" name="price" class="label">Precio</label>
                 </div>
 
-                <div class="inputContainer" id="form-product">
-                  <label for="" name="year" class="label">Colores disponibles</label>
-                </div>
-                  <% const colors=['Rojo' , 'Negro' , 'Blanco' , 'Azul' ] %>
-                    <% for (const oneColor of colors) { %>
-                      <div class="inputContainer"><input type="checkbox" class="inputColor" name="color" value="<%= oneColor %>">
-                      <%= oneColor %> </input>
-                    </div>
-                        <% } %>
                 
-                
+               
                
                 <div class="inputContainer" id="form-product">
                   <div class="input">
                     <input type="file" name="imgFile" id="Perfil" style="display:none">
                     <label class="label" for="Perfil">Seleccion Imagen De Producto</label>
                   </div>
-                </div>
-              
-               
-               
-               
-                
-               
-               
-              
+                </div> 
                 <input type="submit" class="submitBtn" value="Crear">
               </form>
     </div>

@@ -1,12 +1,9 @@
-body{
+/* body{
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNgt3tPBfbiIlHsPkReRcdDvm0Ghe0RAFgZA&usqp=CAU);
     background-size: 100vw 80vh;
     background-position: center;
     background-repeat: no-repeat;
-
-
-
-}
+} */
 .profilebody{
     
     width: 100%;
@@ -20,23 +17,27 @@ body{
   }
  
   .card {
-      width: 320px;
-      height: 260px;
+      width: 70vw;
+      height: 70vh;
       background: rgb(0, 0, 0);
       box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.333);
       border: solid 1px white;
+      padding: 20px;
   }
   
   .imge {
-    height: 70px;
+    height: 15vh;
+    width: 64vw;
+    padding-left: 15px;
     background-color: rgb(46, 45, 45);
-    border: solid 1px white;
+     border: solid 1px rgb(255, 255, 255); 
+    margin-left: 5px;
   }
   
   .Usericon {
     background-color: #fff;
     transform: translateX(10px) translateY(10px);
-    width: 57px;
+    width:57px;
     height: 57px;
     border-radius: 10px;
   }
@@ -45,7 +46,9 @@ body{
     width: 100%;
     height: 100%;
   }
-  
+  p {
+    width: 30vw;
+  }
   .imge .UserName {
     background-color: #fff;
     width: 60%;
@@ -83,8 +86,9 @@ body{
     background-color: #fff;
     transform: translate(5px, 6px);
     width: 95%;
-    height: 150px;
+    height: 45vh;
     border-radius: 5px;
+    padding: 30px;
     
   }
   
@@ -101,18 +105,19 @@ body{
     display: flex;
     justify-content: center;
     position: relative;
-    left: 55px;
+    left: 200px;
   } 
   
   .logout-button{
     color: #cb0e08;
+    width: 15vw;
     font-size: 16px;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    transition: all 1500ms;
+    transition: all 250ms;
   }
   .logout-button:hover{
     background-color: #cb0e08;

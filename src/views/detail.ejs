@@ -23,7 +23,7 @@
                                     US$ <%= product.price %>
                                 </p>
                                 <h4 class="description">
-                                    <%= product.brand %>
+                                    <%= product.brand.name %>
                                 </h4>
                                 <p class="model">
                                     <%= product.model %>
@@ -34,9 +34,13 @@
                                     <%= product.description %> 
 
                                 </p>
-                                <p class="model">
-                                    <%= product.color %>
-                                </p>
+                            
+                                    <ul class="model">
+                                        <% product.colors.forEach(color => { %>           
+                                          <li><%= color.name %></li>          
+                                        <% }) %>
+                                      </ul>
+                    
 
                                 <div class="action-button">
                                     <div class="cajas-button">

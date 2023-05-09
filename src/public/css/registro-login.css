@@ -50,6 +50,14 @@
   }
   #product {
    color: #cb0e08;
+  
+  }
+
+  #colors {
+   padding-left: 10px;
+   display: flex;
+   flex-wrap:wrap;
+   justify-content: space-around;
   }
   .inputContainer {
     position: relative;
@@ -151,3 +159,4 @@
   p {
     margin-top: 7px;
   }
+ 
