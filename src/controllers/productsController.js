@@ -46,15 +46,20 @@ const controller = {
 				year: req.body.year,
 				description: req.body.description,
 				price: req.body.price,
-				color: req.body.color,
 				image,
 				products_brands_id: req.body.products_brands_id
 			};
+			
+			const productCreated = await db.Product.create(productToCreate);
 
-			await db.Product.create(productToCreate);
+			const productColors = req.body.color?.map(color => ({ products_id: productCreated.id, colors_id: color }))
 
-			res.redirect('products')
+            await db.ProductHasColor.bulkCreate(productColors);
 
+			res.send(productColors)
+
+			res.redirect('/products'); 
+		
 		} catch (error) {
 			res.send(error);
 		}

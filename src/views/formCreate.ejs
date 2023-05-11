@@ -1,60 +1,76 @@
 <%- include('partials/head' , { title: 'Crear producto' , styles: [ 'header' , 'footer' , 'registro-login' ]}) %>
-    
-<body>
 
-  <%- include('partials/header') %>
-  
-     <div class="signupFrm" id="form-container">
-    
+  <body>
 
-      <form action="/products" method="POST" enctype="multipart/form-data">
-        <h1 class="title" id= "product">Crear nuevo producto</h1>
+    <%- include('partials/header') %>
 
-        <div class="inputContainer" id="form-product">
-          <select class="input" name="products_brands_id" required>
-            <option  value = "" font-family="oswald">Marca</option>
-            <% brands.forEach(brand => { %>         
-              <option value="<%= brand.id %>"><%= brand.name %></option>
-           <% }) %>  
-        
-          </select>
-          
-        </div>
-        <div class="inputContainer" id="form-product">
-          <input type="text" class="input" name="model" placeholder="a">
-          <label for="" name="model" class="label">Modelo</label>
-        </div>
+      <div class="signupFrm" id="form-container">
 
-            <div class="inputContainer" id="form-product">
-              <input type="number" class="input" name="year" placeholder="a">
-              <label for="" name="year" class="label">Año</label>
+
+        <form action="/products" method="POST" enctype="multipart/form-data">
+          <h1 class="title" id="product">Crear nuevo producto</h1>
+
+          <div class="inputContainer" id="form-product">
+            <select class="input" name="products_brands_id" required>
+              <option value="" font-family="oswald">Selecciona la marca</option>
+              <% for( let i=0; i < brands.length; i++ ) { %>
+
+                <option value="<%= brands[i].id %>" id="<%=brands[i].name %>">
+                  <%= brands[i].name %>
+                </option>
+                <% } %>
+
+
+            </select>
+          </div>
+
+          <div class="inputContainer" id="form-product">
+            <input type="text" class="input" name="model" placeholder="a">
+            <label for="" name="model" class="label">Modelo</label>
+          </div>
+
+          <div class="inputContainer" id="form-product">
+            <input type="number" class="input" name="year" placeholder="a">
+            <label for="" name="year" class="label">Año</label>
+          </div>
+
+          <div class="inputContainer" id="form-product">
+            <input type="text" class="input" name="description">
+            <label for="" name="description" class="label">Descripción</label>
+          </div>
+
+          <div class="inputContainer" id="form-product">
+            <input type="number" class="input" name="price">
+            <label for="" name="price" class="label">Precio</label>
+          </div>
+
+          <div class="inputContainer" id="form-product">
+            <label for="" name="colors" class="label">Colores disponibles</label>
+          </div>
+          <div class="inputContainer" id="colors">
+
+            <% colors.forEach( color=> { %>
+              <p>
+                <input type="checkbox" id="<%= color.name %>" value="<%= color.id %>" name="color">
+                <label for="<%= color.name %>">
+                  <%= color.name %>
+                </label>
+
+                <% }) %>
+              </p>
+          </div>
+
+          <div class="inputContainer" id="form-product">
+            <div class="input">
+              <input type="file" name="imgFile" id="Perfil" style="display:none">
+              <label class="label" for="Perfil">Seleccion Imagen De Producto</label>
             </div>
-           
-                <div class="inputContainer" id="form-product">
-                  <input type="text" class="input" name="description">
-                  <label for="" name="description" class="label">Descripción</label>
-                </div>
-               
-                
-                <div class="inputContainer" id="form-product">
-                  <input type="number" class="input" name="price">
-                  <label for="" name="price" class="label">Precio</label>
-                </div>
-
-                
-               
-               
-                <div class="inputContainer" id="form-product">
-                  <div class="input">
-                    <input type="file" name="imgFile" id="Perfil" style="display:none">
-                    <label class="label" for="Perfil">Seleccion Imagen De Producto</label>
-                  </div>
-                </div> 
-                <input type="submit" class="submitBtn" value="Crear">
-              </form>
-    </div>
+          </div>
+          <input type="submit" class="submitBtn" value="Crear">
+        </form>
+      </div>
   </body>
-  
+
   <%- include('partials/footer') %>
-</html>
-    
+
+    </html>
