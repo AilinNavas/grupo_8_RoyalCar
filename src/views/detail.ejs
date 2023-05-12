@@ -5,17 +5,19 @@
         <%- include('partials/header') %>
 
             <main>
-              
-               <section class="product-cart"> 
-                  
-                    <h3><%= product.model %></h3> 
-                    
+
+                <section class="product-cart">
+
+                    <h3>
+                        <%= product.model %>
+                    </h3>
+
                     <div class="product-cart">
 
 
                         <article class="product-cart2">
-                            <a href="/products/<%= product.id %>"><img
-                                    src="\images\products\<%= product.image %>" alt="Auto" class="product_img"></a>
+                            <a href="/products/<%= product.id %>"><img src="\images\products\<%= product.image %>"
+                                    alt="Auto" class="product_img"></a>
 
                             <div class="main-article">
                                 <i class="fa-solid fa-car"></i></i>
@@ -26,21 +28,27 @@
                                     <%= product.brand.name %>
                                 </h4>
                                 <p class="model">
-                                    <%= product.model %>
-                                        <%= product.year%>
+                                  Modelo:  <%= product.model %>
 
                                 </p>
                                 <p class="model">
-                                    <%= product.description %> 
+                                   Año:     <%= product.year%>
+                                </p>
+                                <p class="model">
+                                    <%= product.description %>
 
                                 </p>
-                            
+                                <div>
+                                    <p class="model">Colores disponibles:</p>
                                     <ul class="model">
-                                        <% product.colors.forEach(color => { %>           
-                                          <li><%= color.name %></li>          
-                                        <% }) %>
-                                      </ul>
-                    
+                                        <% product.colors.forEach(color=> { %>
+                                            <li>
+                                                <%= color.name %>
+                                            </li>
+                                            <% }) %>
+                                    </ul>
+                                </div>
+
 
                                 <div class="action-button">
                                     <div class="cajas-button">
@@ -49,23 +57,25 @@
                                     </div>
 
                                     <div class="cajas-button">
-                                        <a href="/products/<%= product.id %>/edit" class="button-decoration">EDITAR PRODUCTO</a>
-                                    </div> 
+                                        <a href="/products/<%= product.id %>/edit" class="button-decoration">EDITAR
+                                            PRODUCTO</a>
+                                    </div>
                                     <div class="cajas-button">
                                         <form action="/products/<%= product.id %>?_method=DELETE" method="POST"
                                             style="display: inline-flex">
                                             <button class="button-decoration" type="submit">ELIMINAR</button>
                                         </form>
-                                    </div>                            
-                                </div>   
+                                    </div>
+                                </div>
                             </div>
-                                
+
                         </article>
                     </div>
-                <!-- </section> -->
+                    <!-- </section> -->
             </main>
-            
-        </body>
-        
-        <%- include('partials/footer') %>
-    </html>
+
+    </body>
+
+    <%- include('partials/footer') %>
+
+        </html>

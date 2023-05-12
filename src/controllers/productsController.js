@@ -52,11 +52,9 @@ const controller = {
 			
 			const productCreated = await db.Product.create(productToCreate);
 
-			const productColors = req.body.color?.map(color => ({ products_id: productCreated.id, colors_id: color }))
-
-            await db.ProductHasColor.bulkCreate(productColors);
-
-			res.send(productColors)
+			 const productColors = req.body.color?.map(color => ({ products_id: productCreated.id, colors_id: color }))
+			console.log(productColors);
+             await db.ProductHasColor.bulkCreate(productColors);
 
 			res.redirect('/products'); 
 		
@@ -104,7 +102,11 @@ const controller = {
 
 		try {
 			const id = req.params.id;
+			
+			await db.ProductHasColor.destroy({ where: { products_id: id } });
+
 			await db.Product.destroy({ where: { id } });
+			
 			res.redirect('/products');
 		}
 		catch (error) {

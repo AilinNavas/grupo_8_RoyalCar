@@ -23,12 +23,6 @@
     color: #ebebeb;
   }
   
-  .action-button {
-    /* font-size: 16px;
-    color: goldenrod; */
-    
-    
-  }
   .button-decoration{
     border-radius: 4px;
     font-size: 18px;
@@ -40,6 +34,9 @@
     transition: all 300ms;
     font-weight: normal;
 
+  }
+  li{
+   list-style: none;
   }
 
   
