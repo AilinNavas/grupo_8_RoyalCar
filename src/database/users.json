@@ -100,44 +100,54 @@
     "confirm_password": "LjyeUOas08Pu"
   },
   {
-    "id": 11,
+    "id": 15,
+    "name": "Walter",
+    "last_name": "Barboza",
+    "email": "wbarboza97@gmail.com",
+    "image": "1680893397778-descarga.jpg",
+    "category": "Usuario",
+    "password": "$2a$10$G8AgQYRUJNj58O0lOX8sLeEwc3U.jy.Y04lgYiXJqVmg0uuX/dJ/i",
+    "confirm_password": "$2a$10$n4ZsYCu2HkRgnDiPbgKQUO6A3GgkSuc/.8Ef1jSIpU29y6wwgvqi."
+  },
+  {
+    "id": 16,
     "name": "Ailin",
     "last_name": "Navas",
     "email": "navasailin18@gmail.com",
+    "image": "1683254777639-100_8601.jpg2 - copia.jpg",
+    "category": "Usuario",
+    "password": "$2a$10$Vyub0bGUCJiWIRlZbbRSCOYAUnaUL7IdLX.8HcVDwE38gzLMNXBpe",
+    "confirm_password": "$2a$10$pDvjqJE7tfwK2l1NEJBGruE8RBffbWfOy0/5sOx6ezcHMJGyICgoG"
+  },
+  {
+    "id": 17,
+    "name": "Ailin",
+    "last_name": "",
+    "email": "",
     "image": "default-image.png",
-    "category": "Usuario",
-    "password": "$2a$10$symuw0n4rGWmr66r61lrYOBvpHAWs2XhfJuVdxTaOrff9E5aHJnfi",
-    "confirm_password": "$2a$10$5gPemJgbWGMEEaVg2ujd3OnCZe5p1DeySxteT.bsEn.9SMenvuRPO"
+    "category": "",
+    "password": "$2a$10$KCgH8Lrtp4fOrSMYbFiysunW2XBSgPZGxMA1/qfARuesUMIlCzB5W",
+    "confirm_password": "$2a$10$lDgDbaohJGsuU/58yqm6..KfJLg0yZX3JQUQeQy3XHuSvlC0FoVDW"
   },
   {
-    "id": 12,
-    "name": "Ailin",
+    "id": 18,
+    "name": "Nahuel",
     "last_name": "Navas",
-    "email": "navasailin18@gmail.com",
-    "image": "1680890487455-ferrari-monza2.jpg",
-    "category": "Usuario",
-    "password": "$2a$10$z408JJzEu.hmMQMY0MwO.OL9/Hc89PJDRsnaXw3I9n5mQLy2TI8ra",
-    "confirm_password": "$2a$10$a72Xd4IWADTZ/EfZnU9yS.HgSeS/9ze.nv8LbUsFBAA6pgXiVbTKS"
-  },
-  {
-    "id": 13,
-    "name": "Ailin",
-    "last_name": "Navas",
-    "email": "navasailin18@gmail.com",
-    "image": "1680890761922-ferrari-monza2.jpg",
+    "email": "saturnopeluok@gmail.com",
+    "image": "1684242720723-lv_0_20221219200842.mp4",
     "category": "Administrador",
-    "password": "$2a$10$nLDIPmXmxwf5Gb8C1UpAEuR0XA7xHAfJsyWiUwJvwKceHURffn2QK",
-    "confirm_password": "$2a$10$OajahAe6YXHiK6jZsWD.vex1X2b.LJp8L/itjVdsgIQYz6i.iupeW"
+    "password": "$2a$10$AVQriNf8FkBxYg4c5Rji2.Tit3SIwEhsR88S7U7.QNN5Yne1zrbJO",
+    "confirm_password": "$2a$10$/MgRWRrdmsOaesDkHUhZwefYiIvjDZNPQCpwwxnkE1e0/1JD1AIy6"
   },
   {
-    "id": 14,
-    "name": "Ailin",
+    "id": 19,
+    "name": "Nahuel",
     "last_name": "Navas",
-    "email": "navasailin18@gmail.com",
-    "image": "1680890963439-ferrari-monza2.jpg",
+    "email": "saturnopeluok@gmail.com",
+    "image": "1684242787507-lv_0_20221219200842.mp4",
     "category": "Administrador",
-    "password": "$2a$10$TNFkRmA9WjbJ1TgdKyH3dualcRjrFD9WIbUtg/6.pxZeOoSedpE0G",
-    "confirm_password": "$2a$10$VUIykMIuVkujdnfOJIUmPupxBCoS.ZX6EIZ7Vaf4AV0ZD0qmOAIku"
+    "password": "$2a$10$M3BmkBWi/Uc9fQEbfzbfyOAU7BQwTDV..03yhlnDEPtgwK/PWo25y",
+    "confirm_password": "$2a$10$f8clNyOzybR0HounpT51M.QJDdu1VjhDDnKxJH8/UgSriosKQlDtS"
   },
   {
     "id": 15,

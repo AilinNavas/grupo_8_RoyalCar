@@ -1,82 +1,75 @@
 <%- include('partials/head' , { title: 'Editar producto' , styles: [ 'registro-login' ,'header' , 'footer' ]}) %>
-    
-<body>
 
-  <%- include('partials/header') %>
+  <body>
+
+    <%- include('partials/header') %>
 
 
-    <div class="signupFrm"  id="form-container">
-     
-      <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
-        <h1 class="title" id="product" >Editar producto</h1>
-        <div class="inputContainer" id="form-product">
-          <select class="input" name="brand">
-            <option class="label" value = "" font-family="oswald">Marca</option>
+      <div class="signupFrm" id="form-container">
 
-           <% 
-           const brands = ['Lamborghini' , 'Ferrari', 'BMW' , 'Rolls-Royce'] 
-           %>
-           <% for (const oneBrand of brands) { %>
-           <option 
-            value="<%= oneBrand %>" 
-           <%= locals.oldData && (oneBrand === oldData.brand ? 'selected' : null) %>
-          > <%= oneBrand %> </option>
-          <% } %></option>
-          </select>
-        </div> 
-         
-        <div class="inputContainer" id="form-product">
-          <input type="text" class="input" name="model" placeholder="a" value="<%= productToEdit.model %>">
-          <label for="" name="model" class="label">Modelo</label>
-        </div>
+        <form action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+          <h1 class="title" id="product">Editar producto</h1>
+          <div class="inputContainer" id="form-product">
+            <select class="input" name="products_brands_id">
+              <option class="label" value="" font-family="oswald">Selecciona la marca</option>
+              <% brands.forEach(brand=> { %>
+                <option value="<%= brand.id %>" <%=product.brand.id==brand.id ? "selected" : "" %>><%= brand.name %>
+                </option>
+                <% }) %>
 
-            <div class="inputContainer" id="form-product">
-              <input type="number" class="input" name="year" placeholder="a" value="<%= productToEdit.year %>">
-              <label for="" name="year" class="label">Año</label>
+            </select>
+          </div>
+
+          <div class="inputContainer" id="form-product">
+            <input type="text" class="input" name="model" placeholder="a" value="<%= product.model %>">
+            <label for="" name="model" class="label">Modelo</label>
+          </div>
+
+          <div class="inputContainer" id="form-product">
+            <input type="number" class="input" name="year" placeholder="a" value="<%= product.year %>">
+            <label for="" name="year" class="label">Año</label>
+          </div>
+
+          <div class="inputContainer" id="form-product">
+            <input type="text" class="input" name="description" value="<%= product.description %>">
+            <label for="" name="description" class="label">Descripción</label>
+          </div>
+
+          <div class="inputContainer" id="form-product">
+            <input type="number" class="input" name="price" value="<%= product.price %>">
+            <label for="" name="price" class="label">Precio</label>
+          </div>
+
+          <div class="inputContainer" id="form-product">
+            <label for="" name="color" class="label">Colores disponibles</label>
+          </div>
+          <div class="inputContainer" id="colors">
+
+            <% colors.forEach( color=> { %>
+              <p>
+                <input type="checkbox" id="<%= color.name %>" value="<%= color.id %>">
+                <label for="<%= color.name %>">
+                  <%= color.name %>
+                </label>
+
+                <% }) %>
+              </p>
+          </div>
+        
+
+
+          <div class="inputContainer" id="form-product">
+            <div class="input">
+              <input type="file" name="img" id="Perfil" style="display:none" value="<%= product.image %>">
+              <label class="label" for="Perfil">Seleccion Imagen De Producto</label>
             </div>
-           
-                <div class="inputContainer" id="form-product">
-                  <input type="text" class="input" name="description" value="<%= productToEdit.description %>" >
-                  <label for="" name="description" class="label">Descripción</label>
-                </div>
-               
-                
-                <div class="inputContainer" id="form-product">
-                  <input type="number" class="input" name="price" value="<%= productToEdit.price %>">
-                  <label for="" name="price" class="label">Precio</label>
-                </div>
+          </div>
 
-                <div class="inputContainer" id="form-product">
-                  <label for="" name="year" class="label">Colores disponibles</label>
-                </div>
-                  <% const colors=['Rojo' , 'Negro' , 'Blanco' , 'Azul' ] %>
-                    <% for (const oneColor of colors) { %>
-                      <div class="inputContainer"><input type="checkbox" class="inputColor" name="color" value="<%= oneColor %>">
-                      <%= oneColor %> </input>
-                    </div>
-                        <% } %>
-                
-                
-               
-                <div class="inputContainer" id="form-product">
-                  <div class="input">
-                    <input type="file" name="imgFile" id="Perfil" style="display:none" value="<%= productToEdit.image %>"> 
-                    <label class="label" for="Perfil">Seleccion Imagen De Producto</label>
-                  </div>
-                </div>
-              
-               
-               
-               
-                
-               
-               
-              
-                <input type="submit" class="submitBtn" value="Guardar cambios">
-              </form>
-    </div>
-    
+          <input type="submit" class="submitBtn" value="Guardar cambios">
+        </form>
+      </div>
+
   </body>
   <%- include('partials/footer') %>
-  
-</html>
+
+    </html>

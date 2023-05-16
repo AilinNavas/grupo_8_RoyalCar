@@ -1,30 +1,19 @@
 const express = require("express");
-const multer = require("multer");
 const path = require("path");
-
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.resolve(__dirname, "../public/images/users"));
-    },
-    filename: (req, file, cb) => {
-        cb(null, Date.now() + '-' + file.originalname);
-        
-    }
-});
-
-
-const upload = multer({ storage });
 
 const usersController = require("../controllers/usersController");
 const guestMidddleware = require('../middlewares/guestMiddleware');
 const authMidddleware = require("../middlewares/authMiddleware");
+const upload = require('../middlewares/multerMiddleware');
 const { body } = require("express-validator");
 
 const validationsRegister = [
     body("name")
-        .notEmpty().withMessage('*Debes completar con tu nombre'),
+        .notEmpty().withMessage('*Debes completar con tu nombre').bail()
+        .isLength({ min: 2 }),
     body("last_name")
-        .notEmpty().withMessage('*Debes completar con tu apellido'),
+        .notEmpty().withMessage('*Debes completar con tu apellido').bail()
+        .isLength({ min: 2 }),
     body("email")
         .notEmpty().withMessage('*Debes completar con un correo electronico').bail()
         .isEmail().withMessage('*Debes completar con un correo electronico válido'),
@@ -37,9 +26,17 @@ const validationsRegister = [
         .notEmpty().withMessage('*Debes confirmar tu contraseña'),
     body("usersImage").custom((value, { req }) => {
         let file = req.file;
+        let acceptedExtensions = ['.jpg','.jpeg','.png','.gif'];
+        
         if(!file) {
             throw new Error('*Debes subir una imagen de perfil')
+        } else {
+            let fileExtension = path.extname(file.originalname); 
+            if(!acceptedExtensions.includes(fileExtension)){
+                throw new Error(`*Las extensiones de archivo permitidas son ${acceptedExtensions.join(' , ')}`)
         }
+    }
+
         return true;
     })
 ]
