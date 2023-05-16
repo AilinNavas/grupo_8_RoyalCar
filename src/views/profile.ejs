@@ -9,7 +9,7 @@
                     <div class="card">
                         <div class="imge">
                             <div class="Usericon">
-                                <img class="image-perfil" src="\images\users\<%= user.image %>" alt="">
+                                <img class="image-perfil" src="/images/users/<%=user.avatar %>" alt="">
 
                             </div>
                             <p class="UserName"> hi <%= user.name %>
@@ -22,7 +22,7 @@
                         <div class="Description">
                             <p>
                                 Bienvenid@ <%= user.name %>
-                                    <%= user.last_name %> a tu cuenta de <%= user.category %> de RoyalCar.
+                                    <%= user.last_name %> a tu cuenta de <%= user.rol.name %> de RoyalCar.
                                             Por cualquier duda, podes comunicarte con un asesor de nuestro equipo a
                                             travez de asesoria_personalizada@royalcar.com.
 
@@ -31,9 +31,10 @@
 
                         <div class="social-media">
                             <div class="contein-logout">
-
-                                <a href="/users/logout" class="logout-button"> Cerrar Sesion </a>
-
+                                <a href="/users/logout" class="logout-button"> CERRAR SESION </a>
+                            </div>
+                            <div class="contein-logout">
+                                <a href="/users/<%= user.id %>/edit" class="logout-button">EDITAR</a>
                             </div>
 
                         </div>

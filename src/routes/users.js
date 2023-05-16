@@ -8,6 +8,7 @@ const storage = multer.diskStorage({
     },
     filename: (req, file, cb) => {
         cb(null, Date.now() + '-' + file.originalname);
+        
     }
 });
 
@@ -54,6 +55,10 @@ router.post("/login", usersController.loginProcess);
 router.get("/profile", authMidddleware ,usersController.profile);
 
 router.get('/logout', usersController.logout);
+
+router.get("/:id/edit", usersController.edit);
+router.put("/:id", upload.single('usersImage'),usersController.update);
+
 // ruta para huespedes
 // router.get('/guests', usersController.guests);
 // // ruta para lista de usuarios

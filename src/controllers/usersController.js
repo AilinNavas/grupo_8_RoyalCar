@@ -4,108 +4,136 @@ const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
 
-
-const Roles = db.Rol;
-const Users = db.User;
-
-
-const usersFilePath = path.join(__dirname, '../database/users.json');
-function getUsers() {
-	return JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-}
+// const usersFilePath = path.join(__dirname, '../database/users.json');
+// function getUsers() {
+// 	return JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+// }
 
 
 const controller = {
-	register: (req, res) => {
-		res.render('register');
+	register:(req, res) => {
+		 db.Rol.findAll()
+		.then(function(roles){
+			res.render('register', { roles:roles });
+		})
 	},
 
 	createUser: (req, res) => {
-		const resultValidation = validationResult(req);
+		try {
+			const resultValidation = validationResult(req);
 
-		if (resultValidation.errors.length > 0) {
-			res.render('register', { errors: resultValidation.mapped(), oldData: req.body });
+			if (resultValidation.errors.length > 0) {
+				res.render('register', { errors: resultValidation.mapped(), oldData: req.body });
+			}
+			const avatar = req.file ? req.file.filename : 'default-image.png';
+			const usersToCreate = {
+				name: req.body.name,
+				last_name: req.body.last_name,
+				email: req.body.email,
+				avatar,
+				roles_id: req.body.roles,
+				password: bcrypt.hashSync(req.body.password, 10),
+			};
+			
+			const usersCreated = db.User.create(usersToCreate);
+
+			res.redirect('login');
+
+		} catch (error) {
+			res.send(error);
 		}
 
-		const image = req.file ? req.file.filename : 'default-image.png';
-		const users = getUsers();
-		const newUsers = {
-			id: users[users.length - 1].id + 1,
-			name: req.body.name,
-			last_name: req.body.last_name,
-			email: req.body.email,
-			image,
-			category: req.body.category,
-			password: bcrypt.hashSync(req.body.password, 10),
-			confirm_password: bcrypt.hashSync(req.body.confirm_password, 10)
 
-		};
-		users.push(newUsers);
-		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-		res.redirect('login');
+
 	},
 
 
 	login: (req, res) => {
-		res.render(path.join(__dirname, '../views/login.ejs'))
-	},
-	// todos los usuarios
-	findAll: function () {
-		return getUsers();
-	},
-	// buscar un usuario por id
-	findByPk: function (id) {
-		let allUser = controller.findAll();
-		let userFound = allUser.find(oneUser => oneUser.id === id);
-		return userFound;
-	},
-	// buscar un usuario por email
-	findByField: function (field, text) {
-		let allUser = controller.findAll();
-		let userFound = allUser.find(oneUser => oneUser[field] === text);
-		return userFound;
+		db.User.findAll()
+			.then(function (User) {
+				res.render('login', { User })
+			})
 	},
 
-	loginProcess: (req, res) => {
-		let userToLogin = controller.findByField("email", req.body.email);
 
-		if (userToLogin) {
-			let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password);
-			if (isOkThePassword) {
-				delete userToLogin.password;
-				req.session.userLogged = userToLogin;
+	loginProcess: async (req, res) => {
 
-				if (req.body.remember_user) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+		try {
+			const email = req.body.email;
+			const userToLogin = await db.User.findOne({ include: ['rol'], where: { email } });
+
+			if (userToLogin) {
+				let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+				if (isOkThePassword) {
+					delete userToLogin.password;
+					req.session.userLogged = userToLogin;
+
+					if (req.body.remember_user) {
+						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+					}
+
+					return res.redirect("profile");
 				}
-
-				return res.redirect("profile");
+				return res.render('login', {
+					errors: {
+						password: {
+							msg: "La informacion es incorrecta..."
+						}
+					}
+				});
 			}
 			return res.render('login', {
 				errors: {
-					password: {
-						msg: "La informacion es incorrecta..."
+					email: {
+						msg: "No se encuentra este email..."
 					}
 				}
 			});
-
+		} catch (error) {
+			res.send(error)
 		}
-		return res.render('login', {
-			errors: {
-				email: {
-					msg: "No se encuentra este email..."
-				}
-			}
-		});
+
 	},
-
-
 	profile: (req, res) => {
-		    res.render('profile', {
+		res.render('profile', {
 			user: req.session.userLogged
 
 		});
 	},
+
+	edit: async (req, res) => {
+		const id = req.params.id;
+
+		const roles = await db.Rol.findAll();
+
+		const user = await db.User.findOne({ include: { all: true }, where: { id } });
+
+		res.render('userEdit', { user, roles });
+	},
+
+
+	update: async (req, res) => {
+		try {
+			const avatar = req.file ? req.file.filename : 'default-image.png';
+			const userUpdate = {
+				name: req.body.name,
+				last_name: req.body.last_name,
+				email: req.body.email,
+				avatar,
+				roles_id: req.body.roles,
+				password: bcrypt.hashSync(req.body.password, 10),
+			};
+
+			await db.User.update(userUpdate, { where: { id: req.params.id }, force: true });
+			res.redirect('profile');
+
+		} catch (error) {
+			res.send(error);
+		}
+
+	},
+
+
 
 	logout: (req, res) => {
 		res.clearCookie('userEmail');

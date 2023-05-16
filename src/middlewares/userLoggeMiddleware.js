@@ -1,10 +1,13 @@
-const controller = require("../controllers/usersController");
+const db= require('../database/models')
 
-function userLoggedMiddleware(req, res, next) {
+async function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = false;
 
     let emailInCookie = req.cookies.userEmail;
-    let userFromCookie = controller.findByField('email', emailInCookie);
+    if(!emailInCookie) return next();
+
+    let userFromCookie =  await db.User.findOne ({where: {email:emailInCookie },attributes:{exclude:['password']}, include: {model:db.Rol, as: "rol" } });
+
         
     if(userFromCookie) {
         req.session.userLogged = userFromCookie;

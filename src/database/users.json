@@ -148,5 +148,54 @@
     "category": "Usuario",
     "password": "$2a$10$G8AgQYRUJNj58O0lOX8sLeEwc3U.jy.Y04lgYiXJqVmg0uuX/dJ/i",
     "confirm_password": "$2a$10$n4ZsYCu2HkRgnDiPbgKQUO6A3GgkSuc/.8Ef1jSIpU29y6wwgvqi."
+  },
+  {
+    "id": 16,
+    "name": "",
+    "last_name": "",
+    "email": "",
+    "image": "default-image.png",
+    "category": "",
+    "password": "$2a$10$fWqG/.p1ouLGAGaCmwauBeb9NeIBtRwdptgIbuxFRYWyQcxGKkCLm",
+    "confirm_password": "$2a$10$aUqseP9shBHkOBVIE.TDd.Z/wDua4OFU57JOIROKTL.k/X6gTXx7y"
+  },
+  {
+    "id": 17,
+    "name": "",
+    "last_name": "",
+    "email": "",
+    "image": "default-image.png",
+    "category": "",
+    "password": "$2a$10$cRgM9HghTvci9zJ9WtJN8ul6cJhN00XzqH2nKBh1zm34bYSC66KRi",
+    "confirm_password": "$2a$10$mNHNmN5aBEDXbHNxYj39EunoK/tx7RtzVRaBy9kJzP8Y73NEsSvI2"
+  },
+  {
+    "id": 18,
+    "name": "",
+    "last_name": "",
+    "email": "",
+    "image": "default-image.png",
+    "category": "",
+    "password": "$2a$10$WQCUys6MD0m5/deFZJ4VlObrqF8Z7z.sVs4wKufP6cpdSNfQRXAnG",
+    "confirm_password": "$2a$10$cYm9d20aOUvLkjv6BNA53OrI6r9b3QCAAAKVPh3QSJlxlUg/ExjoS"
+  },
+  {
+    "id": 19,
+    "name": "",
+    "last_name": "",
+    "email": "",
+    "image": "default-image.png",
+    "category": "",
+    "password": "$2a$10$Ri.VxYbxNtdOoJ88/ozy6eh11lWKd58l7ThFiX5GB99XABWPgCwAi",
+    "confirm_password": "$2a$10$jftAiWGdBzTJJFQ3j6FRM.Yi7X34dN7z2YhLDwzOK2nfbiVkVpLqq"
+  },
+  {
+    "id": 20,
+    "name": "Facundo",
+    "last_name": "Alcocer",
+    "email": "walter_97@live.com.ar",
+    "image": "1683424260836-WhatsApp Image 2022-12-11 at 17.26.10.jpeg",
+    "password": "$2a$10$5OF1..wQz.0qyahmBZ44y.Wmqhr/1Nkq4/vhoFbTDw9oPQgLFOpBO",
+    "confirm_password": "$2a$10$3R/tNS4qyFfCjyOmdIZiB.vBqc1Ez2S16Z2YKIG5g0XHDx1IQj9oy"
   }
 ]

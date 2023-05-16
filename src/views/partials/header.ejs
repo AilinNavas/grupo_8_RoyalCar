@@ -25,9 +25,7 @@
 
 
   <div class="header_2">
-    <!-- <div class="logo_2">
-            <img src="../images/logo.png" alt="logo">
-        </div> -->
+    
     <div class="navbar">
       <a href="/" title="Home">Home</a>
       <a href="/products" class="">Alquilar</a>
@@ -36,8 +34,8 @@
       <a href="/contact" class="">Contáctanos</a>
       <% if (locals.isLogged) { %>
         <!-- <li class="nav-profile"> -->
-          <a class="nav-profile-1" href="users/profile" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="/images/users/<%= locals.userLogged.image %>" width="45" style="border-radius: 100%;">
+          <a class="nav-profile-1" href="/users/profile" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/images/users/<%= locals.userLogged.avatar %>" width="45" style="border-radius: 100%;">
             Hi <%= locals.userLogged.name %> 
           </a>
           <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
