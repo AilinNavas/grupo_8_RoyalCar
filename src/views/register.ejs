@@ -43,7 +43,7 @@
 
                       <div class="inputContainer">
                         <div class="input">
-                          <input type="file" name="usersImage" id="Perfil" style="display:none">
+                          <input type="file" name="avatar" id="Perfil" style="display:none">
                           <label class="label" for="Perfil">Seleccion Imagen De Perfil</label>
                         </div>
                       </div>
@@ -53,12 +53,15 @@
                         </div>
                         <% } %>
                           <div class="inputContainer">
-                            <select class="input" name="roles">
-                              <% for (let i=0; i < roles.length; i++) { %>
-                                <option class="label" value="<%=roles[i].id%> " font-family="oswald">
-                                  <%=roles[i].name%>
+                            <select class="input" name="roles" required>
+                              <option class="label" value="" font-family="oswald">Selecciona Tu Rol</option>
+                              <% for( let i=0; i < roles.length; i++ ) { %>
+
+                                <option value="<%= roles[i].id %>" id="<%=roles[i].name %>">
+                                  <%= roles[i].name %>
                                 </option>
                                 <% } %>
+
                             </select>
                           </div>
                           <% if (locals.errors && errors.roles) { %>
