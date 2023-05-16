@@ -118,5 +118,45 @@
     "category": "Usuario",
     "password": "$2a$10$Vyub0bGUCJiWIRlZbbRSCOYAUnaUL7IdLX.8HcVDwE38gzLMNXBpe",
     "confirm_password": "$2a$10$pDvjqJE7tfwK2l1NEJBGruE8RBffbWfOy0/5sOx6ezcHMJGyICgoG"
+  },
+  {
+    "id": 17,
+    "name": "Ailin",
+    "last_name": "",
+    "email": "",
+    "image": "default-image.png",
+    "category": "",
+    "password": "$2a$10$KCgH8Lrtp4fOrSMYbFiysunW2XBSgPZGxMA1/qfARuesUMIlCzB5W",
+    "confirm_password": "$2a$10$lDgDbaohJGsuU/58yqm6..KfJLg0yZX3JQUQeQy3XHuSvlC0FoVDW"
+  },
+  {
+    "id": 18,
+    "name": "Nahuel",
+    "last_name": "Navas",
+    "email": "saturnopeluok@gmail.com",
+    "image": "1684242720723-lv_0_20221219200842.mp4",
+    "category": "Administrador",
+    "password": "$2a$10$AVQriNf8FkBxYg4c5Rji2.Tit3SIwEhsR88S7U7.QNN5Yne1zrbJO",
+    "confirm_password": "$2a$10$/MgRWRrdmsOaesDkHUhZwefYiIvjDZNPQCpwwxnkE1e0/1JD1AIy6"
+  },
+  {
+    "id": 19,
+    "name": "Nahuel",
+    "last_name": "Navas",
+    "email": "saturnopeluok@gmail.com",
+    "image": "1684242787507-lv_0_20221219200842.mp4",
+    "category": "Administrador",
+    "password": "$2a$10$M3BmkBWi/Uc9fQEbfzbfyOAU7BQwTDV..03yhlnDEPtgwK/PWo25y",
+    "confirm_password": "$2a$10$f8clNyOzybR0HounpT51M.QJDdu1VjhDDnKxJH8/UgSriosKQlDtS"
+  },
+  {
+    "id": 20,
+    "name": "Nahuel",
+    "last_name": "Navas",
+    "email": "saturnopeluok@gmail.com",
+    "image": "1684242802868-pexels-taryn-elliott-5309422-1920x1080-25fps.mp4",
+    "category": "Administrador",
+    "password": "$2a$10$X6WbZ3A1k2ASnkGfmP0CcuimrWgKoS7vnnw.3bErE1Lt0g8R0NCc.",
+    "confirm_password": "$2a$10$RH6lPCJ9klTaANfQSRwbZ.jde/PawG8ayReyaCU4NJv2Idz0WhoqC"
   }
 ]
