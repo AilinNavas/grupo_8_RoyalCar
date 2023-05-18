@@ -9,11 +9,9 @@ const { body } = require("express-validator");
 
 const validationsRegister = [
     body("name")
-        .notEmpty().withMessage('*Debes completar con tu nombre').bail()
-        .isLength({ min: 2 }),
+        .notEmpty().withMessage('*Debes completar con tu nombre'),
     body("last_name")
-        .notEmpty().withMessage('*Debes completar con tu apellido').bail()
-        .isLength({ min: 2 }),
+        .notEmpty().withMessage('*Debes completar con tu apellido'),
     body("email")
         .notEmpty().withMessage('*Debes completar con un correo electronico').bail()
         .isEmail().withMessage('*Debes completar con un correo electronico válido'),
