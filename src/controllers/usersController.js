@@ -4,21 +4,23 @@ const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
 
-// const usersFilePath = path.join(__dirname, '../database/users.json');
-// function getUsers() {
-// 	return JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-// }
 
 
 const controller = {
-	register:(req, res) => {
-		 db.Rol.findAll()
-		.then(function(roles){
-			res.render('register', { roles:roles });
-		})
+	// 	register:(req, res) => {
+	// 		 db.Rol.findAll()
+	// 		.then(function(roles){
+	// 			res.render('register', { roles:roles });
+	// 		})
+	// 	},
+	register: async (req, res) => {
+		const roles = await db.Rol.findAll();
+
+		res.render('register', { roles });
 	},
 
-	createUser: (req, res) => {
+
+	createUser: async (req, res) => {
 		try {
 			const resultValidation = validationResult(req);
 
@@ -34,8 +36,8 @@ const controller = {
 				roles_id: req.body.roles,
 				password: bcrypt.hashSync(req.body.password, 10),
 			};
-			
-			const usersCreated = db.User.create(usersToCreate);
+
+			const usersCreated = await db.User.create(usersToCreate);
 
 			res.redirect('login');
 
