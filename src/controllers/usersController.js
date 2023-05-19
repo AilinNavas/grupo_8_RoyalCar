@@ -2,6 +2,8 @@ const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
+
+
 const db = require('../database/models');
 
 
@@ -25,7 +27,10 @@ const controller = {
 			const resultValidation = validationResult(req);
 
 			if (resultValidation.errors.length > 0) {
-				res.render('register', { errors: resultValidation.mapped(), oldData: req.body });
+				const roles = await db.Rol.findAll();
+				console.log(resultValidation.errors)
+				return res.render('register', { errors: resultValidation.mapped(), oldData: {...req.body } ,roles});
+
 			}
 			const avatar = req.file ? req.file.filename : 'default-image.png';
 			const usersToCreate = {

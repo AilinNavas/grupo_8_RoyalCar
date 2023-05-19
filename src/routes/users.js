@@ -29,8 +29,8 @@ const validationsRegister = [
     body("email")
         .notEmpty().withMessage('*Debes completar con un correo electronico').bail()
         .isEmail().withMessage('*Debes completar con un correo electronico válido'),
-    body("category")
-        .notEmpty().withMessage('*Debes seleccionar una categoria'),
+    body("roles")
+        .notEmpty().withMessage('*Debes seleccionar un rol'),
     body("password")
         .notEmpty().withMessage('*Debes completar con una contraseña').bail()
         .isLength({ min: 8 }).isAlphanumeric().withMessage('La contraseña debe ser alfanumérica y tener mínimo 8 caractéres'),

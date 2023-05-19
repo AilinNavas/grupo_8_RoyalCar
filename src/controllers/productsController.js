@@ -48,16 +48,19 @@ const controller = {
 				image,
 				products_brands_id: req.body.products_brands_id
 			};
-			
+			console.log(productToCreate);
 			const productCreated = await db.Product.create(productToCreate);
+			console.log(productCreated);
 
 			 const productColors = req.body.color?.map(color => ({ products_id: productCreated.id, colors_id: color }))
 			console.log(productColors);
+			
              await db.ProductHasColor.bulkCreate(productColors);
 
 			res.redirect('/products'); 
 		
 		} catch (error) {
+			console.log(error)
 			res.send(error);
 		}
 	},
