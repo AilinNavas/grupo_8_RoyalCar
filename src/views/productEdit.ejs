@@ -16,7 +16,6 @@
                 <option value="<%= brand.id %>" <%=product.brand.id==brand.id ? "selected" : "" %>><%= brand.name %>
                 </option>
                 <% }) %>
-
             </select>
           </div>
 
@@ -24,48 +23,66 @@
             <input type="text" class="input" name="model" placeholder="a" value="<%= product.model %>">
             <label for="" name="model" class="label">Modelo</label>
           </div>
-
-          <div class="inputContainer" id="form-product">
-            <input type="number" class="input" name="year" placeholder="a" value="<%= product.year %>">
-            <label for="" name="year" class="label">Año</label>
-          </div>
-
-          <div class="inputContainer" id="form-product">
-            <input type="text" class="input" name="description" value="<%= product.description %>">
-            <label for="" name="description" class="label">Descripción</label>
-          </div>
-
-          <div class="inputContainer" id="form-product">
-            <input type="number" class="input" name="price" value="<%= product.price %>">
-            <label for="" name="price" class="label">Precio</label>
-          </div>
-
-          <div class="inputContainer" id="form-product">
-            <label for="" name="color" class="label">Colores disponibles</label>
-          </div>
-          <div class="inputContainer" id="colors">
-
-            <% colors.forEach( color=> { %>
-              <p>
-                <input type="checkbox" id="<%= color.name %>" value="<%= color.id %>">
-                <label for="<%= color.name %>">
-                  <%= color.name %>
-                </label>
-
-                <% }) %>
-              </p>
-          </div>
-        
-
-
-          <div class="inputContainer" id="form-product">
-            <div class="input">
-              <input type="file" name="img" id="Perfil" style="display:none" value="<%= product.image %>">
-              <label class="label" for="Perfil">Seleccion Imagen De Producto</label>
+          <% if (locals.errors && errors.model) { %>
+            <div class="msg-error">
+              <%= errors.model.msg %>
             </div>
-          </div>
+            <% } %>
 
-          <input type="submit" class="submitBtn" value="Guardar cambios">
+              <div class="inputContainer" id="form-product">
+                <input type="number" class="input" name="year" placeholder="a" value="<%= product.year %>">
+                <label for="" name="year" class="label">Año</label>
+              </div>
+
+              <div class="inputContainer" id="form-product">
+                <input type="text" class="input" name="description" value="<%= product.description %>">
+                <label for="" name="description" class="label">Descripción</label>
+              </div>
+              <% if (locals.errors && errors.description) { %>
+                <div class="msg-error">
+                  <%= errors.description.msg %>
+                </div>
+                <% } %>
+
+                  <div class="inputContainer" id="form-product">
+                    <input type="number" class="input" name="price" value="<%= product.price %>">
+                    <label for="" name="price" class="label">Precio</label>
+                  </div>
+
+                  <div class="inputContainer" id="form-product">
+                    <label for="" name="color" class="label">Colores disponibles</label>
+                  </div>
+                  <div class="inputContainer" id="colors">
+
+                    <% colors.forEach( color=> { %>
+                      <p>
+                        <input type="checkbox" name="color" id="<%= color.name %>" value="<%= color.id %>">
+                        <label for="<%= color.name %>">
+                          <%= color.name %>
+                        </label>
+                        <% }) %>
+                      </p>
+                  </div>
+                  <% if (locals.errors && errors.color) { %>
+                    <div class="msg-error">
+                      <%= errors.color.msg %>
+                    </div>
+                    <% } %>
+
+                      <div class="inputContainer" id="form-product">
+                        <div class="input">
+                          <input type="file" name="imgFile" id="Perfil" style="display:none"
+                            value="<%= product.image %>">
+                          <label class="label" for="Perfil">Seleccion Imagen De Producto</label>
+                        </div>
+                      </div>
+                      <% if (locals.errors && errors.imgFile) { %>
+                        <div class="msg-error">
+                          <%= errors.imgFile.msg %>
+                        </div>
+                        <% } %>
+
+                          <input type="submit" class="submitBtn" value="Guardar cambios">
         </form>
       </div>
 

@@ -19,21 +19,19 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-
-
 const productsController = require("../controllers/productsController");
+const productValidation = require("../middlewares/productValidationMiddleware");
 
 router.get("/", productsController.products); 
 router.get("/productCart", productsController.productCart);
 
-
 router.get("/create", productsController.create);
-router.post("/", upload.single('imgFile'), productsController.store);
+router.post("/", upload.single('imgFile'), productValidation, productsController.store);
 
 router.get("/:id", productsController.productDetail);
 
 router.get("/:id/edit", productsController.edit);
-router.put("/:id", upload.single('img'),productsController.update);
+router.put("/:id", upload.single('imgFile'),productValidation, productsController.update);
 
 router.delete("/:id", productsController.destroy);
 

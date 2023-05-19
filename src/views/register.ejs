@@ -9,7 +9,7 @@
 
           <div class="inputContainer">
             <input type="text" class="input" name="name" placeholder="a"
-              value="<%= locals.oldData ? oldData.name : null %>">
+              value="<%= locals.oldData ? oldData.name : null %>" required minlength="2">
 
             <label for="" name="name" class="label">Nombre</label>
           </div>
@@ -22,7 +22,7 @@
 
               <div class="inputContainer">
                 <input type="text" class="input" name="last_name" placeholder="a"
-                  value="<%= locals.oldData ? oldData.last_name : null %>">
+                  value="<%= locals.oldData ? oldData.last_name : null %>" required minlength="2">
                 <label for="" name="last_name" class="label">Apellido</label>
               </div>
               <% if (locals.errors && errors.last_name) { %>
@@ -32,7 +32,7 @@
                 <% } %>
                   <div class="inputContainer">
                     <input type="email" class="input" name="email" placeholder="ejemplo@gmil.com"
-                      value="<%= locals.oldData ? oldData.email : null %>">
+                      value="<%= locals.oldData ? oldData.email : null %>" required>
                     <label for="" name="email" class="label">Email</label>
                   </div>
                   <% if (locals.errors && errors.email) { %>
@@ -47,9 +47,9 @@
                           <label class="label" for="Perfil">Seleccion Imagen De Perfil</label>
                         </div>
                       </div>
-                      <% if (locals.errors && errors.usersImage) { %>
+                      <% if (locals.errors && errors.avatar) { %>
                         <div class="msg-error">
-                          <%= errors.usersImage.msg %>
+                          <%= errors.avatar.msg %>
                         </div>
                         <% } %>
                           <div class="inputContainer">
