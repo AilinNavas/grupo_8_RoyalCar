@@ -25,13 +25,24 @@ window.onload = function () {
                 form[name].classList.add('is-valid');
             }
         }
-        validations('brands', ' Por favor selecciona una marca');
+        // function validationsColor(message) {
+        //     if (!form.color.value ) {
+        //         errors.push({message });
+        //         form.color.classList.add('is-invalid');
+        //     }
+        //     else {
+        //         form.color.classList.remove('is-invalid');
+        //         form.color.classList.add('is-valid');
+        //     }
+        // }
+ 
+        validations('brands', 'Por favor seleccionar una marca');
         validations('model', 'El campo modelo no puede estar vacio');
         validations('year', 'Por favor seleciona el año ');
         validations('description', 'Escribir una breve descripcion');
         validations('price', 'El campo precio no debe estar vacio');
-        // validations('color.name', 'Seleciona por lo menos un color');
-        validations('perfil', 'Seleccionar una imagen');
+        // validationsColor('Seleciona por lo menos un color');
+        validations('Perfil', 'Seleccionar una imagen');
 
         errors.forEach(error => {
             const errorLabel = document.getElementById('error-' + error.name);
