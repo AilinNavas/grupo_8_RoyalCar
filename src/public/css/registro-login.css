@@ -114,6 +114,14 @@
     transition: 0.5s;
     z-index: 0;
   }
+  .is-valid {
+    box-shadow: 0 0 10px #198754;
+  }
+
+.field-error {
+ color: #cb0e08;
+ box-shadow: 0 0 10px #cb0e08 ;
+}
   .submitBtn {
     display: block;
     margin-left: auto;
