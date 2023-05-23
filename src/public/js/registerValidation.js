@@ -3,6 +3,7 @@ window.addEventListener('load', function () {
 
     form.name.focus();
 
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
     });
@@ -11,13 +12,14 @@ window.addEventListener('load', function () {
     const lastNameField = document.getElementById('apellido');
     const emailField = document.getElementById('email');
     const fileField = document.getElementById('Perfil');
-    const passwordField = document.getElementById('password');
-    const confirmPasswordField = document.getElementById('confirm_password');
+    const rolField = document.getElementById('rol');
+    const passwordField1 = document.getElementById('password');
+    const passwordField2 = document.getElementById('confirm_password');
 
     const validateEmptyField = (e) => {
         const field = e.target;
         const fieldValue = e.target.value;
-        if (fieldValue.length === 0 || fieldValue.length <= 2) {
+        if (fieldValue.length == 0 || fieldValue.length <= 2) {
             field.classList.add('field-error');
             field.nextElementSibling.classList.add('is-invalid');
             field.nextElementSibling.innerHTML = `Debes ingresar tu ${field.id}`;
@@ -33,6 +35,7 @@ window.addEventListener('load', function () {
         const field = e.target;
         const fieldValue = e.target.value;
         const regex = new RegExp('^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*\\.\\w{2,4}$');
+        
         if (fieldValue.trim().length > 5 && !regex.test(field.value)) {
             field.classList.add('field-error');
             field.nextElementSibling.classList.add('is-invalid');
@@ -65,7 +68,29 @@ window.addEventListener('load', function () {
             field.nextElementSibling.innerHTML = '' 
         }
     })
-});
+
+    const validateRolField = (e) => {
+        const field = e.target;
+        const fieldValue = e.target.value;
+        if (fieldValue.length == 0) {
+            field.classList.add('field-error');
+            field.nextElementSibling.classList.add('is-invalid');
+            field.nextElementSibling.innerHTML = 'Debes seleccionar tu rol';
+        } else {
+            field.classList.remove('field-error');
+            field.classList.add('is-valid');
+            field.nextElementSibling.classList.remove('is-invalid');
+            field.nextElementSibling.innerHTML = '';
+        }
+
+    };
+
+    rolField.addEventListener('blur', validateRolField);
+    
+
+
+}
+);
 
 
 
