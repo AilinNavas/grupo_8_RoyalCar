@@ -11,7 +11,7 @@
           <h1 class="title" id="product">Crear nuevo producto</h1>
 
           <div class="inputContainer" id="form-product">
-            <select class="input" name="products_brands_id" required>
+            <select class="input" name="products_brands_id" id="brands" >
               <option value="" font-family="oswald">Selecciona la marca</option>
               <% for( let i=0; i < brands.length; i++ ) { %>
 
@@ -22,53 +22,61 @@
 
 
             </select>
+            <p class="error-message" id="error-brands"></p>
           </div>
 
           <div class="inputContainer" id="form-product">
-            <input type="text" class="input" name="model" placeholder="a">
+            <input type="text" class="input" name="model" placeholder="a" id="model">
             <label for="" name="model" class="label">Modelo</label>
+            <p class="error-message" id="error-model"></p>
           </div>
 
           <div class="inputContainer" id="form-product">
-            <input type="number" class="input" name="year" placeholder="a">
+            <input type="number" class="input" name="year" placeholder="a" id="year">
             <label for="" name="year" class="label">Año</label>
+            <p class="error-message" id="error-year"></p>
           </div>
 
           <div class="inputContainer" id="form-product">
-            <input type="text" class="input" name="description">
+            <input type="text" class="input" name="description" id="description">
             <label for="" name="description" class="label">Descripción</label>
+            <p class="error-message" id="error-description"></p>
           </div>
 
           <div class="inputContainer" id="form-product">
-            <input type="number" class="input" name="price">
+            <input type="number" class="input" name="price" id="price">
             <label for="" name="price" class="label">Precio</label>
+            <p class="error-message" id="error-price"></p>
           </div>
 
           <div class="inputContainer" id="form-product">
-            <label for="" name="colors" class="label">Colores disponibles</label>
+            <label for="" name="colors" class="label" id="colors">Colores disponibles</label>
           </div>
           <div class="inputContainer" id="colors">
 
             <% colors.forEach( color=> { %>
               <p>
-                <input type="checkbox" id="<%= color.name %>" value="<%= color.id %>" name="color">
-                <label for="<%= color.name %>">
+                <input type="checkbox" id="<%= color.name %> " value="<%= color.id %>" name="color">
+                <label for="<%= color.name %>" id="color">
                   <%= color.name %>
                 </label>
 
                 <% }) %>
               </p>
+              <p class="error-message" id="error-colors"></p>
           </div>
 
           <div class="inputContainer" id="form-product">
             <div class="input">
-              <input type="file" name="imgFile" id="Perfil" style="display:none">
+              <input type="file" name="imgFile" id="perfil" style="display:none">
               <label class="label" for="Perfil">Seleccion Imagen De Producto</label>
+              <p class="error-message" id="error-perfil"></p>
             </div>
           </div>
           <input type="submit" class="submitBtn" value="Crear">
         </form>
       </div>
+      <script src="/js/formCreateValidation.js"></script>
   </body>
 
   <%- include('partials/footer') %>

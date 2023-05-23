@@ -159,4 +159,19 @@
   p {
     margin-top: 7px;
   }
- 
+  /* css validaciones */
+  .is-valid {
+    color: #198754;
+  }
+  
+  .is-invalid {
+    color: #cb0e08;
+    border: 2px #cb0e08 solid;
+  }
+  
+  .error-message{
+    color:#cb0e08;
+   
+    text-align: center;
+    border-radius: 10px;
+  }
