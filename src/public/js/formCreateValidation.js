@@ -30,7 +30,7 @@ window.onload = function () {
         validations('year', 'Por favor seleciona el año ');
         validations('description', 'Escribir una breve descripcion');
         validations('price', 'El campo precio no debe estar vacio');
-        // validations('colors', 'Seleciona por lo menos un color');
+        // validations('color.name', 'Seleciona por lo menos un color');
         validations('perfil', 'Seleccionar una imagen');
 
         errors.forEach(error => {

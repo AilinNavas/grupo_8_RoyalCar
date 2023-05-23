@@ -55,8 +55,8 @@
           <div class="inputContainer" id="colors">
 
             <% colors.forEach( color=> { %>
-              <p>
-                <input type="checkbox" id="<%= color.name %> " value="<%= color.id %>" name="color">
+              <p id="color">
+                <input type="checkbox" id="<%= color.name %>" value="<%= color.id %>" name="color">
                 <label for="<%= color.name %>" id="color">
                   <%= color.name %>
                 </label>
