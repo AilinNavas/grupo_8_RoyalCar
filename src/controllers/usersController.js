@@ -84,7 +84,7 @@ const controller = {
 				return res.render('login', {
 					errors: {
 						password: {
-							msg: "La informacion es incorrecta..."
+							msg: "La informacion es incorrecta... Completa nuevamente el formulario"
 						}
 					}
 				});

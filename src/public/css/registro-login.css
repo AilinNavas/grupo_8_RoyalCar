@@ -109,8 +109,8 @@
     left: 6px;
     padding: 0 4px;
     background-color: white;
-    color: #DADCE0;
-    font-size: 16px;
+    color: #5a606c;
+    font-size: 12px;
     transition: 0.5s;
     z-index: 0;
   }
@@ -118,10 +118,10 @@
     box-shadow: 0 0 10px #198754;
   }
 
-.field-error {
+ .field-error {
  color: #cb0e08;
  box-shadow: 0 0 10px #cb0e08 ;
-}
+} 
   .submitBtn {
     display: block;
     margin-left: auto;
@@ -167,4 +167,15 @@
   p {
     margin-top: 7px;
   }
- 
+  .error-message{
+    color:#cb0e08;
+    border-radius: 10px;
+    font-size: 12px;
+    display: inline-block;
+    margin: 5px;
+  }
+ i {
+  color:#cb0e08;
+  font-size: 12px;
+
+ }

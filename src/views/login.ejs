@@ -1,48 +1,52 @@
+<%- include('partials/head' , { title: 'Ingresar' , styles: [ 'registro-login' , 'header' , 'footer' ]}) %>
 
-  <%- include('partials/head' , { title: 'Ingresar' , styles: [ 'registro-login' , 'header' , 'footer' ]}) %>
-  
-    <body>
-      <%- include('partials/header') %>
-  
-        <div class="loginFrm">
-          <form action="/users/login" method="POST" class="form">
-            <h1 class="title">Ingresa</h1>
-  
-  
-            <div class="inputContainer">
-              <input type="email" class="input" name="email" placeholder="ejemplo@gmil.com"
-              value = "<%= locals.oldData ? oldData.email : null %>">
-              <label for="" name="email" class="label">Email de Usuario</label>
+  <body>
+    <%- include('partials/header') %>
+
+      <div class="loginFrm">
+        <form action="/users/login" id="form-login" method="POST" class="form">
+          <h1 class="title">Ingresa</h1>
+
+
+          <div class="inputContainer">
+            <input type="email" class="input" name="email" id="email" placeholder="ejemplo@gmil.com"
+              value="<%= locals.oldData ? oldData.email : null %>">
+            <label for="" name="email" class="label">Email de Usuario</label>
+          </div>
+          <p class="error-message" id="error-email"></p>
+          <% if (locals.errors && errors.email) { %>
+            <div class="msg-error">
+              <%= errors.email.msg %>
             </div>
-            <% if (locals.errors && errors.email) { %>
-              <div class="msg-error">
-                <%= errors.email.msg %>
-              </div>
             <% } %>
-            <div class="inputContainer">
-              <input type="password" name="password" class="input" placeholder="a" minlength="8">
-              <label for="" class="label">Contraseña</label>
-            </div>
-            <% if (locals.errors && errors.password) { %>
-              <div class="msg-error">
-                <%= errors.password.msg %>
+              <div class="inputContainer">
+                <input type="password" name="password" class="input" placeholder="a">
+                <label for="" class="label">Contraseña</label>
               </div>
-            <% } %>
+              <p class="error-message" id="error-password"></p>
+              <% if (locals.errors && errors.password) { %>
+                <div class="msg-error">
+                  <%= errors.password.msg %>
+                </div>
+                <% } %>
+                  <div>
+                    <label class="">
+                      <input type="checkbox" class="" name="remember_user"> Recordar mi usuario
+                    </label>
+                  </div>
 
-            <label class="">
-              <input type="checkbox" class="" name="remember_user"> Recordar mi usuario
-            </label>
 
-            <input type="submit" class="submitBtn" value="Continuar">
-  
-            <br><br>
-            <a href="/users/register" style="color:red;">¿No tienes cuenta? Registrate</a>
-            <br>
-            <br>
-            <a href="#" style="color:red;">¿Olvidaste tu contraseña?</a>
-          </form>
-        </div>
-        <%- include('partials/footer') %>
-    </body>
-  
-    </html>
+                  <input type="submit" class="submitBtn" value="Continuar">
+
+                  <br><br>
+                  <a href="/users/register" style="color:red;">¿No tienes cuenta? Registrate</a>
+                  <br>
+                  <br>
+                  <a href="#" style="color:red;">¿Olvidaste tu contraseña?</a>
+        </form>
+      </div>
+      <%- include('partials/footer') %>
+        <script src="/js/loginValidation.js"></script>
+  </body>
+
+  </html>

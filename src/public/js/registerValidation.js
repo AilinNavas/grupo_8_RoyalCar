@@ -1,104 +1,138 @@
 window.addEventListener('load', function () {
     const form = document.querySelector('form');
 
-    form.name.focus();
-
-
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        const allErrorLabels = document.querySelectorAll('.msg-error');
+
+
+        allErrorLabels.forEach(element => {
+            element.innerHTML = '';
+        });
+        const errors = [];
+
+        if (form.name.value.length == 0 || form.name.value.length <= 2) {
+            errors.push({
+                name: "name",
+                message: "Debes ingresar tu nombre de al menos 2 letras"
+            });
+            form.name.classList.add('field-error');
+
+        } else {
+            form.name.classList.remove('field-error');
+            form.name.classList.add('is-valid');
+
+        }
+        if (form.last_name.value.length == 0 || form.last_name.value.length <= 2) {
+            errors.push({
+                name: "last_name",
+                message: "Debes ingresar tu apellido de al menos 2 letras"
+            });
+            form.last_name.classList.add('field-error');
+
+        } else {
+            form.last_name.classList.remove('field-error');
+            form.last_name.classList.add('is-valid');
+
+        }
+        if (!form.email.value) {
+            errors.push({
+                name: "email",
+                message: "Debes completar con tu email"
+            });
+            form.email.classList.add('field-error');
+        } else {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!regex.test(form.email.value)) {
+                errors.push({
+                    name: "email",
+                    message: "Debes ingresar un correo electrónico válido",
+                });
+                form.email.classList.remove('is-valid');
+                form.email.classList.add('field-error');
+            } else {
+                form.email.classList.remove('field-error');
+                form.email.classList.add('is-valid');
+            }
+        }
+
+        if (form.avatar.value) {
+            const imageUser = document.getElementById('Perfil');
+            const fileExt = imageUser.files[0].name.split('.').pop().toLowerCase();
+            const acceptedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+
+            if (!acceptedExtensions.includes(fileExt)) {
+                errors.push({
+                    name: "avatar",
+                    message: `Los formatos de imagen permitidos son ${acceptedExtensions.join(', ')}`,
+                });
+                form.avatar.classList.add('field-error');
+                form.avatar.classList.remove('is-valid');
+            } else {
+                form.avatar.classList.remove('field-error');
+                form.avatar.classList.add('is-valid');
+            }
+        } else {
+            form.avatar.classList.remove('field-error');
+            form.avatar.classList.remove('is-valid');
+        }
+        if (!form.roles.value) {
+            errors.push({
+                name: "roles",
+                message: "Debes seleccionar tu rol"
+            });
+            form.roles.classList.add('field-error');
+        } else {
+            form.roles.classList.remove('field-error');
+            form.roles.classList.add('is-valid')
+        }
+
+
+
+        const validatePassword = () => {
+            const passwordField = document.getElementById('password');
+            const confirmPasswordField = document.getElementById('confirm_password');
+            const passwordValue = passwordField.value;
+            const confirmPasswordValue = confirmPasswordField.value;
+            const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+            if (!regex.test(passwordValue)) {
+                errors.push({
+                    name: 'password',
+                    message: 'La contraseña debe tener al menos 8 caracteres y ser alfanumérica'
+                });
+                form.password.classList.add('field-error');
+                form.confirm_password.classList.add('field-error');
+            } else if (passwordValue !== confirmPasswordValue) {
+                errors.push({
+                    name: 'password',
+                    message: 'Las contraseñas no coinciden'
+                });
+                form.password.classList.add('field-error');
+                form.confirm_password.classList.add('field-error');
+            } else {
+                form.password.classList.remove('field-error');
+                form.password.classList.add('is-valid');
+                form.confirm_password.classList.remove('field-error');
+                form.confirm_password.classList.add('is-valid');
+            }
+        };
+
+        form.password.addEventListener('input', validatePassword);
+        form.confirm_password.addEventListener('input', validatePassword);
+
+
+        errors.forEach((error) => {
+            const errorLabel = document.getElementById("error-" + error.name);
+            errorLabel.innerHTML = error.message;
+        });
+        if (errors.length === 0) {
+            form.submit();
+        }
     });
 
-    const nameField = document.getElementById('nombre');
-    const lastNameField = document.getElementById('apellido');
-    const emailField = document.getElementById('email');
-    const fileField = document.getElementById('Perfil');
-    const rolField = document.getElementById('rol');
-    const passwordField1 = document.getElementById('password');
-    const passwordField2 = document.getElementById('confirm_password');
-
-    const validateEmptyField = (e) => {
-        const field = e.target;
-        const fieldValue = e.target.value;
-        if (fieldValue.length == 0 || fieldValue.length <= 2) {
-            field.classList.add('field-error');
-            field.nextElementSibling.classList.add('is-invalid');
-            field.nextElementSibling.innerHTML = `Debes ingresar tu ${field.id}`;
-        } else {
-            field.classList.remove('field-error');
-            field.classList.add('is-valid');
-            field.nextElementSibling.classList.remove('is-invalid');
-            field.nextElementSibling.innerHTML = '';
-        }
-
-    };
-    const validateEmailFormat = (e) => {
-        const field = e.target;
-        const fieldValue = e.target.value;
-        const regex = new RegExp('^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*\\.\\w{2,4}$');
-        
-        if (fieldValue.trim().length > 5 && !regex.test(field.value)) {
-            field.classList.add('field-error');
-            field.nextElementSibling.classList.add('is-invalid');
-            field.nextElementSibling.innerHTML = 'Debes ingresar un formato de email válido'
-        } else {
-            field.classList.remove('field-error');
-            field.classList.add('is-valid');
-            field.nextElementSibling.classList.remove('is-invalid');
-            field.nextElementSibling.innerHTML = '';
-        }
-    }
-
-    nameField.addEventListener('blur', validateEmptyField);
-    lastNameField.addEventListener('blur', validateEmptyField);
-    emailField.addEventListener('blur', validateEmptyField);
-
-    emailField.addEventListener('input', validateEmailFormat);
-
-    fileField.addEventListener('change', (e) => {
-        const field = e.target;
-        const fileExt = e.target.files[0].name.split('.').pop().toLowerCase();
-        const acceptedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-        if(!acceptedExtensions.includes(fileExt)) {
-            field.classList.add('field-error');
-            field.nextElementSibling.innerHTML = `Los formatos de imagen permitidos son ${acceptedExtensions.join(', ')}`;
-        } else {
-            field.classList.remove('field-error');
-            field.classList.add('is-valid');
-            field.nextElementSibling.classList.remove('is-invalid');
-            field.nextElementSibling.innerHTML = '' 
-        }
-    })
-
-    const validateRolField = (e) => {
-        const field = e.target;
-        const fieldValue = e.target.value;
-        if (fieldValue.length == 0) {
-            field.classList.add('field-error');
-            field.nextElementSibling.classList.add('is-invalid');
-            field.nextElementSibling.innerHTML = 'Debes seleccionar tu rol';
-        } else {
-            field.classList.remove('field-error');
-            field.classList.add('is-valid');
-            field.nextElementSibling.classList.remove('is-invalid');
-            field.nextElementSibling.innerHTML = '';
-        }
-
-    };
-
-    rolField.addEventListener('blur', validateRolField);
-    
 
 
 }
-);
-
-
-
-
-
-
-
-
-
-
-
+)

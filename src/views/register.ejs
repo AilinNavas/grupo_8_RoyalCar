@@ -12,8 +12,10 @@
               value="<%= locals.oldData ? oldData.name : null %>">
             <label for="" name="name" class="label">Nombre</label>
           </div>
+          <!-- <i class="fa fa-exclamation-triangle" aria-hidden="true" id="icono-error"></i> -->
+          <p class="error-message" id="error-name"></p>
           <% if (locals.errors && errors.name) { %>
-            <div id="error-name">
+            <div id="error-name" class="msg-error">
               <%= errors.name.msg %>
             </div>
             <% } %>
@@ -23,6 +25,8 @@
                   value="<%= locals.oldData ? oldData.last_name : null %>">
                 <label for="" name="last_name" class="label">Apellido</label>
               </div>
+              <!-- <i class="fa fa-exclamation-triangle" id="icono-error" display ="none"></i> -->
+              <p class="error-message" id="error-last_name"></p>
               <% if (locals.errors && errors.last_name) { %>
                 <div class="msg-error" id="error-last_name">
                   <%= errors.last_name.msg %>
@@ -33,6 +37,8 @@
                       value="<%= locals.oldData ? oldData.email : null %>">
                     <label for="" name="email" class="label">Email</label>
                   </div>
+                  <!-- <i class="fa fa-exclamation-triangle" id="icono-error"></i> -->
+                  <p class="error-message" id="error-email"></p>
                   <% if (locals.errors && errors.email) { %>
                     <div class="msg-error" id="error-email">
                       <%= errors.email.msg %>
@@ -43,8 +49,9 @@
                       <div class="inputContainer">
                         <input type="file" class="input" name="avatar" id="Perfil">
                       </div>
-                      <p></p>
-                      
+                      <!-- <i class="fa fa-exclamation-triangle" class="icono-error"></i> -->
+                      <p class="error-message" id="error-avatar"></p>
+
 
                       <% if (locals.errors && errors.avatar) { %>
                         <div class="msg-error" id="error-avatar">
@@ -52,7 +59,7 @@
                         </div>
                         <% } %>
                           <div class="inputContainer">
-                            <select class="input" name="roles" id="rol" required>
+                            <select class="input" name="roles" id="rol">
                               <option class="label" value="" font-family="oswald">Selecciona Tu Rol</option>
                               <% for( let i=0; i < roles.length; i++ ) { %>
 
@@ -63,6 +70,8 @@
 
                             </select>
                           </div>
+                          <!-- <i class="fa fa-exclamation-triangle" id="icono-error"></i> -->
+                          <p class="error-message" id="error-roles"></p>
                           <% if (locals.errors && errors.roles) { %>
                             <div class="msg-error" id="error-roles">
                               <%= errors.roles.msg %>
@@ -71,10 +80,11 @@
 
 
                               <div class="inputContainer">
-                                <input type="password" name="password" class="input" id="password" placeholder="a"
-                                  minlength="8">
+                                <input type="password" name="password" class="input" id="password" placeholder="a">
                                 <label for="" class="label">Contraseña</label>
                               </div>
+                              <!-- <i class="fa fa-exclamation-triangle" id="icono-error"></i> -->
+                              <p class="error-message" id="error-password"></p>
                               <% if (locals.errors && errors.password) { %>
                                 <div class="msg-error" id="error-password">
                                   <%= errors.password.msg %>
@@ -83,9 +93,11 @@
 
                                   <div class="inputContainer">
                                     <input type="password" name="confirm_password" id="confirm_password" class="input"
-                                      placeholder="a" minlength="6">
+                                      placeholder="a">
                                     <label for="" class="label">Confirmar Contraseña</label>
                                   </div>
+                                  <!-- <i class="fa fa-exclamation-triangle" id="icono-error"></i> -->
+                                  <p class="error-message" id="error-confirm_password"></p>
                                   <% if (locals.errors && errors.confirm_password) { %>
                                     <div class="msg-error" id="error-confirm_password">
                                       <%= errors.confirm_password.msg %>
