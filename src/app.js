@@ -1,9 +1,9 @@
 require('dotenv').config();
-const express = require("express");
-const path = require("path");
+const express = require('express');
+const path = require('path');
 const methodOverride = require('method-override'); //para poder usar metodos Put y delete
-const session = require("express-session");
-const userLoggedMiddleware = require("./middlewares/userLoggeMiddleware")
+const session = require('express-session');
+const userLoggedMiddleware = require('./middlewares/userLoggeMiddleware');
 const cookies = require ('cookie-parser');
 
 
@@ -22,8 +22,8 @@ app.use(express.static(publicPath));
 app.use(express.urlencoded({ extended: false }));// para poder recibir informacion por post
 app.use(express.json());// para poder recibir informacion  por post
 app.use(methodOverride('_method')); //para poder pisar el mothod- 'post' en el form por put y delete
-app.use(cookies());
 app.use(userLoggedMiddleware);
+app.use(cookies());
 
 //Template engine
 app.set("view engine", "ejs");
@@ -32,18 +32,19 @@ app.set("views", path.join(__dirname, "views"));
 //Sistema de rutas
 const mainRoutes = require("./routes/main.js");
 const productsRouter = require('./routes/products.js');
-const usersRouter = require('./routes/users.js')
+const usersRouter = require('./routes/users.js');
+
 
 app.use('/', mainRoutes);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
 
 
+
 //Pagina no encontrada
 app.use((req, res, next) => {
     res.status(404).render('notFound');
 })
-
 
 
 const port = process.env.PORT || 3000;

@@ -9,50 +9,64 @@ const db = require('../database/models');
 
 
 const controller = {
-	// 	register:(req, res) => {
-	// 		 db.Rol.findAll()
-	// 		.then(function(roles){
-	// 			res.render('register', { roles:roles });
-	// 		})
-	// 	},
+
 	register: async (req, res) => {
 		const roles = await db.Rol.findAll();
 
 		res.render('register', { roles });
 	},
-
-
 	createUser: async (req, res) => {
 		try {
-			const resultValidation = validationResult(req);
-
-			if (resultValidation.errors.length > 0) {
-				const roles = await db.Rol.findAll();
-				console.log(resultValidation.errors)
-				return res.render('register', { errors: resultValidation.mapped(), oldData: {...req.body } ,roles});
-
+		  // Comprobar que no exista el usuario por su email
+		  const roles = await db.Rol.findAll();
+		  const existingUser = await db.User.findOne({
+			where: {
+			  email: req.body.email
 			}
-			const avatar = req.file ? req.file.filename : 'default-image.png';
-			const usersToCreate = {
-				name: req.body.name,
-				last_name: req.body.last_name,
-				email: req.body.email,
-				avatar,
-				roles_id: req.body.roles,
-				password: bcrypt.hashSync(req.body.password, 10),
-			};
-
-			const usersCreated = await db.User.create(usersToCreate);
-
-			res.redirect('login');
-
+		  });
+	  
+		  if (existingUser) {
+			return res.render('register', {
+			  errors: {
+				email: {
+				  msg: 'Este email ya se encuentra registrado'
+				}
+			  },
+			  oldData: req.body,
+			   roles
+			});
+		  }
+	  
+		  const resultValidation = validationResult(req);
+	  
+		  if (resultValidation.errors.length > 0) {
+			const roles = await db.Rol.findAll();
+			console.log(roles);
+			return res.render('register', {
+			  errors: resultValidation.mapped(),
+			  oldData: { ...req.body },
+			  roles
+			});
+		  }
+	  
+		  const avatar = req.file ? req.file.filename : 'default-image.png';
+		  const usersToCreate = {
+			name: req.body.name,
+			last_name: req.body.last_name,
+			email: req.body.email,
+			avatar,
+			roles_id: req.body.roles,
+			password: bcrypt.hashSync(req.body.password, 10),
+		  };
+	  
+		  const usersCreated = await db.User.create(usersToCreate);
+	  
+		  res.redirect('login');
 		} catch (error) {
-			res.send(error);
+		  console.error(error);
+		  res.send(error);
 		}
-
-
-
-	},
+	  },
 
 
 	login: (req, res) => {

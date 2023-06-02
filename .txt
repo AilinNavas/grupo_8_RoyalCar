@@ -1,0 +1,335 @@
+function validatePass() {
+        if(!isPassword(passwordValue)) {
+            setErrorFor(password, '(*) Deberá tener mínimo 8 caracteres, una letras mayúsculas, una letra minúsculas, un número y un carácter especial');
+            errors.push('(*) Deberá tener mínimo 8 caracteres, una letras mayúsculas, una letra minúsculas, un número y un carácter especial');
+        } else {
+            setSuccessFor(password);
+        }
+        
+        if(password2Value === '') {
+            setErrorFor(password2, '(*) La confirmación de contraseña, no debe estar en blanco');
+            errors.push('(*) La confirmación de contraseña, no debe estar en blanco');
+        } else if(passwordValue !== password2Value) {
+            setErrorFor(password2, '(*) Las contraseñas no coinciden');
+            errors.push('(*) Las contraseñas no coinciden');
+        } else{
+            setSuccessFor(password2);
+        }
+    }
+
+
+    function isPassword(password) {
+    return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
+}
+
+function setErrorFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.classList = 'form-group error';
+	small.innerText = message;
+}
+
+function setSuccessFor(input) {
+	const formControl = input.parentElement;
+	formControl.classList = 'form-group success';
+}
+
+
+PAGINADO POR BACK
+
+paginate: (req, res) => {
+        const { page, size } = req.query;
+        let pagina = parseInt(page);
+        let tamano = parseInt(size);
+        db.Product.findAll(
+            {
+                where: {
+                    estado: 'A'
+                },
+                raw: true,
+                attributes: ['title'],
+                limit : tamano,
+                offset : pagina * tamano
+            }
+
+        ).then(product => {
+            let respuesta = {
+                products: product,
+                status: 200
+            }
+            res.status(200).json(respuesta);
+        })
+    },
+
+
+    import React, { useState, useEffect } from "react";
+import Products from "./Products";
+
+function ContentAllProducts() {
+  const [productsPage, setProductsPage] = useState([]);
+  const [cantPage, setCantPage] = useState(0);
+  const [pageActual, setPageActual] = useState(1);
+
+  const handlePageNext = () => {
+    if (pageActual < cantPage) {
+      setPageActual(pageActual + 1);
+    }
+  };
+
+  const handlePageLast = () => {
+    setPageActual(cantPage);
+  };
+
+  const handlePagePrevious = () => {
+    if (pageActual > 1) {
+      setPageActual(pageActual - 1);
+    }
+  };
+
+  const handlePageFirst = () => {
+      setPageActual(1);
+  };
+
+  useEffect(() => {
+    fetch("/api/products/all/")
+      .then((respuesta) => {
+        return respuesta.json();
+      })
+      .then((data) => {
+        setCantPage(Math.ceil(data.products.length / 4));
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  useEffect(() => {
+    fetch(`/api/products/page?page=${pageActual - 1}&size=4`)
+      .then((respuesta) => {
+        return respuesta.json();
+      })
+      .then((data) => {
+        setProductsPage(data.products);
+      })
+      .catch((error) => console.log(error));
+  }, [pageActual]);
+
+  return (
+    <React.Fragment>
+      {/*<!-- Categories in DB -->*/}
+      <div className="col-lg-12 mb-4">
+        <div className="card shadow mb-4">
+          <div className="card-header py-3">
+            <h6 className="m-0 font-weight-bold text-gray-800">
+              TODOS LOS PRODUCTOS
+            </h6>
+          </div>
+          <div className="card-body">
+            <div className="row">
+              {productsPage.map((product, index) => {
+                return <Products title={product.title} key={index} />;
+              })}
+            </div>
+            <div className="col-12">
+              <button
+                className="btn btn-success mr-1"
+                onClick={handlePageFirst}
+              >
+                {"|<"}
+              </button>
+              <button
+                className="btn btn-primary mr-3"
+                onClick={handlePagePrevious}
+              >
+                {"<"}
+              </button>
+              <span>
+                {pageActual} / {cantPage}
+              </span>
+              <button className="btn btn-primary ml-3" onClick={handlePageNext}>
+                {">"}
+              </button>
+              <button className="btn btn-success ml-1" onClick={handlePageLast}>
+                {">|"}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+}
+
+export default ContentAllProducts;
+
+
+DATA TABLE PARA REACT ES UNA LIBRERIA 
+
+import React, { useState, useEffect } from "react";
+import DataTable from 'react-data-table-component'
+
+const columnas = [
+    {
+        name: 'ID',
+        selector: 'id',
+        sortable: true,
+        grow: 0
+    },
+    {
+        name: 'TITULO',
+        selector: 'title',
+        sortable: true,
+        grow: 4
+    },
+    {
+        name: 'PRECIO',
+        selector: 'price',
+        sortable: true,
+        right: true
+    },
+    {
+        name: 'DESC',
+        selector: 'discount',
+        sortable: true,
+        center: true,
+        grow: 0
+    },
+    {
+        name: 'CATEGORIA',
+        selector: 'category',
+        sortable: true,
+        grow: 1
+    },
+    {
+        name: 'SUBCATEGORIA',
+        selector: 'subcategory',
+        sortable: true,
+        grow: 1
+    }
+];
+
+const paginacionOpciones = {
+    rowsPerPageText: 'Filas por Página',
+    rangeSeparatorText: 'de',
+    selectAllRowsItem: true,
+    selectAllRowsItemText: 'Todos'
+}
+
+function ContentDataTableProducts () {
+    const [tablaProducts, setTablaProducts] = useState([]);
+    useEffect(() => {
+        fetch("/api/products/datatable")
+          .then((respuesta) => {
+            return respuesta.json();
+          })
+          .then((data) => {
+            setTablaProducts(data.products);
+          })
+          .catch((error) => console.log(error));
+    },[])
+
+    return (
+        <div className="content-wrapper">
+            <div className="row ml-1 mr-1 mt-4">
+                <div className="col-lg-12 mb-4">						
+                    <div className="card shadow mb-4">
+                        <div className="card-header py-3 bg-warning">
+                            <h6 className="m-0 font-weight-bold text-gray-800">TODOS LOS PRODUCTOS</h6>
+                        </div>
+                        <div className="card-body table-responsive">
+                            <DataTable 
+                                columns={columnas}
+                                data={tablaProducts}
+                                title="Listado general de productos"
+                                pagination
+                                paginationComponentOptions={paginacionOpciones}
+                                fixedHeader
+                                fixedHeaderScrollHeight="300px"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default ContentDataTableProducts
+
+
+// Comprobar que no exista el usuario por su email
+
+        db.Users.findOne(
+            {
+                where: {
+                    email: req.body.email
+                }
+            }
+        )
+        .then(user => {
+            let userInDB = JSON.parse(JSON.stringify(user));
+
+            if(userInDB) {
+
+                    if(req.file) {
+                        if(req.file.filename) {
+                            if(req.file.filename != 'user_default.png') {
+                                fs.unlinkSync(path.join(__dirname, '../../public/img/users/'+req.file.filename))
+                            }
+                        }
+                    }
+
+                return res.render('users/register', {
+                    categories,
+                    subCategories,
+                    afip,
+                    zoneDatabase,
+                    nombrePagina: 'Registro',
+                    errors: {
+                        email: {
+                            msg: '(*) Este email ya está registrado'
+                        }
+                    },
+                    oldData: req.body
+                });
+            }
+
+            db.Users.create(
+                {
+                    fullName: req.body.fullName,
+                    dni_cuit: parseInt(req.body.dni_cuit),
+                    phone: parseInt(req.body.phone),
+                    email: req.body.email,
+                    invoice_type_id: parseInt(req.body.invoice_type_id),
+                    street: req.body.street,
+                    number: parseInt(req.body.number),
+                    floor: req.body.floor,
+                    flat: req.body.flat,
+                    zip: parseInt(req.body.zip),
+                    city: req.body.city,
+                    state_id: parseInt(req.body.state),
+                    password: bcryptjs.hashSync(req.body.password, 10),
+                    avatar: req.file ? req.file.filename : 'user_default.png',
+                    roll_user_id: 2,
+                    reference: req.body.reference
+                }
+            )
+            .then(()=> {
+                return res.redirect('/users/login')})            
+            .catch(error => res.send(error))
+        })
+
+
+
+body('password')
+		.notEmpty().withMessage('(*) Tienes que escribir una contraseña').bail()
+    .isLength({ min: 8}).withMessage('(*) Debe contener un mínimo de 8 carateres')
+    .custom((value, { req }) => {
+      
+      const regex = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/);
+      if (!regex.test(value) ) {
+        throw new Error('(*) La contraseña debe tener al menos, una letra mayúscula, una minúscula, un número y un carácter especial');
+      }
+      console.log(regex.test(value));
+      return true;
+    }),
+
+

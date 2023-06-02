@@ -90,37 +90,37 @@ window.addEventListener('load', function () {
 
 
 
-        const validatePassword = () => {
-            const passwordField = document.getElementById('password');
-            const confirmPasswordField = document.getElementById('confirm_password');
-            const passwordValue = passwordField.value;
-            const confirmPasswordValue = confirmPasswordField.value;
-            const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+        // const validatePassword = () => {
+        //     const passwordField = document.getElementById('password');
+        //     const confirmPasswordField = document.getElementById('confirm_password');
+        //     const passwordValue = passwordField.value;
+        //     const confirmPasswordValue = confirmPasswordField.value;
+        //     const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-            if (!regex.test(passwordValue)) {
-                errors.push({
-                    name: 'password',
-                    message: 'La contraseña debe tener al menos 8 caracteres y ser alfanumérica'
-                });
-                form.password.classList.add('field-error');
-                form.confirm_password.classList.add('field-error');
-            } else if (passwordValue !== confirmPasswordValue) {
-                errors.push({
-                    name: 'password',
-                    message: 'Las contraseñas no coinciden'
-                });
-                form.password.classList.add('field-error');
-                form.confirm_password.classList.add('field-error');
-            } else {
-                form.password.classList.remove('field-error');
-                form.password.classList.add('is-valid');
-                form.confirm_password.classList.remove('field-error');
-                form.confirm_password.classList.add('is-valid');
-            }
-        };
+        //     if (!regex.test(passwordValue)) {
+        //         errors.push({
+        //             name: 'password',
+        //             message: 'La contraseña debe tener al menos 8 caracteres y ser alfanumérica'
+        //         });
+        //         passwordField.classList.add('field-error');
+        //         confirmPasswordField.classList.add('field-error');
+        //     } else if (passwordValue !== confirmPasswordValue) {
+        //         errors.push({
+        //             name: 'password',
+        //             message: 'Las contraseñas no coinciden'
+        //         });
+        //         passwordField.classList.add('field-error');
+        //         confirmPasswordField.classList.add('field-error');
+        //     } else {
+        //         passwordField.classList.remove('field-error');
+        //         passwordField.classList.add('is-valid');
+        //         confirmPasswordField.classList.remove('field-error');
+        //         confirmPasswordField.classList.add('is-valid');
+        //     }
+        // };
 
-        form.password.addEventListener('input', validatePassword);
-        form.confirm_password.addEventListener('input', validatePassword);
+        // passwordField.addEventListener('input', validatePassword);
+        // confirmPasswordField.addEventListener('input', validatePassword);
 
 
         errors.forEach((error) => {

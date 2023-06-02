@@ -10,13 +10,7 @@ const validationsRegister = [
         .notEmpty().withMessage('Debes completar con tu apellido'),
     body("email")
         .notEmpty().withMessage('Debes completar con un correo electronico').bail()
-        .isEmail().withMessage('Debes completar con un correo electronico válido').bail()
-        .custom(async value => {
-         const existingUser = await User.findOne({ email: value });
-         if (existingUser) {
-           throw new Error('Ya existe un usuario con esta dirección de correo electrónico');
-         }
-       }),
+        .isEmail().withMessage('Debes completar con un correo electronico válido').bail(),
     body("roles")
         .notEmpty().withMessage('Debes seleccionar un rol'),
     body("password")
