@@ -16,6 +16,7 @@
            
             <label for="" name="name" class="label">Nombre</label>
           </div>
+          <p class="error-message" id="error-name"></p>
           <% if (locals.errors && errors.name) { %>
             <div class="msg-error">
               <%= errors.name.msg %>
@@ -31,6 +32,7 @@
                    value = "<%= user.last_name %>">
                 <label for="" name="last_name" class="label">Apellido</label>
               </div>
+              <p class="error-message" id="error-last_name"></p>
               <% if (locals.errors && errors.last_name) { %>
                 <div class="msg-error">
                   <%= errors.last_name.msg %>
@@ -44,6 +46,7 @@
                     value = "<%= user.email %>">
                     <label for="" name="email" class="label">Email</label>
                   </div>
+                  <p class="error-message" id="error-email"></p>
                   <% if (locals.errors && errors.email) { %>
                     <div class="msg-error">
                       <%= errors.email.msg %>

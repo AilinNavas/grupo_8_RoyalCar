@@ -45,7 +45,7 @@
                     </div>
                     <% } %>
 
-                      <p>Seleccion Imagen De Perfil</p>
+                      <p id="text-image">Selecciona una imagen de perfil</p>
                       <div class="inputContainer">
                         <input type="file" class="input" name="avatar" id="Perfil">
                       </div>
@@ -83,6 +83,7 @@
                                 <input type="password" name="password" class="input" id="password" placeholder="a">
                                 <label for="" class="label">Contraseña</label>
                               </div>
+                              <p id ="i"><i class="fa fa-info-circle" aria-hidden="true"></i> La contrasea debe ser alfanumerica y tener mínimo 8 caracteres</p>
                               <!-- <i class="fa fa-exclamation-triangle" id="icono-error"></i> -->
                               <p class="error-message" id="error-password"></p>
                               <% if (locals.errors && errors.password) { %>
@@ -106,7 +107,7 @@
 
 
 
-                                      <p>Al registrarte, aceptas nuestras Condiciones de uso y Politicas de Privacidad
+                                      <p>Al registrarte, aceptas nuestras <a href="#" style="color:blue;">Condiciones de uso y Politicas de Privacidad</a>
                                       </p>
                                       <p>¿Ya tienes una cuenta? <a href="/login" style="color:red;">Inicia Sesion</a>
                                       </p>

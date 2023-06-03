@@ -15,14 +15,15 @@ const validationsRegister = [
         .notEmpty().withMessage('Debes seleccionar un rol'),
     body("password")
         .notEmpty().withMessage('Debes completar con una contraseña').bail()
-        .isLength({ min: 8 }).isAlphanumeric().withMessage('La contraseña debe ser alfanumérica y tener mínimo 8 caractéres'),
+        .isLength({ min: 8 }).withMessage('La contraseña debe tener mínimo 8 caractéres, letras y números')
+        .matches(/^(?=.*[a-zA-Z])(?=.*\d).*$/).withMessage('La contraseña debe contener letras y números'),
     body("confirm_password")
         .notEmpty().withMessage('Debes confirmar tu contraseña'),
     body('avatar').custom((value, { req }) => {
         let file = req.file;
 
         if (!file) {
-            return true;
+            throw new Error('Debes subir una imagen de perfil')
         }
 
         let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];

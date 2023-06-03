@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         avatar: {
             type: dataTypes.TEXT,
-            // unique: true
+            unique: true
         },
         roles_id: {
             type: dataTypes.INTEGER,
