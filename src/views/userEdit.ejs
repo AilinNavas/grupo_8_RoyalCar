@@ -8,12 +8,7 @@
           <h1 class="title">Editar Perfil</h1>
 
           <div class="inputContainer">
-            <input type="text"
-             class="input" 
-             name="name"
-              placeholder="a"
-              value = "<%= user.name %>">
-           
+            <input type="text" class="input" name="name" placeholder="a" value="<%= user.name %>">
             <label for="" name="name" class="label">Nombre</label>
           </div>
           <p class="error-message" id="error-name"></p>
@@ -25,11 +20,7 @@
 
 
               <div class="inputContainer">
-                <input type="text"
-                 class="input" 
-                 name="last_name"
-                  placeholder="a" 
-                   value = "<%= user.last_name %>">
+                <input type="text" class="input" name="last_name" placeholder="a" value="<%= user.last_name %>">
                 <label for="" name="last_name" class="label">Apellido</label>
               </div>
               <p class="error-message" id="error-last_name"></p>
@@ -39,11 +30,8 @@
                 </div>
                 <% } %>
                   <div class="inputContainer">
-                    <input type="email" 
-                    class="input" 
-                    name="email" 
-                    placeholder="ejemplo@gmil.com"
-                    value = "<%= user.email %>">
+                    <input type="email" class="input" name="email" placeholder="ejemplo@gmil.com"
+                      value="<%= user.email %>">
                     <label for="" name="email" class="label">Email</label>
                   </div>
                   <p class="error-message" id="error-email"></p>
@@ -51,59 +39,68 @@
                     <div class="msg-error">
                       <%= errors.email.msg %>
                     </div>
-                  <% } %>
-                 
-                  <div class="inputContainer">
-                    <div class="input">
-                      <input type="file" name="avatar" id="Perfil" style="display:none">
-                      <label class="label" for="Perfil">Seleccion Imagen De Perfil</label>
-                    </div>
-                  </div>
-                  <% if (locals.errors && errors.usersImage) { %>
-                    <div class="msg-error">
-                      <%= errors.usersImage.msg %>
-                    </div>
-                  <% } %>
-                  <div class="inputContainer">
-                    <select class="input" name="roles" value="<%= user.roles %>">
-                      <% for (let i = 0; i < roles.length; i++) { %>
-                      <option class="label" value = "<%=roles[i].id%> " font-family="oswald"><%=roles[i].name%></option>
-                      <% } %>
-                    </select>
-                  </div>
-                  <% if (locals.errors && errors.roles) { %>
-                    <div class="msg-error">
-                      <%= errors.roles.msg %>
-                    </div>
-                  <% } %>
-                 
-                 
-                  <div class="inputContainer">
-                    <input type="password" name="password" class="input" placeholder="a" minlength="8" value="">
-                    <label for="" class="label">Nueva Contraseña</label>
-                  </div>
-                  <% if (locals.errors && errors.password) { %>
-                    <div class="msg-error">
-                      <%= errors.password.msg %>
-                    </div>
-                  <% } %>
-                 
-                  <div class="inputContainer">
-                    <input type="password" name="confirm_password" class="input" placeholder="a" minlength="6" value="">
-                    <label for="" class="label">Confirmar Nueva Contraseña</label>
-                  </div>
-                  <% if (locals.errors && errors.confirm_password) { %>
-                    <div class="msg-error">
-                      <%= errors.confirm_password.msg %>
-                    </div>
-                  <% } %>
-               
-                 
-                  <input type="submit" class="submitBtn" value="Guardar">
-                </form>
+                    <% } %>
+
+
+                      <p id="text-image">Selecciona una imagen de perfil</p>
+                      <div class="inputContainer">
+                        <input type="file" class="input" name="avatar" id="Perfil">
+                      </div>
+
+                      <p class="error-message" id="error-avatar"></p>
+                      <% if (locals.errors && errors.usersImage) { %>
+                        <div class="msg-error">
+                          <%= errors.usersImage.msg %>
+                        </div>
+                        <% } %>
+                          <div class="inputContainer">
+                            <select class="input" name="roles" value="<%= user.roles %>">
+                              <% for (let i=0; i < roles.length; i++) { %>
+                                <option class="label" value="<%=roles[i].id%> " font-family="oswald">
+                                  <%=roles[i].name%>
+                                </option>
+                                <% } %>
+                            </select>
+                          </div>
+                          <% if (locals.errors && errors.roles) { %>
+                            <div class="msg-error">
+                              <%= errors.roles.msg %>
+                            </div>
+                            <% } %>
+
+
+                              <div class="inputContainer">
+                                <input type="password" name="password" class="input" id="password" placeholder="a"
+                                  value="">
+                                <label for="" class="label">Nueva Contraseña</label>
+                              </div>
+                              <p id="i"><i class="fa fa-info-circle" aria-hidden="true"></i> La contrasea debe ser
+                                alfanumerica y tener mínimo 8 caracteres</p>
+                              <p class="error-message" id="error-password"></p>
+                              <% if (locals.errors && errors.password) { %>
+                                <div class="msg-error">
+                                  <%= errors.password.msg %>
+                                </div>
+                                <% } %>
+
+                                  <div class="inputContainer">
+                                    <input type="password" name="confirm_password" class="input" placeholder="a"
+                                      id="confirm_password" value="">
+                                    <label for="" class="label">Confirmar Nueva Contraseña</label>
+                                  </div>
+                                  <p class="error-message" id="error-confirm_password"></p>
+                                  <% if (locals.errors && errors.confirm_password) { %>
+                                    <div class="msg-error">
+                                      <%= errors.confirm_password.msg %>
+                                    </div>
+                                    <% } %>
+
+
+                                      <input type="submit" class="submitBtn" value="Guardar">
+        </form>
       </div>
       <%- include('partials/footer') %>
-      <script src="/js/registerValidation.js"></script>
+        <script src="/js/registerValidation.js"></script>
   </body>
 
 
