@@ -20,8 +20,9 @@
             </div>
             <% } %>
               <div class="inputContainer">
-                <input type="password" name="password" class="input" placeholder="a">
+                <input type="password" name="password" class="input" id ="passwordInput" placeholder="a">
                 <label for="" class="label">Contraseña</label>
+                <!-- <button type="button" id="togglePasswordButton">Ver</button> -->
               </div>
               <p class="error-message" id="error-password"></p>
               <% if (locals.errors && errors.password) { %>

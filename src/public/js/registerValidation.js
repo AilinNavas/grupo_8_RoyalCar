@@ -24,6 +24,7 @@ window.addEventListener('load', function () {
 
         } else {
             form.name.classList.remove('field-error');
+            document.getElementById('error-name').innerHTML = ''
             form.name.classList.add('is-valid');
 
         }
@@ -36,6 +37,7 @@ window.addEventListener('load', function () {
 
         } else {
             form.last_name.classList.remove('field-error');
+            document.getElementById('error-last_name').innerHTML = ''
             form.last_name.classList.add('is-valid');
 
         }
@@ -57,6 +59,7 @@ window.addEventListener('load', function () {
                 form.email.classList.add('field-error');
             } else {
                 form.email.classList.remove('field-error');
+                document.getElementById('error-email').innerHTML = '';
                 form.email.classList.add('is-valid');
             }
         }
@@ -70,6 +73,7 @@ window.addEventListener('load', function () {
             form.avatar.classList.remove('is-valid');
         } else {
             form.avatar.classList.remove('field-error');
+            document.getElementById('error-avatar').innerHTML = '';
             form.avatar.classList.add('is-valid');
 
             const imageUser = document.getElementById('Perfil');
@@ -94,6 +98,7 @@ window.addEventListener('load', function () {
             form.roles.classList.add('field-error');
         } else {
             form.roles.classList.remove('field-error');
+            document.getElementById('error-roles').innerHTML = '';
             form.roles.classList.add('is-valid');
         }
 
@@ -123,7 +128,9 @@ window.addEventListener('load', function () {
             confirmPasswordField.value = '';
         } else {
             passwordField.classList.remove('field-error');
+            document.getElementById('error-password').innerHTML = '';
             passwordField.classList.add('is-valid');
+        
         }
 
         if (confirmPasswordValue.trim() === '') {
@@ -141,6 +148,7 @@ window.addEventListener('load', function () {
             confirmPasswordField.value = '';
         } else {
             confirmPasswordField.classList.remove('field-error');
+            document.getElementById('error-confirm_password').innerHTML = '';
             confirmPasswordField.classList.add('is-valid');
         }
 

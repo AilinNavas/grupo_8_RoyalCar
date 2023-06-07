@@ -1,38 +1,3 @@
-function validatePass() {
-        if(!isPassword(passwordValue)) {
-            setErrorFor(password, '(*) Deberá tener mínimo 8 caracteres, una letras mayúsculas, una letra minúsculas, un número y un carácter especial');
-            errors.push('(*) Deberá tener mínimo 8 caracteres, una letras mayúsculas, una letra minúsculas, un número y un carácter especial');
-        } else {
-            setSuccessFor(password);
-        }
-        
-        if(password2Value === '') {
-            setErrorFor(password2, '(*) La confirmación de contraseña, no debe estar en blanco');
-            errors.push('(*) La confirmación de contraseña, no debe estar en blanco');
-        } else if(passwordValue !== password2Value) {
-            setErrorFor(password2, '(*) Las contraseñas no coinciden');
-            errors.push('(*) Las contraseñas no coinciden');
-        } else{
-            setSuccessFor(password2);
-        }
-    }
-
-
-    function isPassword(password) {
-    return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
-}
-
-function setErrorFor(input, message) {
-	const formControl = input.parentElement;
-	const small = formControl.querySelector('small');
-	formControl.classList = 'form-group error';
-	small.innerText = message;
-}
-
-function setSuccessFor(input) {
-	const formControl = input.parentElement;
-	formControl.classList = 'form-group success';
-}
 
 
 PAGINADO POR BACK
@@ -332,4 +297,114 @@ body('password')
       return true;
     }),
 
+API PARA PRODUCTOS
+all: (req, res) => {
+        let products = db.Product.findAll({where: {estado: 'A'}});
+        let categories = db.Category.findAll({where: {estado : 'A'}});
+        Promise.all([products, categories]). then(([products, categories]) => {
+            let productsToSend = products.map((product) => product.dataValues);
+            let categoriesToSend = categories.map((category) => category.dataValues);
+
+            let namesCategories = [];
+            let countCategories = [];
+            let idCategories = [];
+
+            categoriesToSend.forEach((category) => {
+                idCategories.push(category.id);
+                namesCategories.push(category.name);
+                countCategories.push(0);
+            })
+
+            let conatdor = 0;
+
+            idCategories.forEach((categoryId) => {
+                conatdor = 0;
+                productsToSend.forEach((product) => {
+                    if(product.category_id == categoryId) {
+                        conatdor = conatdor + 1;
+                        countCategories[categoryId - 1] = conatdor;
+                    }
+                })
+            })
+            
+            idCategories.shift();
+            namesCategories.shift();
+            countCategories.shift();
+
+            let countCategoryToSend = [];
+            for (let i = 0; i < namesCategories.length; i++) {
+                countCategoryToSend.push(namesCategories[i] + ':  ' + countCategories[i]);
+            }
+
+            productsToSend.forEach((product) => {
+                delete product.discount;
+                delete product.promotion;
+                delete product.img;
+                delete product.estado;
+                delete product.category_id;
+                delete product.subcategory_id;
+                product.dbaseRelations = "category_id";
+                product.detailUrl = `http://localhost:4000/api/product/${product.id}`
+            })
+
+            let dataToSend = { countProducts: products.length,
+                categoriesCount: countCategories.length,
+                countByCategory: countCategoryToSend,
+                products: productsToSend,
+                status: 200
+            }
+
+            return res.status(200).json(dataToSend);
+
+        })
+    },
+
+    ROYAAL 
+    let products = db.Product.findAll();
+    let brands = db.Brand.findAll();
+    Promise.all([products, brands]). then(([products, brands]) => {
+        let processedProducts = products.map((product) => product.dataValues);
+        let processedBrands = brands.map((brand) => brand.dataValues);
+   
+         let namesBrands = [];
+            let countBrands = [];
+            let idBrands = [];
+
+            processedBrands.forEach((brand) => {
+                idBrands.push(brand.id);
+                namesBrands.push(brand.name);
+                countBrands.push(0);
+            })
+            let counter = 0;
+
+            idBrands.forEach((brandId) => {
+                counter = 0;
+                processedProducts.forEach((product) => {
+                    if(product.products_brands_id == brandId) {
+                        counter = counter + 1;
+                        countBrands[brandId - 1] = counter;
+                    }
+                })
+            }) 
+            let countBrandsProcessed = [];
+            for (let i = 0; i <  namesBrands.length; i++) {
+                countBrandsProcessed.push(namesBrands[i] + ':  ' + countBrands[i]);
+            }
+            processedProducts.forEach((product) => {
+                delete product.year;
+                delete product.price;
+                delete product.image;
+                delete product.products_brands_id;
+                product.detailUrl = `http://localhost:3000/api/products/${product.id}`
+            })
+            let dataToSend = { countProducts: products.length,
+                countByBrand: countBrandsProcessed,
+                brandsCount: countBrands.length,
+                products: processedProducts,
+                status: 200
+            }
+
+            return res.status(200).json(dataToSend);
+
+        })
 

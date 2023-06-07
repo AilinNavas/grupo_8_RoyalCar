@@ -53,15 +53,19 @@
                           <%= errors.usersImage.msg %>
                         </div>
                         <% } %>
+
                           <div class="inputContainer">
-                            <select class="input" name="roles" value="<%= user.roles %>">
+                            <select class="input" name="roles" value="<%= user.roles %>" id="rol">
+                              <option class="label" value="" font-family="oswald">Selecciona Tu Rol</option>
                               <% for (let i=0; i < roles.length; i++) { %>
-                                <option class="label" value="<%=roles[i].id%> " font-family="oswald">
+                                <option class="label" value="<%=roles[i].id%> " id="<%=roles[i].name %>"
+                                  font-family="oswald">
                                   <%=roles[i].name%>
                                 </option>
                                 <% } %>
                             </select>
                           </div>
+                          <p class="error-message" id="error-roles"></p>
                           <% if (locals.errors && errors.roles) { %>
                             <div class="msg-error">
                               <%= errors.roles.msg %>

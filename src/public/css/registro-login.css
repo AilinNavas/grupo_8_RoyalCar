@@ -211,3 +211,8 @@ i {
   margin-left: 10px;
   margin-bottom: 5px;
 }
+#togglePasswordButton {
+position: absolute;
+right: 5%;
+top:30%;
+}

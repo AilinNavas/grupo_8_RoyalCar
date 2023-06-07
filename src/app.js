@@ -34,10 +34,17 @@ const mainRoutes = require("./routes/main.js");
 const productsRouter = require('./routes/products.js');
 const usersRouter = require('./routes/users.js');
 
+//Rutas API
+const usersAPIRoutes = require('./routes/api/usersAPIRoutes');
+const productsAPIRoutes = require('./routes/api/productsAPIRoutes');
+
 
 app.use('/', mainRoutes);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
+
+app.use('/api/users', usersAPIRoutes);
+app.use('/api/products', productsAPIRoutes);
 
 
 

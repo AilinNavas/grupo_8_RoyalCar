@@ -106,7 +106,7 @@ const controller = {
 			return res.render('login', {
 				errors: {
 					email: {
-						msg: "No se encuentra este email..."
+						msg: "El email proporcionado no se encuntra registrado"
 					}
 				}
 			});

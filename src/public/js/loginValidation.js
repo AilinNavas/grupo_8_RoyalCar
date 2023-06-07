@@ -1,8 +1,21 @@
 window.onload = function () {
   const form = document.getElementById('form-login');
-  const email = document.getElementById('email')
+  const email = document.getElementById('email');
+  const passwordField = document.getElementById('passwordInput');
+  const passwordButton = document.getElementById('togglePasswordButton');
+  console.log(passwordButton)
 
-  email.focus()
+  email.focus();
+
+  // passwordButton.addEventListener('click', () => {
+  //   if (passwordField.type === 'password') {
+  //     passwordField.type = 'text';
+  //      passwordButton.textContent = 'Ocultar';
+  //   } else {
+  //     passwordField.type = 'password';
+  //      passwordButton.textContent = 'Ver';
+  //   }
+  // });
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -31,6 +44,7 @@ window.onload = function () {
         form.email.classList.add('field-error');
       } else {
         form.email.classList.remove('field-error');
+        document.getElementById('error-email').innerHTML = '';
         form.email.classList.add('is-valid');
       }
     }
@@ -39,12 +53,13 @@ window.onload = function () {
     if (!form.password.value) {
       errors.push({
         name: "password",
-        message: "Tu contraseña no puede estar vacia",
+        message: "Debes ingresar tu contraseña",
       });
       form.password.classList.remove("is-valid");
       form.password.classList.add('field-error');
     } else {
       form.password.classList.remove('field-error');
+      document.getElementById('error-password').innerHTML = '';
       form.password.classList.add("is-valid");
     }
 
