@@ -51,6 +51,7 @@ La comunicacion entre los integrantes del equipo.
 *¿Que vamos a empezar a hacer?
 Realizarnos seguimientos entre nosotros para ayudarnos en el cumplimiento de cada tarea.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Principales conclusiones de la retro del Sprint N°5:
 
@@ -62,3 +63,29 @@ Mejorar la frecuencia de nuestras reuniones para lograr alcanzar los obejtivos, 
 
 *¿Que vamos a empezar a hacer?
 Mejorar la comunicacion, estar pendientes del otro y trabajar más unidos para .
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Principales conclusiones de la retro del Sprint N°6:
+
+*¿Que hicimos bien?
+Organizamos las tareas para poder avanzar juntos, y nos animamos al desafio de los seeders y las migraciones.
+
+*¿Que podemos mejorar?
+La division de tareas.
+
+*¿Que vamos a empezar a hacer?
+Dedicar mas tiempo al proyecto.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Principales conclusiones de la retro del Sprint N°7:
+*¿Que hicimos bien?
+Dividimos las tareas a tiempo.
+
+*¿Que podemos mejorar?
+El cumplimiento de las fechas pactadas para entregar las tareas.
+
+*¿Que vamos a empezar a hacer?
+Aprovechar mejor el tiempo de las reuniones y clases.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Principales conclusiones de la retro del Sprint N°8:
