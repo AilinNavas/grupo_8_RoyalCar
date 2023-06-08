@@ -45,32 +45,38 @@
             <p class="error-message" id="error-price"></p>
           </div>
 
+          
           <div class="inputContainer" id="form-product">
-            <label for="" name="color" class="label">Colores disponibles</label>
+            <label for="" name="colors" class="label" id="colors">Colores disponibles</label>
           </div>
           <div class="inputContainer" id="colors">
+            <div class="error-message" id="colorsChecbox"></div>
 
             <% colors.forEach( color=> { %>
-              <p>
-                <input type="checkbox" id="<%= color.name %>" value="<%= color.id %>">
-                <label for="<%= color.name %>">
+              <p id="color">
+                <input type="checkbox" id="<%= color.name %>" value="<%= color.id %>" name="color"
+                  class="colorsSelector">
+                <label for="<%= color.name %>" id="color">
                   <%= color.name %>
                 </label>
 
                 <% }) %>
               </p>
-              <p class="error-message" id="error-colors"></p>
           </div>
-        
-
-
+                 
+          <p >Seleccionar la Imagen del Producto</p>
           <div class="inputContainer" id="form-product">
-            <div class="input">
-              <input type="file" name="img" id="perfil" style="display:none" value="<%= product.image %>">
-              <label class="label" for="Perfil">Seleccion Imagen De Producto</label>
-              <p class="error-message" id="error-perfil"></p>
-            </div>
+            
+            <input type="file" name="imgFile" id="Perfil">
+            
           </div>
+          <p class="error-message" id="error-imgFile"></p>
+
+          <% if (locals.errors && errors.imgFile) { %>
+            <div class="msg-error" id="error-imgFile">
+              <%= errors.imgFile.msg %>
+            </div>
+            <% } %>
 
           <input type="submit" class="submitBtn" value="Guardar cambios">
         </form>

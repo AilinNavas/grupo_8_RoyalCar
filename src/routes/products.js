@@ -33,7 +33,7 @@ router.post("/", upload.single('imgFile'), productsController.store);
 router.get("/:id", productsController.productDetail);
 
 router.get("/:id/edit", productsController.edit);
-router.put("/:id", upload.single('img'),productsController.update);
+router.put("/:id", upload.single('imgFile'),productsController.update);
 
 router.delete("/:id", productsController.destroy);
 

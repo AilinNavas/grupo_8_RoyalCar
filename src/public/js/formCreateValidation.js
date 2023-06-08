@@ -5,7 +5,7 @@ window.onload = function () {
 
 
     //------DESDE AQUÍ CONTINÚE CON LAS VALIDACIONES DEL FORMULARIO //
-    //-------------------DE CREACION DE PELICULAS------------------//    
+    //-------------------DE CREACION DE PRODUCTOS------------------//    
     const form = document.querySelector('form');
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -15,6 +15,8 @@ window.onload = function () {
             element.innerHTML = '';
         });
         const errors = [];
+
+        //validaciones Generales Por Campos vacios
         function validations(name, message) {
             if (!form[name].value) {
                 errors.push({ name, message });
@@ -25,24 +27,68 @@ window.onload = function () {
                 form[name].classList.add('is-valid');
             }
         }
-        // function validationsColor(message) {
-        //     if (!form.color.value ) {
-        //         errors.push({message });
-        //         form.color.classList.add('is-invalid');
-        //     }
-        //     else {
-        //         form.color.classList.remove('is-invalid');
-        //         form.color.classList.add('is-valid');
-        //     }
-        // }
- 
-        validations('brands', 'Por favor seleccionar una marca');
+        validations('brands', 'Seleccionar tu Marca');
         validations('model', 'El campo modelo no puede estar vacio');
         validations('year', 'Por favor seleciona el año ');
-        validations('description', 'Escribir una breve descripcion');
         validations('price', 'El campo precio no debe estar vacio');
-        // validationsColor('Seleciona por lo menos un color');
-        validations('Perfil', 'Seleccionar una imagen');
+        
+        //Validaciones Description
+        if (form.description.value.length == 0 || form.description.value.length <= 20) {
+            errors.push({
+                name: "description",
+                message: "La descripcion debe tener al menos 20 caracteres"
+            });
+            form.description.classList.add('field-error');
+
+        } else {
+            form.description.classList.remove('field-error');
+            document.getElementById('error-description').innerHTML = ''
+            form.description.classList.add('is-valid');
+        }
+
+        //Validaciones campo Imagen del Producto
+        if (!form.imgFile.value) {
+            errors.push({
+                name: "imgFile",
+                message: "Debes seleccionar una imagen del Producto",
+            });
+            form.imgFile.classList.add('field-error');
+            form.imgFile.classList.remove('is-valid');
+        } else {
+            form.imgFile.classList.remove('field-error');
+            document.getElementById('error-imgFile').innerHTML = '';
+            form.imgFile.classList.add('is-valid');
+
+            const imageUser = document.getElementById('Perfil');
+            const fileExt = imageUser.files[0].name.split('.').pop().toLowerCase();
+            const acceptedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+
+            if (!acceptedExtensions.includes(fileExt)) {
+                errors.push({
+                    name: "imgFile",
+                    message: `Los formatos de imagen permitidos son ${acceptedExtensions.join(', ')}`,
+                });
+                form.imgFile.classList.add('error-imgFile');
+                form.imgFile.classList.add('field-error');
+                form.imgFile.classList.remove('is-valid');
+            }
+        }
+
+        //Validaciones Del Checkbox Colores
+        const colorsField = document.querySelectorAll('.colorsSelector')
+        let countChecked = 0;
+        colorsField.forEach((element) => {
+            if (element.checked == true) {
+                countChecked++;
+            }
+        })
+        if (countChecked == 0) {
+            document.getElementById("colors").innerHTML = 'Seleccionar un color'
+            document.getElementById("colors").classList.add('is-invalid')
+        } else {
+            document.getElementById("colors").classList.remove('is-invalid');
+            document.getElementById("colors").innerHTML = 'Colores disponibles';
+        }
 
         errors.forEach(error => {
             const errorLabel = document.getElementById('error-' + error.name);
