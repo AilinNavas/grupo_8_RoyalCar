@@ -29,9 +29,9 @@ const productApiController = {
                     }
                 })
             })
-             const countByBrandsProcessed = namesBrands.map((nameBrand, index) => {
-                 return `${nameBrand}: ${countBrands[index]}`;
-               });
+            const countByBrandsProcessed = namesBrands.map((nameBrand, index) => {
+                return `${nameBrand}: ${countBrands[index]}`;
+            });
             //  let countBrandsProcessed = [];
             //  for (let i = 0; i < namesBrands.length; i++) {
             //      countBrandsProcessed.push(namesBrands[i] + ':  ' + countBrands[i]);
@@ -44,27 +44,49 @@ const productApiController = {
                 delete product.products_brands_id;
                 product.detailUrl = `http://localhost:3000/api/products/${product.id}`
             })
+
             let dataToSend = {
-                countProducts: products.length,
-                countByBrand: countByBrandsProcessed,
-                brandsCount: countBrands.length,
-                products: processedProducts,
-                status: 200
+                meta: {
+                    status: 200,
+                    url: 'http://localhost:3000/api/products'
+                },
+                data: {
+                    countProducts: products.length,
+                    countByBrand: countByBrandsProcessed,
+                    brandsCount: countBrands.length,
+                    products: processedProducts,
+
+                }
+
             }
 
-            return res.status(200).json(dataToSend);
-
+            return res.json(dataToSend);
 
         } catch (error) {
             return res.status(500).json({ error: 'Error al procesar la información' });
         }
 
-
     },
-    detail: (req, res) => {
-        res.send('hola desde /api/products/:id')
-    }
 
+    detail: async (req, res) => {
+        try {
+            const product = await db.Product.findByPk(req.params.id, { include: ['brand'] });
+
+            let dataToSend = {
+                meta: {
+                    status: 200,
+                    url: 'http:localhost:3000/api/product/:id'
+                },
+                data: product
+            };
+
+            res.json(dataToSend);
+        } catch (error) {
+            res.status(500).json({ error: 'Error al procesar la información' });
+        }
+    }
 };
 
 module.exports = productApiController;
+
+
