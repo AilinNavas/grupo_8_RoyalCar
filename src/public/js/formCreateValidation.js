@@ -20,10 +20,10 @@ window.onload = function () {
         function validations(name, message) {
             if (!form[name].value) {
                 errors.push({ name, message });
-                form[name].classList.add('is-invalid');
+                form[name].classList.add('field-error');
             }
             else {
-                form[name].classList.remove('is-invalid');
+                form[name].classList.remove('field-error');
                 form[name].classList.add('is-valid');
             }
         }
@@ -84,9 +84,9 @@ window.onload = function () {
         })
         if (countChecked == 0) {
             document.getElementById("colors").innerHTML = 'Seleccionar un color'
-            document.getElementById("colors").classList.add('is-invalid')
+            document.getElementById("colors").classList.add('field-error')
         } else {
-            document.getElementById("colors").classList.remove('is-invalid');
+            document.getElementById("colors").classList.remove('field-error');
             document.getElementById("colors").innerHTML = 'Colores disponibles';
         }
 

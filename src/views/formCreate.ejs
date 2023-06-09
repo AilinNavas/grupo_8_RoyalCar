@@ -77,8 +77,14 @@
                         </label>
 
                 <% }) %>
-              </p>
+              </p>              
           </div>
+          <% if (locals.errors && errors.color) { %>
+            <div class="msg-error">
+              <%= errors.color.msg %>
+            </div>
+            <% } %>
+
           
           <p >Seleccionar la Imagen del Producto</p>
           <div class="inputContainer" id="form-product">
@@ -95,28 +101,9 @@
             <% } %>
 
 
-          <input type="submit" class="submitBtn" value="Crear">
-                        <% }) %>
-                      </p>
-                  </div>
-                  <% if (locals.errors && errors.color) { %>
-                    <div class="msg-error">
-                      <%= errors.color.msg %>
-                    </div>
-                    <% } %>
-
-                  <div class="inputContainer" id="form-product">
-                    <div class="input">
-                      <input type="file" name="imgFile" id="Perfil" style="display:none">
-                      <label class="label" for="Perfil">Seleccion Imagen De Producto</label>
-                    </div>
-                  </div>
-                  <% if (locals.errors && errors.imgFile) { %>
-                    <div class="msg-error">
-                      <%= errors.imgFile.msg %>
-                    </div>
-                    <% } %>
-                  <input type="submit" class="submitBtn" value="Crear">
+          
+            <input type="submit" class="submitBtn" value="Crear">
+                    
         </form>
       </div>
       <script src="/js/formCreateValidation.js"></script>
