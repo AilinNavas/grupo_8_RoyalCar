@@ -70,7 +70,7 @@ const productApiController = {
 
     detail: async (req, res) => {
         try {
-            const product = await db.Product.findByPk(req.params.id, { include: ['brand'] });
+            const product = await db.Product.findByPk(req.params.id, {include: ['brand'] });
 
             let dataToSend = {
                 meta: {
