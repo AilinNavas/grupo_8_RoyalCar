@@ -27,9 +27,10 @@
   <div class="header_2">
     
     <div class="navbar">
-      <a href="/" title="Home">Home</a>
+      <a href="/" title="Home">Inicio</a>
       <a href="/products" class="">Alquilar</a>
       <a href="/products" class="">Comprar</a>
+
 
       <a href="/contact" class="">Contáctanos</a>
       <% if (locals.isLogged) { %>
@@ -46,7 +47,7 @@
         <!-- </li> -->
         
       <% } else {%>
-      <a href="/users/login" class="">Ingresar</a>
+      <a href="/users/login" class="">Ingresar <i class="fa fa-sign-out" id="logout" aria-hidden="true"></i></a>
       <% } %>
     </div>
   </div>

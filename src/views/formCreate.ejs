@@ -19,50 +19,62 @@
                   <%= brands[i].name %>
                 </option>
                 <% } %>
-
-
             </select>
           </div>
           <p class="error-message" id="error-brands"></p>
 
           <div class="inputContainer" id="form-product">
-            <input type="text" class="input" name="model" placeholder="a" id="model">
+            <input type="text" class="input" name="model" placeholder="a" id="model"
+              value="<%= locals.oldData ? oldData.model : null %>">
             <label for="" name="model" class="label">Modelo</label>
           </div>
+          <% if (locals.errors && errors.model) { %>
+            <div class="msg-error">
+              <%= errors.model.msg %>
+            </div>
+            <% } %>
           <p class="error-message" id="error-model"></p>
 
-          <div class="inputContainer" id="form-product">
-            <input type="number" class="input" name="year" placeholder="a" id="year">
-            <label for="" name="year" class="label">Año</label>
-          </div>
+              <div class="inputContainer" id="form-product">
+                <input type="number" class="input" name="year" placeholder="a" id="year"
+                  value="<%= locals.oldData ? oldData.year : null %>">
+                <label for="" name="year" class="label">Año</label>
+              </div>
           <p class="error-message" id="error-year"></p>
 
-          <div class="inputContainer" id="form-product">
-            <input type="text" class="input" name="description" id="description">
-            <label for="" name="description" class="label">Descripción</label>
-          </div>
+              <div class="inputContainer" id="form-product">
+                <input type="text" class="input" name="description" id="description"
+                  value="<%= locals.oldData ? oldData.description : null %>">
+                <label for="" name="description" class="label">Descripción</label>
+              </div>
+              <% if (locals.errors && errors.description) { %>
+                <div class="msg-error">
+                  <%= errors.description.msg %>
+                </div>
+                <% } %>
           <p id="i"><i class="fa fa-info-circle" aria-hidden="true"></i> La descripción deberá tener como mínimo 20 caracteres</p>
           <p class="error-message" id="error-description"></p>
 
-          <div class="inputContainer" id="form-product">
-            <input type="number" class="input" name="price" id="price">
-            <label for="" name="price" class="label">Precio</label>
-          </div>
+                  <div class="inputContainer" id="form-product">
+                    <input type="number" class="input" name="price" id="price"
+                      value="<%= locals.oldData ? oldData.price : null %>">
+                    <label for="" name="price" class="label">Precio</label>
+                  </div>
           <p class="error-message" id="error-price"></p>
 
-          <div class="inputContainer" id="form-product">
-            <label for="" name="colors" class="label" id="colors">Colores disponibles</label>
-          </div>
-          <div class="inputContainer" id="colors">
+                  <div class="inputContainer" id="form-product">
+                    <label for="" name="colors" class="label" id="colors">Colores disponibles</label>
+                  </div>
+                  <div class="inputContainer" id="colors">
             <div class="error-message" id="colorsChecbox"></div>
 
-            <% colors.forEach( color=> { %>
-              <p id="color">
-                <input type="checkbox" id="<%= color.name %>" value="<%= color.id %>" name="color"
+                    <% colors.forEach( color=> { %>
+                      <p id="color">
+                        <input type="checkbox" name="color" id="<%= color.name %>" value="<%= color.id %>" name="color"
                   class="colorsSelector">
-                <label for="<%= color.name %>" id="color">
-                  <%= color.name %>
-                </label>
+                        <label for="<%= color.name %>" id="color">
+                          <%= color.name %>
+                        </label>
 
                 <% }) %>
               </p>
@@ -84,6 +96,27 @@
 
 
           <input type="submit" class="submitBtn" value="Crear">
+                        <% }) %>
+                      </p>
+                  </div>
+                  <% if (locals.errors && errors.color) { %>
+                    <div class="msg-error">
+                      <%= errors.color.msg %>
+                    </div>
+                    <% } %>
+
+                  <div class="inputContainer" id="form-product">
+                    <div class="input">
+                      <input type="file" name="imgFile" id="Perfil" style="display:none">
+                      <label class="label" for="Perfil">Seleccion Imagen De Producto</label>
+                    </div>
+                  </div>
+                  <% if (locals.errors && errors.imgFile) { %>
+                    <div class="msg-error">
+                      <%= errors.imgFile.msg %>
+                    </div>
+                    <% } %>
+                  <input type="submit" class="submitBtn" value="Crear">
         </form>
       </div>
       <script src="/js/formCreateValidation.js"></script>

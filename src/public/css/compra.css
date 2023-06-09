@@ -14,7 +14,7 @@
     font-size: 24px
   }
   
-  .product_img {}
+ 
   
   .description {
     font-size: 16px;
@@ -131,8 +131,8 @@
     /* Variables */
     --button_radius: 0.75em;
     --button_color: #e8e8e8;
-    --button_outline_color: #000000;
-    font-size: 17px;
+    --button_outline_color: rgb(46, 45, 45);
+    font-size: 16px;
     font-weight: bold;
     border: none;
     border-radius: var(--button_radius);
@@ -142,7 +142,7 @@
   .button_top {
     display: block;
     box-sizing: border-box;
-    border: 2px solid var(--button_outline_color);
+    border: 1px solid var(--button_outline_color);
     border-radius: var(--button_radius);
     padding: 0.75em 1.5em;
     background: var(--button_color);
@@ -150,10 +150,17 @@
     transform: translateY(-0.2em);
     transition: transform 0.1s ease;
   }
+  .button_top a {
+    text-decoration: none;
+    outline: none;
+  }
+  
   
   button:hover .button_top {
     /* Pull the button upwards when hovered */
     transform: translateY(-0.33em);
+    color: #cb0e08;
+
   }
   
   button:active .button_top {
