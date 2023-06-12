@@ -22,8 +22,8 @@ app.use(express.static(publicPath));
 app.use(express.urlencoded({ extended: false }));// para poder recibir informacion por post
 app.use(express.json());// para poder recibir informacion  por post
 app.use(methodOverride('_method')); //para poder pisar el mothod- 'post' en el form por put y delete
-app.use(userLoggedMiddleware);
 app.use(cookies());
+app.use(userLoggedMiddleware);
 
 //Template engine
 app.set("view engine", "ejs");

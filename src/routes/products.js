@@ -22,10 +22,11 @@ const upload = multer({ storage });
 const productsController = require("../controllers/productsController");
 const productValidation = require("../middlewares/productValidationMiddleware");
 
+
 router.get("/", productsController.products); 
 router.get("/productCart", productsController.productCart);
 
-router.get("/create", productsController.create);
+router.get("/create",productsController.create);
 router.post("/", upload.single('imgFile'), productValidation, productsController.store);
 
 router.get("/:id", productsController.productDetail);

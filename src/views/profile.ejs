@@ -3,45 +3,62 @@
     <body>
         <%- include('partials/header') %>
             <main class="profilebody">
-                
 
 
-                    <div class="card">
-                        <div class="imge">
-                            <div class="Usericon">
-                                <img class="image-perfil" src="/images/users/<%=user.avatar %>" alt="">
 
-                            </div>
-                            <p class="UserName"> hi <%= user.name %>
+                <div class="card">
+                    <div class="imge">
+
+                        <div class="usericon-right">
+                            <p class="UserName"> NOMBRE: <%= user.name %>
                             </p>
-                            <p class="Id">
-                                <%= user.email %>
+                            <p class="UserName"> APELLIDO: <%= user.last_name %>
+                            </p>
+                            <p class="UserName">
+                                EMAIL: <%= user.email %>
+                            </p>
+                            <p class="UserName">
+                                Cuenta: <%= user.rol.name %>
                             </p>
                         </div>
+                        <div class="usericon-left">
+                            <img class="image-perfil" src="/images/users/<%=user.avatar %>" alt=""
+                                style="border-radius: 50%;" width="45">
 
+                        </div>
+
+
+                    </div>
+                    <div class="Info">
                         <div class="Description">
                             <p>
                                 Bienvenid@ <%= user.name %>
                                     <%= user.last_name %> a tu cuenta de <%= user.rol.name %> de RoyalCar.
                                             Por cualquier duda, podes comunicarte con un asesor de nuestro equipo a
                                             travez de asesoria_personalizada@royalcar.com.
-
+    
                             </p>
                         </div>
-
-                        <div class="social-media">
-                            <div class="contein-logout">
-                                <a href="/users/logout" class="logout-button"> CERRAR SESION </a>
-                            </div>
-                            <div class="contein-logout">
-                                <a href="/users/<%= user.id %>/edit" class="logout-button">EDITAR</a>
-                            </div>
+                        <div class="Description">
 
                         </div>
 
                     </div>
 
-                
+
+                    <div class="social-media">
+                        <div class="contein-logout">
+                            <a href="/users/logout" class="logout-button"> CERRAR SESION </a>
+                        </div>
+                        <div class="contein-logout">
+                            <a href="/users/<%= user.id %>/edit" class="logout-button">EDITAR</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
 
             </main>
 
@@ -50,8 +67,8 @@
 
 
 
-    </body>
+            <%- include('partials/footer') %>
+        </body>
 
-    <%- include('partials/footer') %>
 
-        </html>
+    </html>

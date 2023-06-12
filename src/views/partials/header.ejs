@@ -30,24 +30,29 @@
       <a href="/" title="Home">Inicio</a>
       <a href="/products" class="">Alquilar</a>
       <a href="/products" class="">Comprar</a>
+      <% if (locals.isLogged && locals.userLogged.roles_id== 1 ) { %>
+        <a href="/products/create" class="">Agregar Producto</a>
+
+      <% }else { %>
+          <a href="/contact" class="">Contáctanos</a>
+
+      <% } %>
+      
+     
 
 
-      <a href="/contact" class="">Contáctanos</a>
+
+
       <% if (locals.isLogged) { %>
-        <!-- <li class="nav-profile"> -->
+       
           <a class="nav-profile-1" href="/users/profile" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="/images/users/<%= locals.userLogged.avatar %>" width="45" style="border-radius: 100%;">
-            Hi <%= locals.userLogged.name %> 
+            <img src="/images/users/<%=locals.userLogged.avatar %>" width="45" style="border-radius: 100%;">
+            Hi <%=locals.userLogged.name %> 
           </a>
-          <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/user/profile">Mi perfil</a>
-            <li><hr class="dropdown-divider"></li>
-            <a class="dropdown-item" href="/user/logout">Cerrar Sesion</a>
-          </ul> -->
-        <!-- </li> -->
-        
-      <% } else {%>
-      <a href="/users/login" class="">Ingresar <i class="fa fa-sign-out" id="logout" aria-hidden="true"></i></a>
+         
+          
+          <% } else {%>
+            <a href="/users/login" class="">Ingresar <i class="fa fa-sign-out" id="logout" aria-hidden="true"></i></a>
       <% } %>
     </div>
   </div>

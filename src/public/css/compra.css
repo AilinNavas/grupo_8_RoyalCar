@@ -9,6 +9,37 @@
     font-family:"oswald", sans-serif;
     font-size: 12px
   }
+
+  .motor-busqueda {
+    border: black 1px solid;
+    color: white;
+    font-size: 12px;
+    background-color: black;
+    width: 90vw;
+    position: relative;
+    margin: auto;
+    margin-top: 30px;
+    padding-left: 30px;
+    border-radius: 20px 20px 20px 20px;
+  }
+  
+  .formulario {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .caja1form,
+  .caja2form,
+  .caja3form {
+    width: 90%;
+    margin-top: 5px;
+  }
+  
+  .button-search {
+    width: 100%;
+    margin: 6px
+  }
   
   h4 {
     font-size: 24px
@@ -34,7 +65,9 @@
   
   section {
     border-top: 1px solid;
-    border-color: #ebebeb
+    border-color: #ebebeb;
+    position: relative;
+    top: 30px
   }
   
   article div.main-article {
@@ -95,6 +128,37 @@
   
   
   @media (min-width: 481px) {
+    .motor-busqueda {
+      border: black 1px solid;
+      color: white;
+      font-size: 16px;
+      background-color: hsl(220deg 1% 3%);
+      display: flex;
+      flex-direction: row;
+      width: 90%;
+      text-align: center;
+      margin: auto;
+      margin-top: 20px;
+     
+  
+    }
+  
+     .formulario {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .caja1form,
+    .caja2form,
+    .caja3form {
+      width: 25%;
+      height: 10%;
+     }
+  
+    .button-search {
+      width: 15%;
+    }
+
     main section article .description {
       display: block
     }

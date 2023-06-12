@@ -6,99 +6,89 @@
 } */
 .profilebody{
     
-    width: 100%;
-    position: relative;
-    top: 150px;
-    margin-bottom: 240px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  position: relative;
+  top: 150px;
+  margin-bottom: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
     
   }
  
   .card {
-      width: 70vw;
-      height: 70vh;
+      width: 80%;
+      
       background: rgb(0, 0, 0);
       box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.333);
       border: solid 1px white;
-      padding: 20px;
+      padding: 15px;
   }
   
   .imge {
-    height: 15vh;
-    width: 64vw;
-    padding-left: 15px;
+   
+    width: 100%;
+    
     background-color: rgb(46, 45, 45);
      border: solid 1px rgb(255, 255, 255); 
-    margin-left: 5px;
+     display: flex;
+    align-items: center
+    
   }
   
-  .Usericon {
-    background-color: #fff;
-    transform: translateX(10px) translateY(10px);
-    width:57px;
-    height: 57px;
-    border-radius: 10px;
+  .usericon-left {
+    
+    width:30%;
+    margin: 5px
+    
   }
+  .usericon-right{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .image-perfil{
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    
   }
   p {
     width: 30vw;
   }
-  .imge .UserName {
+  .UserName {
     background-color: #fff;
     width: 60%;
-    height: 15px;
-    border-width: 10px;
     border-radius: 5px;
-    border-color: #262626;
-    color: #262626;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
-    transform: translateX(70px) translateY(-35px);
+    transform: translateX(-95px) translateY(0px);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 5px;
   }
-  
-  .imge .Id {
-    background-color: #fff;
-    width: 65%;
-    height: 15px;
-    border-width: 10px;
-    border-radius: 5px;
-    border-color: #262626;
-    color: #262626;
-    font-size: 15px;
-    font-weight: bold;
-    transform: translateX(70px) translateY(-25px);
+  .Info{
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
+    justify-content: space-around;
+    
+  }  
   .Description {
-    border-color: #141414;
+    border-color: rgb(46, 45, 45);
     background-color: #fff;
-    transform: translate(5px, 6px);
-    width: 95%;
-    height: 45vh;
+    transform: translate(0px, 6px);
+    width: 45%;
     border-radius: 5px;
-    padding: 30px;
+    padding: 15px;
     
   }
+  
   
   /*______Social Media______*/
   .social-media {
     display: flex;
     width: 100%;
-    height: 2px;
     transform: translatey(10px);
-    background: #414141;
     align-items: baseline;
   }
   .contein-logout{

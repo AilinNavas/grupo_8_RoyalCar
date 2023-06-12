@@ -55,6 +55,7 @@
 
                                         <a href="/products/productCart" class="button-decoration">CONTINUNAR COMPRA</a>
                                     </div>
+                                    <% if (locals.isLogged && locals.userLogged.roles_id== 1 ) { %>
 
                                     <div class="cajas-button">
                                         <a href="/products/<%= product.id %>/edit" class="button-decoration">EDITAR
@@ -64,6 +65,7 @@
                                         <form action="/products/<%= product.id %>?_method=DELETE" method="POST"
                                             style="display: inline-flex">
                                             <button class="button-decoration" type="submit">ELIMINAR</button>
+                                            <% } %>
                                         </form>
                                     </div>
                                 </div>
@@ -74,8 +76,8 @@
                     <!-- </section> -->
             </main>
 
+            <%- include('partials/footer') %>
     </body>
 
-    <%- include('partials/footer') %>
 
         </html>

@@ -49,13 +49,13 @@ img {
 
 }
 
-.motor-busqueda {
+/* .motor-busqueda {
   border: black 1px solid;
   color: white;
   font-size: 12px;
   background-color: black;
   width: 90vw;
-  /* height: 20vh; */
+  
   position: relative;
   margin: auto;
   margin-top: 30px;
@@ -73,14 +73,14 @@ img {
 .caja2form,
 .caja3form {
   width: 90%;
-  /* height: 20%; */
+ 
   margin-top: 5px;
 }
 
 .button-search {
   width: 100%;
   margin: 6px
-}
+} */
 
 button {
   font-family: 'Oswald', sans-serif;
@@ -220,7 +220,7 @@ h2.nosotros {
     font-size: 3.2vh;
   }
 
-  .motor-busqueda {
+  /* .motor-busqueda {
     border: black 1px solid;
     color: white;
     font-size: 16px;
@@ -228,12 +228,6 @@ h2.nosotros {
     display: flex;
     flex-direction: row;
     width: 90%;
-    /* height: 10vh; */
-    /* justify-content: center;
-    align-items: center; */
-    /* position: fixed;
-    z-index: 1000; 
-     bottom: 2%;  */
     text-align: center;
     margin: auto;
     margin-top: 20px;
@@ -241,11 +235,7 @@ h2.nosotros {
 
   }
 
-  /* input {
-    width: 90%;
-  } */
-
-  .formulario {
+   .formulario {
     display: flex;
     justify-content: space-between;
   }
@@ -255,12 +245,11 @@ h2.nosotros {
   .caja3form {
     width: 25%;
     height: 10%;
-    /* padding-top: 15px; */
-  }
+   }
 
   .button-search {
     width: 15%;
-  }
+  } */
 
   button {
     /* position: absolute; */
