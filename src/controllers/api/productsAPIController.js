@@ -40,7 +40,6 @@ const productApiController = {
             processedProducts.forEach((product) => {
                 delete product.year;
                 delete product.price;
-                delete product.image;
                 delete product.products_brands_id;
                 product.detailUrl = `http://localhost:3000/api/products/${product.id}`
             })
