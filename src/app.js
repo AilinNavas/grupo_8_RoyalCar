@@ -5,6 +5,7 @@ const methodOverride = require('method-override'); //para poder usar metodos Put
 const session = require('express-session');
 const userLoggedMiddleware = require('./middlewares/userLoggeMiddleware');
 const cookies = require ('cookie-parser');
+const cors = require('cors');
 
 
 const app = express();
@@ -14,7 +15,7 @@ app.use(session({
     secret: "secret!?",
     resave: false,
     saveUninitialized: false,
-}))
+}));
 
 //Middlewares globales
 const publicPath = path.join(__dirname, './public');
@@ -24,6 +25,8 @@ app.use(express.json());// para poder recibir informacion  por post
 app.use(methodOverride('_method')); //para poder pisar el mothod- 'post' en el form por put y delete
 app.use(cookies());
 app.use(userLoggedMiddleware);
+app.use(cookies());
+app.use(cors());
 
 //Template engine
 app.set("view engine", "ejs");
