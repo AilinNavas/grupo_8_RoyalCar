@@ -15,30 +15,60 @@
     color: white;
     font-size: 12px;
     background-color: black;
-    width: 90vw;
+    width: 90%;
     position: relative;
     margin: auto;
     margin-top: 30px;
     padding-left: 30px;
     border-radius: 20px 20px 20px 20px;
   }
-  
-  .formulario {
-    text-align: center;
+  .lits-result{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form_search{
+    width: 70%;
+  } 
+  .input {
+    color: #fff;
+    font-size: 0.9rem;
+    background-color: transparent;
     width: 100%;
-    height: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    border-bottom: var(--border-height) solid var(--border-before-color);
   }
   
-  .caja1form,
-  .caja2form,
-  .caja3form {
-    width: 90%;
-    margin-top: 5px;
+  .input-border {
+    position: absolute;
+    background: var(--border-after-color);
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+  }
+  
+  input:hover {
+    background: var(--input-hovered-color);
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  input:focus~.input-border {
+    width: 100%;
   }
   
   .button-search {
-    width: 100%;
-    margin: 6px
+    width: 30%;
+    
   }
   
   h4 {
@@ -135,7 +165,7 @@
       background-color: hsl(220deg 1% 3%);
       display: flex;
       flex-direction: row;
-      width: 90%;
+      width: 40%;
       text-align: center;
       margin: auto;
       margin-top: 20px;

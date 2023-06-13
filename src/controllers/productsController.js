@@ -135,7 +135,7 @@ const controller = {
 
 	},
 	productCart: (req, res) => {
-		res.render(path.join(__dirname, 'productCart'))
+		res.render ('/productCart');
 	},
 
 }
