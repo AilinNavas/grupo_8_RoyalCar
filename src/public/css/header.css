@@ -113,15 +113,17 @@ body {
     width: 5vw;
     height: 100%;
   }
-  
+  #logout{
+    display: none;
+  }
   
   .navbar {
     width: 100%;
    display: flex;
   }
   .navbar a {
-    width: 19%;
-    font-size: 13px;
+    width: 25%;
+    font-size: 14px;
   }
   .nav-profile{
     display: flex;
@@ -135,6 +137,9 @@ body {
       width: 100%;
       display: flex;
       flex-direction: column;
+    }
+    #logout{
+      display: inline-block;
     }
     .header_1{
       display: flex;
