@@ -47,7 +47,8 @@
         display: flex;
         justify-content: space-between;
         position: fixed;
-        top: 570px;
+        top: 85%;
+        z-index: 50;
 
       }
       .footer-left{
@@ -65,5 +66,5 @@
   
     }
     @media (min-width: 761px){
-      
+     
     }
