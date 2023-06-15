@@ -1,62 +1,155 @@
-/* body{
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNgt3tPBfbiIlHsPkReRcdDvm0Ghe0RAFgZA&usqp=CAU);
-    background-size: 100vw 80vh;
-    background-position: center;
-    background-repeat: no-repeat;
-} */
-.profilebody{
-    
+
+
+.profilebody {
+
   width: 100%;
   position: relative;
-  top: 150px;
+  top: 180px;
   margin-bottom: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
-    
-  }
- 
-  .card {
-      width: 80%;
-      
-      background: rgb(0, 0, 0);
-      box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.333);
-      border: solid 1px white;
-      padding: 15px;
-  }
-  
-  .imge {
-   
+
+}
+
+.card {
+  width: 90%;
+  background: rgb(0, 0, 0);
+  box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.333);
+  border: solid 1px white;
+  padding: 15px;
+}
+
+.imge {
+
+  width: 100%;
+
+  background-color: rgb(46, 45, 45);
+  border: solid 1px rgb(255, 255, 255);
+  display: flex;
+  align-items: center
+}
+
+.usericon-left {
+
+  width: 30%;
+  margin: 5px
+}
+
+.usericon-right {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-perfil {
+  object-fit: cover;
+  width: 100%;
+
+}
+
+.texto-description{
+  width: 80%;
+  text-align: left;
+}
+
+.UserName {
+  background-color: #fff;
+  width: 95%;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: bold;
+  transform: translateX(-95px) translateY(0px);
+  display: flex;
+  margin: 5px;
+  position: relative;
+  left: 97px;
+}
+
+.Info {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.Description {
+  border-color: rgb(46, 45, 45);
+  background-color: #fff;
+  transform: translate(0px, 6px);
+
+  width: 95%;
+  border-radius: 5px;
+  padding: 15px;
+
+}
+
+#descrip-right {
+  display: none;
+}
+
+
+/*______Social Media______*/
+.social-media {
+  display: flex;
+  width: 100%;
+  transform: translatey(10px);
+  align-items: baseline;
+}
+
+.contein-logout {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+}
+
+.logout-button {
+  color: #cb0e08;
+  width: 80%;
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: all 250ms;
+}
+
+.logout-button:hover {
+  background-color: #cb0e08;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+}
+
+@media (min-width: 481px) {
+  .profilebody {
     width: 100%;
-    
-    background-color: rgb(46, 45, 45);
-     border: solid 1px rgb(255, 255, 255); 
-     display: flex;
-    align-items: center
-    
+    position: relative;
+    top: 150px;
+    margin-bottom: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  
-  .usericon-left {
-    
-    width:30%;
-    margin: 5px
-    
+
+  .card {
+    width: 80%;
+    background: rgb(0, 0, 0);
+    box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.333);
+    border: solid 1px white;
+    padding: 15px;
   }
-  .usericon-right{
+
+  .usericon-right {
     width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .image-perfil{
-    object-fit: cover;
-    width: 100%;
-    
-  }
-  p {
-    width: 30vw;
-  }
   .UserName {
     background-color: #fff;
     width: 60%;
@@ -66,52 +159,17 @@
     transform: translateX(-95px) translateY(0px);
     display: flex;
     margin: 5px;
-  }
-  .Info{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    
-  }  
-  .Description {
-    border-color: rgb(46, 45, 45);
-    background-color: #fff;
-    transform: translate(0px, 6px);
-    width: 45%;
-    border-radius: 5px;
-    padding: 15px;
-    
-  }
-  
-  
-  /*______Social Media______*/
-  .social-media {
-    display: flex;
-    width: 100%;
-    transform: translatey(10px);
-    align-items: baseline;
-  }
-  .contein-logout{
-    width: 60%;
-    display: flex;
-    justify-content: center;
     position: relative;
-    
-  } 
+    left: 33px;
+  }
+
+  .Description {
+    width: 45%;
+
+  }
+
+  #descrip-right {
+    display: block;
+  }
   
-  .logout-button{
-    color: #cb0e08;
-    width: 15vw;
-    font-size: 16px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    transition: all 250ms;
-  }
-  .logout-button:hover{
-    background-color: #cb0e08;
-    font-size: 18px;
-    color:rgb(0, 0, 0);
-  }
+}
