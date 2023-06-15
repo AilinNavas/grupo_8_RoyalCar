@@ -1,14 +1,14 @@
 <header class="header">
   <div class="header_1">
     <div class="header-left">
-      <div class="callcenter">
+      <!-- <div class="callcenter">
         <a href="#"><i class="fa-solid fa-headset"></i></a>
         <h2 class="telefono">301 2222222</h2>
       </div>
       <div class="location">
         <a href="#"><i class="fa-solid fa-location-dot"></i></a>
         <h2 class="texto-h2">Buenos Aires</h2>
-      </div>
+      </div> -->
     </div>
     <div class="contenedorlogo">
       <a href="/" class="logo">RoyalCar</a>
@@ -28,10 +28,10 @@
     
     <div class="navbar">
       <a href="/" title="Home">Inicio</a>
-      <a href="/products" class="">Alquilar</a>
+      <a href="/construction" class="">Alquilar</a>
       <a href="/products" class="">Comprar</a>
       <% if (locals.isLogged && locals.userLogged.roles_id== 1 ) { %>
-        <a href="/products/create" class="">Agregar Producto</a>
+        <a href="/products/create" class="add"><i class="fas fa-plus"></i> Producto</a>
 
       <% }else { %>
           <a href="/contact" class="">Contáctanos</a>
@@ -47,7 +47,7 @@
        
           <a class="nav-profile-1" href="/users/profile" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="/images/users/<%=locals.userLogged.avatar %>" width="45" style="border-radius: 100%;">
-            Hi <%=locals.userLogged.name %> 
+             <span> Mi perfil</span>
           </a>
          
           

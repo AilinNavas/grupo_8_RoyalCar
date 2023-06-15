@@ -120,14 +120,32 @@ body {
    display: flex;
   }
   .navbar a {
-    width: 19%;
+    width: 25%;
     font-size: 13px;
+    display: flex;
+  }
+  .add i {
+   position: relative;
+   top:10%;
+   right:5%
   }
   .nav-profile{
     display: flex;
   }
   .nav-profile-1{
     display: flex;
+  }
+  .nav-profile-1 img {
+    display: flex;
+  }
+  .nav-profile-1 span {
+    display: none;
+  }
+  #logout {
+    display: none;
+  }
+  .fa-plus {
+    display: inline-block;
   }
   
 @media (min-width: 481px){
@@ -157,6 +175,15 @@ body {
     .navbar a {
       width: 20%;
       font-size: 22px;
+    }
+    .nav-profile-1 img {
+      display: flex;
+    }
+    .nav-profile-1 span {
+      display: flex;
+    }
+    #logout {
+      display: inline-block;
     }
   }
   

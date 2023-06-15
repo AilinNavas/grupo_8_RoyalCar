@@ -3,8 +3,8 @@ const { body } = require("express-validator");
 
 const productValidation = [
     body("model")
-        .notEmpty().withMessage('Debes completar con el modelo del vehículo').bail()
-        .isLength({ min: 5 }),
+        .notEmpty().withMessage('Debes completar con el modelo del vehículo'),
+        // .isLength({ min: 5 }).withMessage('El modelo del vehículo debe tener mínimo 5 caracteres'),
     body("description")
         .notEmpty().withMessage('Debes completar con la descripcion del vehículo').bail()
         .isLength({ min: 20 }),

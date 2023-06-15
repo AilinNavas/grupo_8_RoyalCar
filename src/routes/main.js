@@ -9,5 +9,6 @@ router.get("/", mainController.index);
 
 router.get("/contact", mainController.contact);
 
+router.get("/construction", mainController.construction);
 
 module.exports = router;

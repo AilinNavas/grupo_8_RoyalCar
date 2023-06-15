@@ -9,6 +9,10 @@ const controller = {
      contact:  (req, res) => {
         res.render(path.join(__dirname,'../views/contactUs.ejs'))
     },
+    construction: (req, res) => {
+        res.render(path.join(__dirname,'../views/construction.ejs'))
+    },
+    
     
 };
 

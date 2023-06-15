@@ -135,8 +135,9 @@ const controller = {
 
 	},
 	productCart: (req, res) => {
-		res.render ('/productCart');
+		res.render ('productCart');
 	},
+	
 
 }
 module.exports = controller;

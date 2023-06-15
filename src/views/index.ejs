@@ -1,34 +1,35 @@
+<%- include('partials/head' , { title: 'Inicio' , styles: [ 'home' , 'header' , 'footer' ]}) %>
 
-  <%- include('partials/head' , { title: 'Inicio' , styles: [ 'home' , 'header' , 'footer']}) %>
-<body>
+  <body>
 
-  <%- include('partials/header') %>
+    <%- include('partials/header') %>
 
-<br>
-<br>
-<br>
-<br>
+      <br>
+      <br>
+      <br>
+      <br>
 
-   <div class="slider">
-    <ul>
-      <li>
-        <img src="/images/fondo.png" alt="">
-      </li>
-      <li>
-        <img src="/images/lambo.jpg" alt="">
-      </li>
-      <li>
-        <img src="/images/bugatti.jpg" alt="">
-      </li>
-      <li>
-        <img src="/images/lamborghini-.jpg" alt="">
-      </li>
-    </ul>
+      <div class="slider">
+        <ul>
+          <li>
+            <img src="/images/fondo.png" alt=""> 
+            <!-- <img src="/images/opcion1.jpg" alt=""> -->
+          </li>
+          <li>
+            <img src="/images/lambo.jpg" alt="">
+          </li> 
+          <li>
+            <img src="/images/bugatti.jpg" alt="">
+          </li>
+          <li>
+            <img src="/images/lamborghini-.jpg" alt="">
+          </li>
+        </ul>
 
-   </div>
+      </div>
 
 
-  <!-- <div class="motor-busqueda">
+      <!-- <div class="motor-busqueda">
 
     <form action=" " class="formulario">
       <div class="caja1form">
@@ -58,38 +59,40 @@
   </div> -->
 
 
-  <h2 class="nosotros"> Nuestros servicios</h2>
-  <section class="servicios">
-    <div class="card">
-      <div class="card2">
-        COMPRAR
-        <a href="/products"></a>
+      <h2 class="nosotros"> Nuestros servicios</h2>
+      <section class="servicios">
+        <div class="card">
+          <div class="card2">
+            COMPRAR
+            <a href="/products"></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card2">
+            ALQUILAR
+            <a href="#"></a>
+          </div>
+        </div>
+
+      </section>
+      <h2 class="nosotros2"> Nosotros</h2>
+
+      <div class="descripcion-nosotros">
+
+        <p> Somos una exclusiva agencia boutique especializada en autos de lujo. Nos enorgullece ofrecer un servicio de
+          asesoramiento personalizado, diseñado para satisfacer las necesidades únicas de cada cliente. Nuestro equipo
+          profesional está comprometido en brindarte la mejor experiencia del consumidor,
+          centrándose en la excelencia y la exclusividad. Ya sea que estés buscando comprar o alquilar un vehículo de primer nivel con prestaciones
+            excepcionales, estamos aquí para ayudarte a encontrar la opción perfecta.</p>
       </div>
-    </div>
 
-    <div class="card">
-      <div class="card2">
-        ALQUILAR
-        <a href="#"></a>
+      <div class="banner">
+
+        <img src="/images/banner.png" alt="">
       </div>
-    </div>
+      <%- include('partials/footer') %>
 
-  </section>
-  <h2 class="nosotros2"> Nosotros</h2>
+        </main>
 
-  <div class="descripcion-nosotros">
-
-    <p> Somos una agencia boutique de autos de lujo, ofrecemos asesoramiento personalizado ajustado a cada cliente.
-      Nuestro equipo profesional brinda la mejor experiencia del consumidor y exclusividad, para aquellas personas que
-      están buscando comprar o alquilar un vehículo de primer nivel con buenas prestaciones.</p>
-  </div>
-
-  <div class="banner">
-
-    <img src="/images/banner.png" alt="">
-  </div>
-  <%- include('partials/footer') %>
-
-  </main>
-
-</html>
+        </html>
