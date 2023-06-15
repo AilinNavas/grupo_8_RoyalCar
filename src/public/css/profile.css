@@ -1,12 +1,5 @@
 
-.profilebody{
-    
-/* body{
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNgt3tPBfbiIlHsPkReRcdDvm0Ghe0RAFgZA&usqp=CAU);
-    background-size: 100vw 80vh;
-    background-position: center;
-    background-repeat: no-repeat;
-} */
+
 .profilebody {
 
   width: 100%;
@@ -144,7 +137,6 @@
 
   .card {
     width: 80%;
-
     background: rgb(0, 0, 0);
     box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.333);
     border: solid 1px white;
