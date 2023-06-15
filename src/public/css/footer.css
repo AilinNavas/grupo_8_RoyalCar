@@ -46,9 +46,9 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        position: fixed;
+        /* position: fixed;
         top: 85%;
-        z-index: 50;
+        z-index: 50; */
 
       }
       .footer-left{

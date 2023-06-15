@@ -37,10 +37,10 @@ body {
     color: white;
     transform: translateY(-2px);
   }
-  .header a.active {
+  /* .header a.active {
     background-color: dodgerblue;
     color: white;
-  }
+  } */
   
   .header-left {
     float: left;
@@ -81,6 +81,7 @@ body {
     align-content: center;
     width: 9vw;
   }
+  
   
   .header-right {
     float: left;
@@ -125,6 +126,7 @@ body {
     width: 25%;
     font-size: 13px;
     display: flex;
+    justify-content: center;
   }
   .add i {
    position: relative;

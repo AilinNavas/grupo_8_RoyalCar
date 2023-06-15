@@ -28,11 +28,11 @@
                                     <%= product.brand.name %>
                                 </h4>
                                 <p class="model">
-                                  Modelo:  <%= product.model %>
+                                    Modelo: <%= product.model %>
 
                                 </p>
                                 <p class="model">
-                                   Año:     <%= product.year%>
+                                    Año: <%= product.year%>
                                 </p>
                                 <p class="model">
                                     <%= product.description %>
@@ -48,32 +48,38 @@
                                             <% }) %>
                                     </ul>
                                 </div>
-                                <p class="status">Agregar al carrito</p>
+                                <!-- <p class="status">Agregar al carrito</p>
                   <label class="switch">
                     <input type="checkbox">
-                    <span class="slider"></span>
+                    <span class="slider"></span> -->
 
-                  </label>
+                                </label>
 
 
                                 <div class="action-button">
                                     <div class="cajas-button">
+                                        <% if (!locals.isLogged ) { %>
+                                            <a href="/users/login" class="button-decoration">CONTINUNAR COMPRA</a>
+                                            <% }else { %>
+                                                <a href="/products/productCart" class="button-decoration">CONTINUNAR COMPRA</a>
 
-                                        <a href="/products/productCart" class="button-decoration">CONTINUNAR COMPRA</a>
-                                    </div>
-                                    <% if (locals.isLogged && locals.userLogged.roles_id== 1 ) { %>
+                                                <% } %>
 
-                                    <div class="cajas-button">
-                                        <a href="/products/<%= product.id %>/edit" class="button-decoration">EDITAR
-                                            PRODUCTO</a>
+
                                     </div>
-                                    <div class="cajas-button">
-                                        <form action="/products/<%= product.id %>?_method=DELETE" method="POST"
-                                            style="display: inline-flex">
-                                            <button class="button-decoration" type="submit">ELIMINAR</button>
-                                            <% } %>
-                                        </form>
-                                    </div>
+                                    <% if (locals.isLogged && locals.userLogged.roles_id==1 ) { %>
+
+                                        <div class="cajas-button">
+                                            <a href="/products/<%= product.id %>/edit" class="button-decoration">EDITAR
+                                                PRODUCTO</a>
+                                        </div>
+                                        <div class="cajas-button">
+                                            <form action="/products/<%= product.id %>?_method=DELETE" method="POST"
+                                                style="display: inline-flex">
+                                                <button class="button-decoration" type="submit">ELIMINAR</button>
+                                                <% } %>
+                                            </form>
+                                        </div>
                                 </div>
                             </div>
 
@@ -86,4 +92,4 @@
     </body>
 
 
-        </html>
+    </html>

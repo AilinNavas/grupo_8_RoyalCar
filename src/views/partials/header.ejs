@@ -28,20 +28,21 @@
     
     <div class="navbar">
       <a href="/" title="Home">Inicio</a>
-      <a href="/construction" class="">Alquilar</a>
+     
       <a href="/products" class="">Comprar</a>
       <% if (locals.isLogged && locals.userLogged.roles_id== 1 ) { %>
         <a href="/products/create" class="add"><i class="fas fa-plus"></i> Producto</a>
+        <a href="http://localhost:5173/" class="add"><i class="fa-solid fa-chart-line"></i> Dasboard</a>
 
       <% }else { %>
           <a href="/contact" class="">Contáctanos</a>
-
+          <a href="/construction" class="">Alquilar</a>
       <% } %>
       
            <% if (locals.isLogged) { %>
        
           <a class="nav-profile-1" href="/users/profile" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="/images/users/<%=locals.userLogged.avatar %>" width="45" style="border-radius: 100%;">
+            <img src="/images/users/<%=locals.userLogged.avatar %>" width="40" height="40" style= "border-radius: 100%">
              <span> Mi perfil</span>
           </a>
          
